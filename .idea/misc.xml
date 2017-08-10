@@ -8,8 +8,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/jmdata-biservice/pom.xml" />
-        <option value="$PROJECT_DIR$/XichengDong-sparktraining/pom.xml" />
         <option value="$PROJECT_DIR$/jmbi-web/pom.xml" />
+        <option value="$PROJECT_DIR$/sparktraining/pom.xml" />
       </list>
     </option>
   </component>

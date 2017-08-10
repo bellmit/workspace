@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/XichengDong-sparktraining" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/jmbi-web" vcs="svn" />
     <mapping directory="$PROJECT_DIR$/jmdata-biservice" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/sparktraining" vcs="Git" />
   </component>
 </project>

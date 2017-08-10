@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/jmbi-web/jmbi-web.iml" filepath="$PROJECT_DIR$/jmbi-web/jmbi-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/jmdata-biservice/jmdata-biservice.iml" filepath="$PROJECT_DIR$/jmdata-biservice/jmdata-biservice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/XichengDong-sparktraining/sparktraining.iml" filepath="$PROJECT_DIR$/XichengDong-sparktraining/sparktraining.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sparktraining/sparktraining.iml" filepath="$PROJECT_DIR$/sparktraining/sparktraining.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
     </modules>
   </component>

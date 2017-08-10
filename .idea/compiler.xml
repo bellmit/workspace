@@ -15,6 +15,7 @@
       <module name="jmbi-web" target="1.7" />
       <module name="jmdata-biservice" target="1.8" />
       <module name="sparktraining" target="1.7" />
+      <module name="sparktraining (1)" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

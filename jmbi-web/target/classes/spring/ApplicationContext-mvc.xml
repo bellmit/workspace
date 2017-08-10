@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd	
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<context:component-scan base-package="com.jumore.jmbi.controller" />
+
+	<mvc:default-servlet-handler/>
+	
+	<!-- 对静态资源文件的访问  restful-->     
+	<mvc:resources mapping="/static/**" location="/static/" />
+    <mvc:view-controller path="/" view-name="redirect:/login"/>
+
+	<mvc:annotation-driven>
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+			<!--json日期格式化默认设�?-->
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean class="com.fasterxml.jackson.databind.ObjectMapper">
+						<property name="dateFormat">
+							<bean class="java.text.SimpleDateFormat">
+								<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss"/>
+							</bean>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+    
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+		<property name="resourceLoaderPath" value="/WEB-INF/html/"></property>
+		<property name="velocityProperties">
+	      <props>
+	       <prop key="input.encoding">UTF-8</prop>
+	       <prop key="output.encoding">UTF-8</prop>
+	      </props>
+	    </property>
+		
+	</bean>
+
+	<!-- 根据客户端不同的请求扩展名使用不同的view进行响应，如/demo/save.json返回json数据�?/demo/save返回.vm模板页面 -->
+	<bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+		<property name="viewResolvers">
+			<list>
+				<!--视图解析�? -->
+				<bean class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
+					<property name="cache" value="false"/>
+					<property name="suffix" value=".html"/>
+					<property name="contentType" value="text/html;charset=UTF-8"/>
+					<property name="dateToolAttribute" value="dateTool"/>
+					<property name="numberToolAttribute" value="numberTool"/>
+					<!-- 此变量�?�为pageContext.request, 页面使用方法：request.contextPath -->
+					<property name="requestContextAttribute" value="rc"/>
+					<property name="toolboxConfigLocation" value="/WEB-INF/toolbox.xml"/>
+				</bean>
+			</list>
+		</property>
+		<property name="defaultViews">
+			<list>
+				<!-- 输出为JSON数据 -->
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"/>
+			</list>
+		</property>
+	</bean>
+
+
+    <bean id="propertyConfigurer" class="com.jumore.dove.config.DoveConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:config/dbconfig.properties</value>
+                <value>classpath:config/dove.properties</value>
+            </list>
+        </property>
+    </bean>
+
+	<mvc:interceptors>
+		<bean class="com.jumore.jmbi.interceptor.WebInterceptor" />
+		<!-- 非法字符拦截�? -->
+		<mvc:interceptor>
+			<mvc:mapping path="/"/>
+			<mvc:exclude-mapping path="/report/save"/>
+			<bean class="com.jumore.dove.aop.interceptor.IllegalCharInterceptor"/>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/"/>
+			<mvc:exclude-mapping path="/banner/save"/>
+			<bean class="com.jumore.dove.aop.interceptor.IllegalCharInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+    <!-- 拦截器配�? -->
+<!-- 	<mvc:interceptors>  
+	非法字符拦截�?
+        <mvc:interceptor>         
+        <mvc:mapping path="/**"/> 
+        静�?�资�?
+        <mvc:exclude-mapping path="/static/**"/>
+        <mvc:exclude-mapping path="/error/**"/>
+        其它不进行转义字符判断的URL
+        <mvc:exclude-mapping path="/roleMenu/saveMenuOfRole"/>      
+        <bean class="com.jumore.dove.aop.interceptor.IllegalCharInterceptor"/>    
+        </mvc:interceptor>  
+    </mvc:interceptors>   -->
+</beans>
