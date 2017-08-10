@@ -43,11 +43,4 @@ public interface EnJzxOverviewSvc {
     public Response TypeRatio(@PathParam("flag") String flag, @PathParam("startDate") String startDate, @PathParam("endDate") String endDate);
 
 
-
-
-
-
-
-
-    
 }
