@@ -1,0 +1,522 @@
+{
+  "getCompanyNum1": {
+    "seriesName": "",
+    "legendData": ["拍档", "客户"],
+    "xAxisData": ["1日", "2日", "3日", "4日", "5日", "6日", "7日", "8日", "9日", "10日", "11日", "12日", "13日", "14日", "15日", "16日", "17日", "18日", "19日", "20日", "21日", "22日", "23日", "24日", "25日", "26日", "27日", "28日", "29日", "30日", "31日"],
+    "series": [{
+      "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "name": "拍档"
+    }, {
+      "data": [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      "name": "客户"
+    }],
+    "title": "企业新增数",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getCompanyNum2": {
+    "seriesName": "",
+    "legendData": ["拍档", "客户"],
+    "xAxisData": ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+    "series": [{
+      "data": [6, 5, 5, 3, 0, 0, 0],
+      "name": "拍档"
+    }, {
+      "data": [6, 5, 6, 5, 0, 0, 0],
+      "name": "客户"
+    }],
+    "title": "企业活跃数",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getCompanyAmount": {
+    "seriesName": "",
+    "seriesData": [42, 32, 17, 17, 16],
+    "yAxisData": ["客户xukaer0043公司", "客户xukaer0051公司", "李媛客户企业801", "中国用友软件股份有限公司", "李媛企业拍档0003"],
+    "title": "客户企业订单数TOP5",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getInOutCountryAmount": {
+    "seriesName": "",
+    "seriesData": [145717715.0000, 35921323.0000, 391537.0000, 363826.0000, 29119.0000],
+    "yAxisData": ["不丹", "巴林", "孟加拉国", "缅甸", "朝鲜"],
+    "title": "进口贸易国别TOP5",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getInOutGoodsAmount": {
+    "seriesName": "",
+    "seriesData": [500000.0000, 462675.7278, 0.0001],
+    "yAxisData": ["船舶动力用汽轮机", "改良种用濒危野马", "南方蓝鳍金枪鱼(Thunnus maccoyii)苗"],
+    "title": "进口商品TOP5",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getInOutCustomsAmount": {
+    "seriesName": "",
+    "seriesData": [143516985.0647, 397494.2491, 29152.0996, 12955.6454, 0.0088],
+    "yAxisData": ["机场单证", "北京关区", "京监管处", "京关展览", "京关关税"],
+    "title": "进口口岸TOP5",
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    }
+  },
+  "getOverview": {
+    "amount": 13649363248.1,
+    "partnerIncome": 233314.1,
+    "count": 178,
+    "customerPay": 233314.1,
+    "partnerCount": 120,
+    "customerCount": 171
+  },
+  "starLevel": {
+    "seriesName": "拍档企业等级分布",
+    "seriesData": [0, 0, 0, 0, 0],
+    "yAxisData": null,
+    "title": "拍档企业等级分布",
+    "status": null
+  },
+  "partner": {
+    "legendData": ["8601101", "8601100"],
+    "seriesName": "拍档企业地域分布",
+    "seriesData": [{
+      "value": 50,
+      "name": "8601101"
+    }, {
+      "value": 1,
+      "name": "8601100"
+    }],
+    "title": "拍档企业地域分布"
+  },
+  "customer": {
+    "legendData": ["8601101", "8601100"],
+    "seriesName": "客户企业地域分布",
+    "seriesData": [{
+      "value": 55,
+      "name": "8601101"
+    }, {
+      "value": 2,
+      "name": "8601100"
+    }],
+    "title": "客户企业地域分布"
+  },
+  "areaOrderList": {
+    "p": [{
+      "value": 422,
+      "name": "客户xukaer0006公司"
+    }, {
+      "value": 138,
+      "name": "李媛客户企业801"
+    }, {
+      "value": 85,
+      "name": "浙江维维集团有限公司"
+    }, {
+      "value": 49,
+      "name": "李媛企业客户0001"
+    }, {
+      "value": 15,
+      "name": "客户xukaer0051公司"
+    }],
+    "a": [{
+      "value": 54905300.00652870,
+      "name": "海关总署/全部关区"
+    }],
+    "c": [{
+      "value": 30,
+      "name": "海关总署/全部关区"
+    }],
+    "i": [{
+      "value": 291.1,
+      "name": "聚拍档liyuan0001"
+    }, {
+      "value": 138,
+      "name": "李媛聚拍0001"
+    }, {
+      "value": 132,
+      "name": "拍档xukaer000045公司"
+    }, {
+      "value": 85,
+      "name": "拍档短信通道公司"
+    }, {
+      "value": 49,
+      "name": "李媛聚拍档企01"
+    }]
+  },
+  "orderTrend": {
+    "series": [{
+      "data": [0, 2, 0, 0, 0, 0, 0],
+      "type": "bar",
+      "name": "出口"
+    }, {
+      "data": [0, 1, 1, 1, 2, 1, 0],
+      "type": "bar",
+      "name": "进口"
+    }, {
+      "data": [0, 3, 1, 1, 2, 1, 0],
+      "type": "line",
+      "name": "总计"
+    }],
+    "legendData": ["出口", "进口", "总计"],
+    "xAxisData": ["周日", "周一", "周二", "周三", "周四", "周五", "周六"],
+    "title": null
+  },
+  "orderMap": [{
+    "name": "海关总署/全部关区",
+    "value": 100,
+    "count": 30,
+    "amount": 54905300.00652870,
+    "partner": 1335121.39,
+    "customer": 1335121.39,
+    "code": "00"
+  }, {
+    "name": "北京关区",
+    "value": 100,
+    "count": 33,
+    "amount": 2415091.7197936620,
+    "partner": 14726.14,
+    "customer": 14726.14,
+    "code": "01"
+  }],
+  "firstLevelCustoms": {
+    "statusCode": 200,
+    "message": "操作成功",
+    "data": [{
+      "customsCode": "all",
+      "customsName": "海关总署/全部关区"
+    }, {
+      "customsCode": "01",
+      "customsName": "北京关区"
+    }, {
+      "customsCode": "02",
+      "customsName": "天津关区"
+    }, {
+      "customsCode": "04",
+      "customsName": "石家庄区"
+    }, {
+      "customsCode": "05",
+      "customsName": "太原海关"
+    }, {
+      "customsCode": "06",
+      "customsName": "满洲里关"
+    }, {
+      "customsCode": "07",
+      "customsName": "呼特关区"
+    }, {
+      "customsCode": "08",
+      "customsName": "沈阳关区"
+    }, {
+      "customsCode": "09",
+      "customsName": "大连海关"
+    }, {
+      "customsCode": "15",
+      "customsName": "长春关区"
+    }, {
+      "customsCode": "19",
+      "customsName": "哈尔滨区"
+    }, {
+      "customsCode": "22",
+      "customsName": "上海海关"
+    }, {
+      "customsCode": "23",
+      "customsName": "南京海关"
+    }, {
+      "customsCode": "29",
+      "customsName": "杭州关区"
+    }, {
+      "customsCode": "31",
+      "customsName": "宁波关区"
+    }, {
+      "customsCode": "33",
+      "customsName": "合肥海关"
+    }, {
+      "customsCode": "35",
+      "customsName": "福州关区"
+    }, {
+      "customsCode": "37",
+      "customsName": "厦门关区"
+    }, {
+      "customsCode": "40",
+      "customsName": "南昌关区"
+    }, {
+      "customsCode": "42",
+      "customsName": "青岛海关"
+    }, {
+      "customsCode": "43",
+      "customsName": "济南海关"
+    }, {
+      "customsCode": "46",
+      "customsName": "郑州关区"
+    }, {
+      "customsCode": "47",
+      "customsName": "武汉海关"
+    }, {
+      "customsCode": "49",
+      "customsName": "长沙关区"
+    }, {
+      "customsCode": "50",
+      "customsName": "广东分署"
+    }, {
+      "customsCode": "51",
+      "customsName": "广州海关"
+    }, {
+      "customsCode": "52",
+      "customsName": "黄埔关区"
+    }, {
+      "customsCode": "53",
+      "customsName": "深圳海关"
+    }, {
+      "customsCode": "57",
+      "customsName": "拱北关区"
+    }, {
+      "customsCode": "60",
+      "customsName": "汕头海关"
+    }, {
+      "customsCode": "64",
+      "customsName": "海口关区"
+    }, {
+      "customsCode": "67",
+      "customsName": "湛江关区"
+    }, {
+      "customsCode": "68",
+      "customsName": "江门关区"
+    }, {
+      "customsCode": "72",
+      "customsName": "南宁关区"
+    }, {
+      "customsCode": "79",
+      "customsName": "成都关区"
+    }, {
+      "customsCode": "80",
+      "customsName": "重庆关区"
+    }, {
+      "customsCode": "83",
+      "customsName": "贵阳海关"
+    }, {
+      "customsCode": "86",
+      "customsName": "昆明关区"
+    }, {
+      "customsCode": "88",
+      "customsName": "拉萨海关"
+    }, {
+      "customsCode": "90",
+      "customsName": "西安关区"
+    }, {
+      "customsCode": "94",
+      "customsName": "乌关区"
+    }, {
+      "customsCode": "95",
+      "customsName": "兰州关区"
+    }, {
+      "customsCode": "96",
+      "customsName": "银川海关"
+    }, {
+      "customsCode": "97",
+      "customsName": "西宁关区"
+    }, {
+      "customsCode": "99",
+      "customsName": "政法司"
+    }]
+  },
+  "secondLevelCustoms": {
+    "statusCode": 200,
+    "message": "操作成功",
+    "data": [{
+      "customsCode": "0204",
+      "customsName": "东港海关"
+    }, {
+      "customsCode": "0205",
+      "customsName": "津塘沽办"
+    }, {
+      "customsCode": "0202",
+      "customsName": "新港海关"
+    }, {
+      "customsCode": "0203",
+      "customsName": "津开发区"
+    }, {
+      "customsCode": "0201",
+      "customsName": "天津海关"
+    }, {
+      "customsCode": "0208",
+      "customsName": "津保税区"
+    }, {
+      "customsCode": "0209",
+      "customsName": "蓟县海关"
+    }, {
+      "customsCode": "0206",
+      "customsName": "津驻邮办"
+    }, {
+      "customsCode": "0207",
+      "customsName": "津机场办"
+    }, {
+      "customsCode": "0215",
+      "customsName": "天津机场海关快件监管中心"
+    }, {
+      "customsCode": "0216",
+      "customsName": "天津经济技术开发区保税物流中心"
+    }, {
+      "customsCode": "0213",
+      "customsName": "天津东疆保税港区"
+    }, {
+      "customsCode": "0214",
+      "customsName": "天津滨海新区综合保税区"
+    }, {
+      "customsCode": "0211",
+      "customsName": "津加工区"
+    }, {
+      "customsCode": "0212",
+      "customsName": "天津保税物流园区"
+    }, {
+      "customsCode": "0210",
+      "customsName": "武清海关"
+    }, {
+      "customsCode": "0217",
+      "customsName": "天津东疆保税港区海关（港区）"
+    }, {
+      "customsCode": "0218",
+      "customsName": "静海海关"
+    }, {
+      "customsCode": "0220",
+      "customsName": "津关税处"
+    }]
+  },
+  "baiduTrend": {
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    },
+    "xAxisData": ["20170101", "20170102", "20170103", "20170104", "20170105", "20170106", "20170107", "20170108", "20170109", "20170110", "20170111", "20170112", "20170113", "20170114", "20170115", "20170116", "20170117", "20170118", "20170119", "20170120", "20170121", "20170122", "20170123", "20170124", "20170125", "20170126", "20170127", "20170128", "20170129", "20170130", "20170131", "20170201", "20170202", "20170203", "20170204", "20170205", "20170206", "20170207", "20170208", "20170209", "20170210", "20170211", "20170212", "20170213", "20170214", "20170215", "20170216", "20170217", "20170218", "20170219", "20170220", "20170221", "20170222", "20170223", "20170224", "20170225", "20170226", "20170227", "20170228", "20170301"],
+    "pvChart": {
+      "title": "浏览量PV趋势情况",
+      "seriesName": "浏览量PV",
+      "unit": "次",
+      "seriesData": [0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "uvChart": {
+      "title": "访客数UV趋势情况",
+      "seriesName": "访客数UV",
+      "unit": "个",
+      "seriesData": [0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "ipChart": {
+      "title": "IP数趋势情况",
+      "seriesName": "IP数",
+      "unit": "个",
+      "seriesData": [0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "averageTimeChart": {
+      "title": "平均停留时长趋势情况",
+      "seriesName": "平均停留时长",
+      "unit": "秒",
+      "seriesData": [0, 0, 0, 0, 0, 0, 100.00, 0, 0, 0, 0, 0, 0, 0, 0, 75.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "avgVisitPagesChart": {
+      "title": "平均访问页数趋势情况",
+      "seriesName": "平均访问页数",
+      "unit": "次",
+      "seriesData": [0, 0, 0, 0, 0, 0, 1.00, 0, 0, 0, 0, 0, 0, 0, 0, 1.25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    "exitRateChart": {
+      "title": "跳出率趋势情况",
+      "seriesName": "跳出率",
+      "unit": "%",
+      "seriesData": [0, 0, 0, 0, 0, 0, 100.00, 0, 0, 0, 0, 0, 0, 0, 0, 75.00, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
+  },
+  "pageVisit": {
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    },
+    "pvChart": {
+      "seriesName": "页面流量排名",
+      "yAxisData": ["http://www.jumoretong.com/active/1", "http://www.jumoretong.com"],
+      "seriesData": [2, 6]
+    },
+    "existCountChart": {
+      "seriesName": "页面跳出排名",
+      "yAxisData": ["http://www.jumoretong.com/active/1", "http://www.jumoretong.com"],
+      "seriesData": [2, 6]
+    }
+  },
+  "getSource": {
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    },
+    "lineChart": {
+      "legendData": ["直接访问", "搜索引擎"],
+      "xAxisData": ["20170101", "20170102", "20170103", "20170104", "20170105", "20170106", "20170107", "20170108", "20170109", "20170110", "20170111", "20170112", "20170113", "20170114", "20170115", "20170116", "20170117", "20170118", "20170119", "20170120", "20170121", "20170122", "20170123", "20170124", "20170125", "20170126", "20170127", "20170128", "20170129", "20170130", "20170131", "20170201", "20170202", "20170203", "20170204", "20170205", "20170206", "20170207", "20170208", "20170209", "20170210", "20170211", "20170212", "20170213", "20170214", "20170215", "20170216", "20170217", "20170218", "20170219", "20170220", "20170221", "20170222", "20170223", "20170224", "20170225", "20170226", "20170227", "20170228", "20170301"],
+      "seriesData": [
+        [0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      ]
+    },
+    "pieChart": {
+      "legendData": ["直接访问", "搜索引擎"],
+      "seriesData": [{
+        "name": "直接访问",
+        "value": "6"
+      }, {
+        "name": "搜索引擎",
+        "value": "2"
+      }]
+    }
+  },
+  "vistors": {
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    },
+    "newPercent": "50.00%",
+    "oldPercent": "50.00%",
+    "tableData": [{
+      "name": "浏览量",
+      "newNumber": "10",
+      "oldNumber": "13"
+    }, {
+      "name": "访客数",
+      "newNumber": "8",
+      "oldNumber": "8"
+    }, {
+      "name": "平均访问时长",
+      "newNumber": "134.125",
+      "oldNumber": "111.25"
+    }]
+  },
+  "getAreas": {
+    "status": {
+      "code": "200",
+      "message": "Successful!"
+    },
+    "data": [{
+      "name": "广东",
+      "value": "1"
+    }, {
+      "name": "河北",
+      "value": "2"
+    }, {
+      "name": "广西",
+      "value": "15"
+    }, {
+      "name": "浙江",
+      "value": "4"
+    }, {
+      "name": "北京",
+      "value": "1"
+    }],
+    "max": 15
+  }
+
+}

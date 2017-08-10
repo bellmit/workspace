@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jumore:dove-web:1.6.1-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/.m2/repository/com/jumore/dove-web/1.6.1-SNAPSHOT/dove-web-1.6.1-20170808.052530-76.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/.m2/repository/com/jumore/dove-web/1.6.1-SNAPSHOT/dove-web-1.6.1-20170808.052530-76-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/.m2/repository/com/jumore/dove-web/1.6.1-SNAPSHOT/dove-web-1.6.1-20170808.052530-76-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

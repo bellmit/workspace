@@ -1,0 +1,101 @@
+-------------- ↓ 融资趋势、分析、明细 -----------------------------------------------
+
+融资趋势折线图
+type 类型：APPLY(0, "融资申请笔数"), REQUIRE(1, "融资需求笔数"), SIGNED(2, "融资签约笔数")
+/biservice/v1/jrt/financing/trend/lineChart/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"平台融资趋势","title":"平台融资趋势","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesData":[0,0]}}
+
+
+融资趋势分析折线图
+type 类型：同上
+/biservice/v1/jrt/financing/trend/analysis/lineChart/platform/1025/startDate/20170101/endDate/20170707/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"平台融资趋势","title":"平台融资趋势","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesData":[0,0]}}
+
+
+融资明细 表格
+type 类型：同上
+/biservice/v1/jrt/financing/trend/detail/limit/10/offset/0/type/0
+{"tableData":[{"create_time":"20161201","apply_no":"sq20170109a0001","company_name":"测试公司小学校","product_name":"e保通","org_company_name":"聚融通测试a","amount_app":10248,"month_app":1},{"create_time":"20161201","apply_no":"sq20170109a0002","company_name":"测试公司小学校","product_name":"不借钱","org_company_name":"聚贸银行","amount_app":1,"month_app":1}],"status":{"code":"200","message":"Successful!"}}
+
+-------------- ↑ 融资趋势、分析、明细 -----------------------------------------------
+
+----------------------------总览数据概览-----------------------------
+/biservice/v1/jrt/overview/OperationOverview
+{"status":{"code":"200","message":"Successful!"},"data":{"入驻企业":"205","融资签约企业":"11","入驻机构":"40","上架融资产品":"56","融资申请":"87","签约金额":"100000000000103.87"}}
+----------------------------业务数据概览-----------------------------
+/biservice/v1/jrt/overview/ServiceDataOverview/20160401/20170701
+{"status":{"code":"200","message":"Successful!"},"data":{"入驻企业":"205","上架产品":"56","签约企业":"11","融资申请":"87","融资签约":"27","签约金额":"100000000000103.87"}}
+----------------------------总览注册转化-----------------------------
+/biservice/v1/jrt/overview/RegistrationConversion/20160401/20170701
+{"status":{"code":"200","message":"Successful!"},"map":{"注册":{"value":"250","Conv":""},"认证或加入公司":{"value":"88","Conv":"35.20"},"提交融资需求":{"value":"26","Conv":"29.54"},"提交融资申请":{"value":"17","Conv":"65.38"},"签约完成":{"value":"11","Conv":"64.70"}}}
+
+/**
+ * type:入驻企业类别饼图.
+ * 
+ * @author Administrator
+ * @date 2017年7月5日 上午10:23:41
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jrt/company/type/
+ 
+ /**
+ * productType:上架产品类型饼图.
+ * 
+ * @author Administrator
+ * @date 2017年7月5日 上午10:27:00
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jrt/company/productType/
+ 
+ /**
+ * area:企业用户区域分布.
+ * 
+ * @author Administrator
+ * @date 2017年7月5日 上午10:28:45
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jrt/company/area/
+ 
+ /**
+ * enterTrend:入驻企业区域图.
+ * 
+ * @author Administrator
+ * @date 2017年7月5日 上午10:43:50
+ * @param startDate
+ * @param endDate
+ * @param enterpriseType 0:其它;51:工厂;52:贸易商;53:工贸一体
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jrt/company/enterTrend/{startDate}/{endDate}/{enterpriseType}/
+ 
+ /**
+ * shelfTrend:上架产品区域图.
+ * 
+ * @author Administrator
+ * @date 2017年7月5日 上午10:49:30
+ * @param startDate
+ * @param endDate
+ * @param productType
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jrt/company/shelfTrend/{startDate}/{endDate}/{productType}/
+ 
+ /**
+ * shelfProductType:上架产品类型列表.
+ * 
+ * @author Administrator
+ * @date 2017年7月11日 上午9:42:28
+ * @param startDate
+ * @param endDate
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/jrt/company/shelfProductType/{startDate}/{endDate}/
+ 
+ 
+ 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>账户信息</title>
+  #parse("./common/header.html")   
+ <link href="$!rc.contextPath/static/css/detail.css" type="text/css" rel="stylesheet"/>
+ 
+<!--业务逻辑-->
+<script type="text/javascript"
+	src="$!rc.contextPath/static/html/common/common.js"></script>
+
+
+<!-- uploadify end -->
+</head>
+<body>
+
+	<form method="post" id="addUserForm" name="addUserForm"
+		action="$!ServiceName/user/add">
+		<input type="hidden" name="id" id="id" 
+			class="input-text" />
+		<input type="hidden" name="role" id="role" value="1"
+			class="input-text" />
+
+		<div class="layer-pop detail-pop">
+			<div class="detail-cont">
+				<table class="detail-content" cellpadding="2" cellspacing="2">
+					<tr>
+						<td class="detail-label"><em>*</em>姓名：</td>
+						<td colspan="3"><input name="name" type="text"
+							class="input-txt"  maxlength="20"
+							  title="请输入姓名！"
+							required></td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em>*</em>账号：</td>
+						<td colspan="3"><input name="account" type="text"
+							class="input-txt"  maxlength="20"
+							  title="请输入账号！"
+							required></td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em>*</em>部门：</td>
+						<td colspan="3"><input name="department" type="text"
+							class="input-txt"  maxlength="30"
+							  title="请输入部门！"
+							required></td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em></em>密码：</td>
+						<td colspan="3"><input name="password" type="password" readonly="true"
+							class="input-txt"  maxlength="20" value="123456"
+							  title="请输入密码！"
+							>  <em>默认密码：123456</em>
+							</td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em></em>邮箱：</td>
+						<td colspan="3"><input name="mail" type="text"
+							class="input-txt"  maxlength="50"
+							  title="请输入邮箱！"
+							></td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em></em>联系方式：</td>
+						<td colspan="3"><input name="phone" type="text"
+							class="input-txt"  maxlength="50"
+							  title="请输入联系方式！"
+							 ></td>
+					</tr>
+					<tr>
+						<td class="detail-label"><em></em>备注：</td>
+						<td colspan="3"><input name="remark" type="text"
+							class="input-txt"  maxlength="30"
+							  title="请输入备注！"
+							 ></td>
+					</tr>
+			 
+				</table>
+
+				<div class="btn-area">
+					<input type="button" class="btn J_confirm " id="J_confirm1"
+						value="保存" /> <input type="button" class="btn J_cancel "
+						id="J_cancel1" value="取消" />
+				</div>
+			</div>
+		</div>
+	</form>
+ 
+	<script type="text/javascript"
+		src="$!rc.contextPath/static/html/user/edit.js"></script>
+
+</body>
+</html>

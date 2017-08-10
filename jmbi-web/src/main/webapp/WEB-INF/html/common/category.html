@@ -1,0 +1,112 @@
+<select class="input-txt w-short category1" name="firstCategory">
+	<option value="">请选择</option>
+    #foreach($!category in $!firstCategories)
+        <option #if($!category.id == $!firstId)selected#end value="$!category.id">$!category.text</option>
+	#end
+</select>
+<select class="input-txt w-short category2" name="secondCategory">
+    <option value="">请选择</option>
+    #foreach($!category in $!secondCategories)
+        <option #if($!category.id == $!secondId)selected#end value="$!category.id">$!category.text</option>
+	#end
+</select>
+<select class="input-txt w-short category3" name="goodsCategory" title="请选择产品类别！" required>
+    <option value="">请选择</option>
+    #foreach($!category in $!thirdCategories)
+        <option #if($!category.id == $!thirdId)selected#end value="$!category.id">$!category.text</option>
+	#end
+</select>
+
+<script type="text/javascript">
+	var category1 = $(".category1"),
+		category2 = $(".category2"),
+		category3 = $(".category3");
+$(function() {
+	category1.select2({width : "162px"});
+	category2.select2({width : "162px"});
+	category3.select2({width : "162px"});
+	$(".category1").on("change", function() {
+		var _this = $(this),
+		parentId = _this.val();
+		if(parentId == "") {
+			category2.html('<option value="">请选择</option>');
+			category3.html('<option value="">请选择</option>');
+			category2.change();
+			category3.change();
+			return;
+		}
+		$.ajax({
+			cache: true,
+			type: "get",
+			url:"../base/categroy",
+			data:{"parentId" : parentId},
+			dataType:"json",
+			error: function(request) {
+				layer.alert("超时或系统异常");
+			},
+			success: function(res) {
+				if(res && res.statusCode == 200){
+					var dataList = res.data;
+					category2.html('');
+					var html = '<option value="">请选择</option>';
+					for(var i = 0; i < dataList.length; i++) {
+						html += '<option value="' + dataList[i].id + '">' + dataList[i].text + '</option>';
+					}
+					category2.append(html);
+					category2.trigger("change");
+					category2.change();
+				}else{
+					layer.alert(res.message);
+				}
+			}
+		});
+	});
+	
+	$(".category2").on("change", function() {
+		var _this = $(this),
+		parentId = _this.val();
+		if(parentId == "") {
+			category3.html('<option value="">请选择</option>');
+			category3.change();
+			return;
+		}
+		$.ajax({
+			cache: true,
+			type: "get",
+			url:"../base/categroy",
+			data:{"parentId" : parentId},
+			dataType:"json",
+			error: function(request) {
+				layer.alert("超时或系统异常");
+			},
+			success: function(res) {
+				if(res && res.statusCode == 200){
+					var dataList = res.data;
+					category3.html('');
+					var html = '<option value="">请选择</option>';
+					for(var i = 0; i < dataList.length; i++) {
+						html += '<option value="' + dataList[i].id + '">' + dataList[i].text + '</option>';
+					}
+					category3.append(html);
+					category3.change();
+				}else{
+					layer.alert(res.message);
+				}
+			}
+		});
+	});
+});
+
+function setCategoryLevel(level) {
+	if(level == 1) {
+		category2.prev().hide();
+		category3.prev().hide();
+	} else if (level == 2){
+		category2.prev().show();
+		category3.prev().hide();
+	} else {
+		category2.prev().show();
+		category3.prev().show();
+	}
+}
+</script>

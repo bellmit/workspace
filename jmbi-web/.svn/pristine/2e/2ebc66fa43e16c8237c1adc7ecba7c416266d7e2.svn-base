@@ -1,0 +1,48 @@
+/*
+.main-block,
+.main-block #wl-cont{
+	display: inline-block;
+	min-width: 100%;	
+}
+*/
+/*
+.bootstrap-table,
+.fixed-table-container,
+.fixed-table-body{
+	display: inline-block;
+	min-width: 100%;
+}
+*/
+.bootstrap-table .fixed-table-body{
+	overflow-x: auto;
+}
+.bootstrap-table .table{
+    min-width: 100%;
+}
+.sch-wrap .col-lg-2,
+.sch-wrap .col-lg-3,
+.sch-wrap .col-lg-4{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.col-lg-2{
+	min-width: 235px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.col-lg-2.btn-area{
+	width: auto;
+	min-width: auto;
+}
+.col-lg-3{
+	min-width: 353px;
+}
+.col-lg-4{
+	min-width: 470px;
+}
+.input-group-addon{
+	min-width: 81px;
+}
+.form-control.wl-date{
+	/*width: 150px;*/
+}

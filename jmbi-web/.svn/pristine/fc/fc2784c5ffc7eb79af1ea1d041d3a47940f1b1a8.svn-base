@@ -1,0 +1,53 @@
+{
+  "platform": "聚咨询BI",
+  "menuData": [{
+      "name": "用户行为",
+      "path": "1",
+      "iconClass": {
+        "icon-yhxw": true
+      },
+      "meta": ["81601", "81602", "81603", "81604"],
+      "items": [{
+          "name": "流量分析",
+          "path": "flow-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81602"]
+        },
+        {
+          "name": "来源分析",
+          "path": "source-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81603"]
+        },
+        {
+          "name": "登录分析",
+          "path": "login-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81604"]
+        }
+      ]
+    },
+    {
+      "name": "运营情况",
+      "path": "2",
+      "iconClass": {
+        "icon-yyqk": true
+      },
+      "meta": ["81605", "81606"],
+      "items": [{
+        "name": "运营分析",
+        "path": "operate-analysis",
+        "iconClass": {
+          "icon-item": true
+        },
+        "meta": ["81606"]
+      }]
+    }
+  ]
+}

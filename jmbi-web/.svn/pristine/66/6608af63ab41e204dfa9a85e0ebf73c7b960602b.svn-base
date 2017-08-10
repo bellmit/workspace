@@ -1,0 +1,270 @@
+﻿
+//-------------- 交易BI运营分析  总览 --------------
+
+/biservice/v1/operate/total/102000  //  运营总览顶部6个统计图
+{"status":{"code":"200","message":"Successful!"},"data":[{"nowDate":"2017-05-10","MemberTotal":"1131.00"},{},{"OpenStoreTotal":"121.00"},{"ItemTotal":"754.00"},{"OrderTotal":"676.00"},{"PayTotal":"190.00"},{"TranTotal":"2916.20"}]}
+
+/biservice/v1/operate/getBasic/102000/20170420/20170501/  //  运营总览pv、uv等12个基本指标
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20170420","20170421","20170422","20170423","20170424","20170425","20170426","20170427","20170428","20170429","20170430","20170501"],"pv":{"title":"浏览量PV趋势情况","seriesName":"浏览量PV","unit":"次","seriesData":[5,0,0,0,6,11,11,4,2,0,0,1]},"uv":{"title":"访客数UV趋势情况","seriesName":"访客数UV","unit":"个","seriesData":[1,0,0,0,5,3,4,2,2,0,0,1]},"ips":{"title":"访问ip数趋势情况","seriesName":"访问ip数","unit":"个","seriesData":[1,0,0,0,3,2,2,1,1,0,0,1]},"ave":{"title":"平均停留时长趋势情况","seriesName":"平均停留时长","unit":"秒","seriesData":[8,0,0,0,39,98,24,14,105,0,0,120]},"avg":{"title":"平均访问页数趋势情况","seriesName":"平均访问页数","unit":"次","seriesData":[1.67,0,0,0,1.20,1.10,1.57,1.33,1.00,0,0,1.00]},"exit":{"title":"跳出率趋势情况","seriesName":"跳出率","unit":"%","seriesData":[66.67,0,0,0,80,90,71.43,66.67,100,0,0,100]},"threeCard":{"title":"三证审核趋势情况","seriesName":"三证审核","unit":"个","seriesData":[41,26,5,0,22,29,29,44,17,0,0,0]},"openStoreTotal":{"title":"开通店铺数趋势情况","seriesName":"开通店铺数","unit":"个","seriesData":[18,23,2,0,3,12,14,9,6,0,0,0]},"itemTotal":{"title":"发布商品数趋势情况","seriesName":"发布商品数","unit":"件","seriesData":[4,28,16,1,13,14,10,23,9,0,0,0]},"orderTotal":{"title":"订单数趋势情况","seriesName":"订单数","unit":"笔","seriesData":[15,32,27,0,26,13,39,28,15,0,0,0]},"payTotal":{"title":"付款笔数趋势情况","seriesName":"付款笔数","unit":"笔","seriesData":[5,0,0,0,12,10,5,3,1,0,0,0]},"tranTotal":{"title":"金额趋势情况","seriesName":"金额","unit":"元","seriesData":[55.00,0,0,0,182.80,562.00,273.00,83.00,699993.00,0,0,0]}}
+/biservice/v1/operate/getBasic/102000/20170424/20170424/  //  按小时
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],"pv":{"title":"浏览量PV趋势情况","seriesName":"浏览量PV","unit":"次","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"uv":{"title":"访客数UV趋势情况","seriesName":"访客数UV","unit":"个","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"ips":{"title":"访问ip数趋势情况","seriesName":"访问ip数","unit":"个","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"ave":{"title":"平均停留时长趋势情况","seriesName":"平均停留时长","unit":"秒","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"avg":{"title":"平均访问页数趋势情况","seriesName":"平均访问页数","unit":"次","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"exit":{"title":"跳出率趋势情况","seriesName":"跳出率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"threeCard":{"title":"三证审核趋势情况","seriesName":"三证审核","unit":"个","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,3,1,0,0,0]},"openStoreTotal":{"title":"订单数趋势情况","seriesName":"订单数","unit":"笔","seriesData":[0,0,0,0,0,0,0,0,0,2,2,1,0,1,0,3,5,5,1,6,0,0,0,0]},"itemTotal":{"title":"发布商品数趋势情况","seriesName":"发布商品数","unit":"件","seriesData":[0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,8,2,1,0,0,0,0,0]},"orderTotal":null,"payTotal":{"title":"付款笔数趋势情况","seriesName":"付款笔数","unit":"笔","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,6,0,0,0,0,0]},"tranTotal":{"title":"金额趋势情况","seriesName":"金额","unit":"元","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,80.50,102.30,0,0,0,0,0]}}
+
+/biservice/v1/operate/getBuyer/102000/20170420/20170501/  //  运营总览买家转化率统计图
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20170420","20170421","20170422","20170423","20170424","20170425","20170426","20170427","20170428","20170429","20170430","20170501"],"authConv":{"title":"认证转化率趋势情况","seriesName":"认证转化率","unit":"%","seriesData":[30.43,71.43,75.0,0,20.0,36.36,9.09,15.37,66.67,0,0,0]},"releaseDemandConv":{"title":"发布需求转化率趋势情况","seriesName":"发布需求转化率","unit":"%","seriesData":[57.14,0,33.33,0,100.0,75.0,100.0,0,10.0,0,0,0]},"orderConv":{"title":"发布需求转化率趋势情况","seriesName":"发布需求转化率","unit":"%","seriesData":[66.67,0,100.0,0,0,50.0,33.33,0,0,0,0,0]}}
+/biservice/v1/operate/getBuyer/102000/20170420/20170420/  //  按小时
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],"authConv":{"title":"认证转化率趋势情况","seriesName":"认证转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,50.0,50.0,50.0,0,100.0,100.0,0,25.0,0,0,0,0,0,0,0]},"releaseDemandConv":{"title":"发布需求转化率趋势情况","seriesName":"发布需求转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,100.0,0,0,0,100.0,0,0,100.0,0,0,0,0,0,0,0]},"orderConv":{"title":"下单转化率趋势情况","seriesName":"下单转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,100.0,0,0,0,0,0,0,0]}}
+
+/biservice/v1/operate/getSeller/102000/20170420/20170501/  //  运营总览卖家转化率统计图
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20170420","20170421","20170422","20170423","20170424","20170425","20170426","20170427","20170428","20170429","20170430","20170501"],"authConv":{"title":"认证转化率趋势情况","seriesName":"认证转化率","unit":"%","seriesData":[30.43,71.43,75.0,0,20.0,36.36,9.09,15.37,66.67,0,0,0]},"dealConv":{"title":"成交转化率趋势情况","seriesName":"成交转化率","unit":"%","seriesData":[100.0,0,0,0,100.0,50.0,0,0,0,0,0,0]},"itemConv":{"title":"发布商品转化率趋势情况","seriesName":"发布商品转化率","unit":"%","seriesData":[60.0,0,0,0,100.0,66.67,0,0,100.0,0,0,0]},"openStoreConv":{"title":"店铺开通转化率趋势情况","seriesName":"店铺开通转化率","unit":"%","seriesData":[71.43,60.0,0,0,100.0,75.0,0,0,10.0,0,0,0]}}
+/biservice/v1/operate/getSeller/102000/20170420/20170420/  //  按小时
+ {"status":{"code":"200","message":"Successful!"},"xAxisData":["00:00","01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"],"authConv":{"title":"认证转化率趋势情况","seriesName":"认证转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,50.0,50.0,50.0,0,100.0,100.0,0,25.0,0,0,0,0,0,0,0]},"itemConv":{"title":"发布商品转化率趋势情况","seriesName":"发布商品转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,0,0,100.0,0,0,0,0,100.0,0,0,0,0,0,0,0]},"dealConv":{"title":"成交转化率趋势情况","seriesName":"成交转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,0,0,100.0,0,0,0,0,100.0,0,0,0,0,0,0,0]},"openStoreConv":{"title":"店铺开通转化率趋势情况","seriesName":"店铺开通转化率","unit":"%","seriesData":[0,0,0,0,0,0,0,0,0,0,0,100.0,0,100.0,100.0,0,100.0,0,0,0,0,0,0,0]}}
+
+/biservice/v1/operateOrder/orderType/platform/100900/startDate/20170420/endDate/20170505 //运营总览订单类型
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["有色金属矿test","贵金属矿","黑色金属矿"],"seriesData":[{"name":"有色金属矿test","value":"2"},{"name":"贵金属矿","value":"2"},{"name":"黑色金属矿","value":"3"}]}}
+
+/biservice/v1/operateOrder/orderPay/platform/100900/startDate/20170420/endDate/20170505 //运营总览订单金额
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":["数量","金额"],"xAxisData":["有色金属矿test","贵金属矿","黑色金属矿"],"seriesData":{"left":[2,2,3],"right":[83.55,1189000.0,12627.2]}}}
+
+/biservice/v1/operate/getTop/20160420/20170501/  //  运营总览关联公司top5、子账户开通top5
+{"status":{"code":"200","message":"Successful!"},"affiliateCompanyChart":{"title":"关联公司top5排名趋势","seriesName":"关联公司","unit":"个","xAxisData":[4,3,3,3,1],"seriesData":["大美的消费品企业","泊位风格","挖煤事业部","供应LQY公司","一一企业"]},"subAccountOpening":{"title":"子账号开通top5排名趋势","seriesName":"子账号开通","unit":"个","xAxisData":[5,4,3,2,2],"seriesData":["manyu9007","ww注册一个新的测试企业","田志鑫测试企业","李媛注册交易线企业0004","浙江阿飞"]}}、
+
+/biservice/v1/operateGoods/goodsCate/platform/100900/startDate/20170420/endDate/20170505 //运营总览发布商品类目占有率
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["贵金属矿","有色金属矿test","黑色金属矿"],"seriesData":[{"name":"贵金属矿","value":"3"},{"name":"有色金属矿test","value":"4"},{"name":"黑色金属矿","value":"3"}]}}
+
+/biservice/v1/operateConv/convFunnel/platform/101100/startDate/20170502/endDate/20170531 //运营总览转化漏斗
+{"status":{"code":"200","message":"Successful!"},"funnelChart":{"legendData":["整站UV","列表UV","详情UV","购物车UV","下单UV","订单支付UV","确认发货UV","确认收货UV"],"seriesData":[{"name":"整站UV","value":"0"},{"name":"列表UV","value":"0"},{"name":"详情UV","value":"0"},{"name":"购物车UV","value":"0"},{"name":"下单UV","value":"101"},{"name":"订单支付UV","value":"51"},{"name":"确认发货UV","value":"51"},{"name":"确认收货UV","value":"51"}]}}
+
+
+====店铺运营=====
+
+开通店铺趋势图
+biservice/v1/shop/openTrend/2017-04-01/2017-04-28/
+{"legendData":null,"xAxisData":["2017年04月01日","2017年04月02日","2017年04月03日","2017年04月04日","2017年04月05日","2017年04月06日","2017年04月07日","2017年04月08日","2017年04月09日","2017年04月10日","2017年04月11日","2017年04月12日","2017年04月13日","2017年04月14日","2017年04月15日","2017年04月16日","2017年04月17日","2017年04月18日","2017年04月19日","2017年04月20日","2017年04月21日","2017年04月22日","2017年04月23日","2017年04月24日","2017年04月25日","2017年04月26日","2017年04月27日","2017年04月28日"],"seriesData":[2,0,0,0,2,1,0,0,0,0,0,0,2,2,0,0,3,0,2,3,8,1,0,2,3,3,3,3]}
+
+基础资料完善统计及占比
+biservice/v1/shop/perfect/2017-04-01/2017-04-28/
+{"seriesName":null,"seriesData":[8,39,41,41,41],"yAxisData":["企业动态","产品分类","企业介绍","背景图","LOGO"],"title":null,"status":null}
+
+/**
+ * 
+ * releaseRank:商品发布排行.
+ * 
+ * @author Administrator
+ * @date 2017年5月3日 上午10:58:57
+ * @param startDate
+ * @param endDate
+ * @param platform 平台ID
+ * @return
+ * @throws Exception
+ */
+商品发布数排行
+biservice/v1/shop/releaseRank/2017-04-01/2017-04-28/100700/
+{"seriesName":null,"seriesData":[29,25,17,16,11],"yAxisData":["weilin测试jyxcs10001","weilin测试jyxcs10002","挖煤事业部","张三注册企业00001","今天天气好晴朗"],"title":"商品发布数排行","status":null}
+
+店铺分类排行
+biservice/v1/shop/categoryRank/2017-04-01/2017-04-28/
+{"seriesName":null,"seriesData":[11,7,4,3,2],"yAxisData":["张三注册企业00001","weilin测试jyxcs10002","煤炭供应商","ceshi新号2000","ll五金工厂"],"title":"店铺分类排行","status":null}
+
+/**
+ * 
+ * dealRank:店铺成交排行
+ * 
+ * @author Administrator
+ * @date 2017年5月3日 下午2:49:54
+ * @param startDate
+ * @param endDate
+ * @param platform 平台ID
+ * @return
+ * @throws Exception
+ */
+店铺成交排行
+biservice/v1/shop/dealRank/2017-04-01/2017-04-28/100700/
+{"seriesName":null,"seriesData":[1191831.33,770992.00,47900.00,33333.00,20500.00],"yAxisData":["张三注册企业00001","weilin测试jyxcs10001","各异神仙","我就测试下","丢丢丢丢丢丢丢"],"title":"店铺成交排行","status":null}
+
+
+/**
+ * 
+ * releaseRank:商品发布列表.
+ * 
+ * @author Administrator
+ * @date 2017年5月3日 上午10:58:57
+ * @param startDate
+ * @param endDate
+ * @param platform 平台ID 
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/shop/releaseList/20170401/20170428/100700/
+[{"company_id":1000000210,"company_name":"weilin测试jyxcs10001","gsxz":"贸易商","total":29},{"company_id":1000000212,"company_name":"weilin测试jyxcs10002","gsxz":"贸易商","total":25},{"company_id":1000000253,"company_name":"挖煤事业部","gsxz":"工贸一体","total":17},{"company_id":1000000270,"company_name":"张三注册企业00001","gsxz":"贸易商","total":16},{"company_id":1000000299,"company_name":"今天天气好晴朗","gsxz":"贸易商","total":11},{"company_id":1000000209,"company_name":"DHC778899","gsxz":"贸易商","total":9},{"company_id":1000000293,"company_name":"生活大爆炸","gsxz":"工贸一体","total":7},{"company_id":1000000228,"company_name":"煤炭供应商","gsxz":"工贸一体","total":6},{"company_id":1000000224,"company_name":"泊位风格","gsxz":"工贸一体","total":6},{"company_id":1000000117,"company_name":"供应LQY公司","gsxz":"工贸一体","total":4}]
+
+/**
+ * 
+ * categoryList:店铺分类列表.
+ * 
+ * @author Administrator
+ * @param startDate
+ * @param endDate
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/shop/categoryList/20170401/20170428/
+ [{"gsxz":"贸易商","shop_id":100105,"shop_cate_sum":11,"comp_name":"张三注册企业00001","comp_id":1000000270,"category_name":"分类1,测试,SSR"},{"gsxz":"贸易商","shop_id":100087,"shop_cate_sum":7,"comp_name":"weilin测试jyxcs10002","comp_id":1000000212,"category_name":"食品,机械,SR"},{"gsxz":"工贸一体","shop_id":100093,"shop_cate_sum":4,"comp_name":"煤炭供应商","comp_id":1000000228,"category_name":"SSR,SR,分类11"},{"gsxz":"工厂","shop_id":100108,"shop_cate_sum":3,"comp_name":"ceshi新号2000","comp_id":1000000282,"category_name":null},{"gsxz":"工厂","shop_id":100090,"shop_cate_sum":2,"comp_name":"ll五金工厂","comp_id":1000000221,"category_name":"一楼,农产品,二楼"},{"gsxz":"工厂","shop_id":100119,"shop_cate_sum":2,"comp_name":"杭州张三集团公司","comp_id":1000000302,"category_name":"分类11"},{"gsxz":"工厂","shop_id":100124,"shop_cate_sum":2,"comp_name":"ww注册一个新的测试企业","comp_id":1000000252,"category_name":"分类11"},{"gsxz":"贸易商","shop_id":100086,"shop_cate_sum":2,"comp_name":"weilin测试jyxcs10001","comp_id":1000000210,"category_name":"机械,分类1,有色"},{"gsxz":"工贸一体","shop_id":100121,"shop_cate_sum":2,"comp_name":"星期三星期三星期三星期三","comp_id":1000000310,"category_name":"炼焦煤,糖类"},{"gsxz":"工贸一体","shop_id":100110,"shop_cate_sum":2,"comp_name":"挖煤事业部","comp_id":1000000253,"category_name":"就是吃吃,食品,分类1"}]
+
+/**
+ * 
+ * dealList:成交分析列表.
+ * 
+ * @author Administrator
+ * @param startDate
+ * @param endDate
+ * @param platform 平台ID 
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/shop/dealList/20170401/20170428/100700/
+[{"store_id":100086,"comp_id":1000000210,"comp_name":"weilin测试jyxcs10001","money_total":470972.00,"order_num":21,"gsxz":"贸易商","goods_name":"fnjrgtgjt$%$%#%%%%%%^^^^,棕榈油厂家 工业润滑油 生物柴油原料 价格面议,开平板"},{"store_id":100105,"comp_id":1000000270,"comp_name":"张三注册企业00001","money_total":302802.53,"order_num":11,"gsxz":"贸易商","goods_name":"银锭,电解铜,铜矿"},{"store_id":100103,"comp_id":1000000259,"comp_name":"各异神仙","money_total":47900.00,"order_num":3,"gsxz":"工贸一体","goods_name":"螺纹钢"},{"store_id":1000000002,"comp_id":1000002,"comp_name":"江西铜矿集团有限公司","money_total":33333.00,"order_num":1,"gsxz":"工贸一体","goods_name":null},{"store_id":100128,"comp_id":1000000365,"comp_name":"丢丢丢丢丢丢丢","money_total":20500.00,"order_num":1,"gsxz":"工贸一体","goods_name":"动力煤动力煤咯咯咯"},{"store_id":100087,"comp_id":1000000212,"comp_name":"weilin测试jyxcs10002","money_total":17434.66,"order_num":42,"gsxz":"贸易商","goods_name":"钒矿,测试订单1,动力煤神华煤炭"},{"store_id":100100,"comp_id":1000000248,"comp_name":"一零七叶","money_total":9000.00,"order_num":1,"gsxz":"工厂","goods_name":"铂矿"},{"store_id":100110,"comp_id":1000000253,"comp_name":"挖煤事业部","money_total":4940.00,"order_num":5,"gsxz":"工贸一体","goods_name":"普卷 ,大颗粒玉米"},{"store_id":100121,"comp_id":1000000310,"comp_name":"星期三星期三星期三星期三","money_total":4050.00,"order_num":1,"gsxz":"其他","goods_name":null},{"store_id":100090,"comp_id":1000000221,"comp_name":"ll五金工厂","money_total":3414.00,"order_num":4,"gsxz":"工厂","goods_name":null}]
+
+
+
+
+
+
+
+
+//-------------- 注册分析  日新增用户 --------------
+
+新增注册数 折线图：
+biservice/v1/register/newlyIncr/lineChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"新增注册数","xAxisData":["20160503","20160504","20160505"],"seriesData":[27,27,29]}}
+
+新增注册数 饼图：
+biservice/v1/register/newlyIncr/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"}"pieChart":{"legendData":"认证中心同步","seriesData":[{"name":"认证中心同步","value":"3123"}]}}
+
+注册明细表：
+biservice/v1/register/newlyIncr/table/platform/1025/startDate/20160501/endDate/20170701/limit/20/offset/0
+{"status":{"code":"200","message":"Successful!"},"tableData":[{"date":"2016-05-03","source":"认证中心同步","amount":"27","rate":"0.86%"},{"date":"2016-05-04","source":"认证中心同步","amount":"27","rate":"0.86%"}],
+ "counts": 3123,"percent": "30.15%", "totalSize":1}
+
+
+//-------------- 注册分析  认证用户 --------------
+
+认证用户情况 折线图：
+biservice/v1/register/authUser/overview/lineChart/platform/1025/startDate/20160501/endDate/20170701/type/1
+type，0：浏览量，1：独立访客，2：注册会员，3：三证审核，4：授权书
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"浏览量","xAxisData":["20160503","20160504","20160505"],"seriesData":[27,27,29]}}
+
+认证用户情况 三证审核历史累积：
+biservice/v1/register/authUser/cert3/history/platform/1025
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["工贸一体","贸易商"],"seriesData":[{"name":"工贸一体","value":"299"},{"name":"贸易商","value":"165"}]},"counts":99999（三证审核历史累积数量）}
+
+认证审核通过 柱状图：
+biservice/v1/register/authUser/passed/histogram/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"认证审核通过","xAxisData":["20161121","20161122"],"seriesData":[1,1]}}
+
+三证合一比例 饼图:
+biservice/v1/register/authUser/licPercent/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["普通三证","多证合一"],"seriesData":[{"name":"普通三证","value":"361"},{"name":"多证合一","value":"875"}]},"counts":5917}
+
+三证、授权地域分布 中国地图:
+biservice/v1/register/authUser/areaDist/chinaMap/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["青海","浙江"],"seriesData":[{"name":"青海","value":"1"},{"name":"浙江","value":"48"}]},"counts":574}
+
+三证、授权地域分布TOP10（条形图 y轴数据 在yAxisData）:
+biservice/v1/register/authUser/areaDist/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"三证、授权地域分布TOP10","yAxisData":["广东","北京","浙江","山东","上海","四川","河北","江苏","天津","辽宁"],"seriesData":[67,58,48,45,36,33,33,28,26,24]}}
+
+
+//-------------- 注册分析  签章支付 --------------
+概览 折线图：
+biservice/v1/register/visaAndPay/overview/lineChart/platform/102000/startDate/20160501/endDate/20170701/type/1
+type，0：浏览量，1：独立访客，2：签章开通数，3：支付开通数
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"浏览量","xAxisData":["20160503","20160504","20160505"],"seriesData":[27,27,29]}}
+
+签章\支付 开通的历史累计饼图
+biservice/v1/register/visaAndPay/history/pieChart/platform/102000
+{"status":{"code":"200","message":"Successful!"},"visa_history_counts":46,"pay_history_counts":56,"pieChart":{"legendData":["浦发银行","民生银行"],"seriesData":[{"name":"浦发银行","value":"20"},{"name":"民生银行","value":"23"}]}}
+
+签章和支付 开通地域分布 中国地图:
+biservice/v1/register/visaAndPay/areaDist/chinaMap/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"legend":{"data":["支付","签章"]},"series":[{"name":"支付","data":[{"name":"北京","value":"8"},{"name":"天津","value":"3"}]},{"name":"签章","data":[{"name":"北京","value":"10"},{"name":"天津","value":"7"}]}]}
+
+签章 开通地域分布top10 条形图：
+biservice/v1/register/visa/areaDist/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"签章","xAxisData":[],"yAxisData":["浙江","天津"],"seriesData":[9,7]}}
+
+支付 开通地域分布top10 条形图：
+biservice/v1/register/pay/areaDist/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"支付","xAxisData":[],"yAxisData":["浙江","天津"],"seriesData":[9,7]}}
+
+
+
+
+
+//-------------- 成交分析 --------------
+//平台运营情况表
+/biservice/v1/deal/operate/20170401/20170428/100700/ 
+[{"order_count":2,"order_money":864.00,"payment_count":2,"payment_money":864.00},{"order_count":65,"order_money":21371.50,"payment_count":65,"payment_money":21371.50}]
+
+//交易转化跟踪
+/biservice/v1/deal/translate/20170401/20170428/100700/
+{"legendData":["下单uv","确认订单uv","签订合同uv","订单支付uv"],"seriesName":"交易转化跟踪","seriesData":[{"value":13,"name":"下单uv"},{"value":6,"name":"确认订单uv"},{"value":4,"name":"签订合同uv"},{"value":4,"name":"订单支付uv"}],"title":"交易转化跟踪"}
+
+//提货方式用户占比
+/biservice/v1/deal/pickup/20170401/20170428/100700/
+{"legendData":["卖家配送","买家自提"],"seriesName":"提货方式用户占比","seriesData":[{"value":5,"name":"10"},{"value":3,"name":"20"}],"title":"提货方式用户占比"}
+
+//交货时间占比
+/biservice/v1/deal/delivery/20170401/20170428/100700/
+{"legendData":["3天以内"],"seriesName":"交货时间占比","seriesData":[{"value":1,"name":"3天以内"}],"title":"交货时间占比"}
+
+//确认收货时间
+/biservice/v1/deal/receipt/20170401/20170428/100700/
+{"legendData":["3天以内"],"seriesName":"确认收货时间","seriesData":[{"value":1,"name":"3天以内"}],"title":"确认收货时间"}
+
+//结算方式占比
+/biservice/v1/deal/settle/20170401/20170428/100700/
+{"legendData":["定金支付","担保支付","全款支付"],"seriesName":"结算方式占比","seriesData":[{"value":4,"name":"10"},{"value":1,"name":"20"},{"value":1,"name":"30"}],"title":"结算方式占比"}
+
+//支付方式
+/biservice/v1/deal/pay/20170401/20170428/100700/
+{"legendData":["平台支付","线下支付","其它"],"seriesName":"支付方式","seriesData":[{"value":6,"name":"10"},{"value":5,"name":"20"},{"value":3,"name":"40"}],"title":"支付方式"}
+
+//合同方式
+/biservice/v1/deal/contract/20170401/20170428/100700/
+{"legendData":["线下合同","无合同"],"seriesName":"合同方式","seriesData":[{"value":11,"name":"20"},{"value":3,"name":"50"}],"title":"合同方式"}
+
+//支付渠道金额占比
+/biservice/v1/deal/payChannel/20170401/20170428/102000/
+{"legendData":["浦发银行","民生银行","东方付通"],"seriesName":"支付渠道金额占比","seriesData":[{"value":132.00,"name":"浦发银行"},{"value":753.00,"name":"民生银行"},{"value":794.00,"name":"东方付通"}],"title":"支付渠道金额占比"}
+
+/**
+ * 
+ * areaAmount:地域金额.
+ * 
+ * @author Administrator
+ * @param role 角色：seller 卖家、buyer 买家
+ * @param startDate 开始日期
+ * @param endDate 结束日期
+ * @param platform 平台ID
+ * @param sortField 排序字段：ordernum 笔数、paytotal 金额
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/deal/areaAmount/seller/20170401/20170428/100300/ordernum/
+[{"ordernum":6,"paytotal":11800.00,"address_province":86021,"area_name":"辽宁省"},{"ordernum":1,"paytotal":600.00,"address_province":86014,"area_name":"山西省"},{"ordernum":28,"paytotal":140280.00,"address_province":86033,"area_name":"浙江省"},{"ordernum":4,"paytotal":666.00,"address_province":86032,"area_name":"江苏省"},{"ordernum":1,"paytotal":20500.00,"address_province":86011,"area_name":"北京市"}]
+
+/**
+ * 
+ * paymentDays:付款天数用户占比.
+ * 
+ * @author Administrator
+ * @date 2017年5月24日 上午11:01:31
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/deal/paymentDays/20170501/20170523/101200/
+{"legendData":["3天以内"],"seriesName":"付款天数用户占比","seriesData":[{"value":5,"name":"3天以内"}],"title":"付款天数用户占比"}

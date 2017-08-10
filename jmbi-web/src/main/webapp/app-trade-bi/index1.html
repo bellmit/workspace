@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>聚贸大数据BI平台</title>
+
+  <link rel="shortcut icon" href="/static/favicon.ico">
+
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <input type="hidden" id="currentUserName" value='$!session.getAttribute("user_session_key").name'>
+  <input type="hidden" id="currentUserRoleId" value='$!session.getAttribute("user_session_key").role'>
+  <input type="hidden" id="visibleMenuList" value='$!session.getAttribute("user_session_key").functions'>
+  <input type="hidden" id="visiblePlatformIds" value='$!session.getAttribute("user_session_key").platformIds'>
+  <input type="hidden" id="currentPlatformId" value='$!session.getAttribute("platformId")'>
+  <input type="hidden" id="currentPlatformName" value='$!session.getAttribute("platformName")'>
+  <!--<input type="hidden" id="visiblePlatformIds" value='100100,100300,100200'>-->
+  <!--<input type="hidden" id="visibleMenuList" value='8101,8102,8103,8104,8105,8106,8107,8108,8109,8110,8111,8112,8113,8114,8115,8116'>-->
+</body>
+
+</html>

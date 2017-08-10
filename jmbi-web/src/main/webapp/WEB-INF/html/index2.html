@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>聚贸BI</title> 
+#parse("./common/header_index.html")
+<link href="$!rc.contextPath/static/css/index.css" rel="stylesheet" />
+<link href="$!rc.contextPath/static/css/list.css" rel="stylesheet" />
+</head>
+<body class="nav-show">
+	<div id="wrapper">
+		<div class="side-nav">
+			<div class="nav-icon"></div>
+			<div id="user-info">
+				#if($!session.getAttribute("user_session_key").headImg) <img
+					class="user_info" src="$!session.getAttribute("
+					user_session_key").headImg" onerror="this.src='$!rc.contextPath/static/img/user.png';">
+				#else <img class="user_info"
+					src="$!rc.contextPath/static/img/user.png"> #end </br>
+				$!session.getAttribute("user_session_key").name
+			</div>
+			<ul>
+				<!--   #if($!subject.isPermitted('overview_index'))
+            <li class="active"><span class="nav01" data-href="$!ServiceName/overview/index"><span class="img"></span>总览</span><span class="arrow"></span></li>
+        #end
+        #if($!subject.isPermitted('needs_list'))
+            <li><span class="nav07" data-href="$!ServiceName/needs/list"><span class="img"></span>需求管理</span><span class="arrow"></span></li>
+        #end
+         -->
+
+				<li><span class="nav11"
+					data-href="$!ServiceName/company/index"><span
+						class="img"></span>客户管理</span>
+				</li>
+                <li><span class="nav11"
+					data-href="$!ServiceName/report/init"><span
+						class="img"></span>报告管理</span></span>
+				</li>
+				
+				<li><span class="nav11"
+					 data-href="$!ServiceName/help/list" ><span
+						class="img"></span>帮助中心</span><span class="arrow"></span>
+					<div class="sub-nav">
+						<ul class="sub-nav-l">
+							<li><span data-href="$!ServiceName/helpCategories/list">分类管理</span></li>
+							<li><span data-href="$!ServiceName/help/list">帮助管理</span></li>
+						</ul>
+					</div>
+				</li>
+								
+				<li><span class="nav11"
+					data-href="$!ServiceName/notice/list"><span
+						class="img"></span>通知管理</span></span>
+				</li>
+				<li><span class="nav11"
+					data-href="$!ServiceName/information/list"><span
+						class="img"></span>资讯管理</span></span>
+				</li>
+				
+				<li><span class="nav11"
+					data-href="$!ServiceName/opinion/list"><span
+						class="img"></span>观点管理</span></span>
+				</li>
+
+				<li><span class="nav04" data-href="$!ServiceName/banner/init"><span
+						class="img"></span>Banner管理</span></span>
+				</li>
+				#if($!session.getAttribute("user_session_key").role !=1)
+				<li><span class="nav04" data-href="$!ServiceName/user/list"><span
+						class="img"></span>用户管理</span></span>
+				</li>
+				#end
+			</ul>
+		</div>
+		<div class="top-box">
+			<div class="left">
+				</span>
+				<!-- <i class="smile"></i> -->
+				<span class="name title">你好
+					$!session.getAttribute("user_session_key").name ！欢迎进入聚贸BI<span
+					class="blue">
+						<!-- $!roleName -->
+				</span>
+				</span>
+			</div>
+			<div class="right">
+ 
+				<span class="signout" onClick="doLogout();"></span>
+			</div>
+		</div>
+		<div class="content-box"></div>
+	</div>
+	<script type="text/javascript">
+		$.ajaxSetup({
+			cache : false
+		//关闭AJAX相应的缓存
+		});
+		$(function() {
+			//初始化为不锁定菜单栏
+			$.cookie("lockNav", "unLocked", {
+				express : 7
+			});
+			/*if($.cookie("lockNav") && ($.cookie("lockNav") == "locked") ){
+			    $("body").addClass("nav-show");
+			    $(".side-nav").addClass("nail");
+			}*/
+			var winh = $(window).height();
+			var winw = $(window).width();
+			var sidew = $(".side-nav").width();
+			var toph = $(".top-box").height();
+			var navW = $(".side-nav").outerWidth();
+			//$(".content-box").css({"height": winh - toph, "width": winw-navW});
+			$(".goto").hover(function() {
+				$(".goto ul").slideDown();
+			}, function() {
+				$(".goto ul").slideUp();
+			});
+			//操作左侧导航
+			$(".nav-icon").on("click", function() {
+				if ($.cookie().lockNav == "unLocked") {
+					$("body").toggleClass("nav-show");
+					var navW = $(".side-nav").outerWidth();
+					$(".content-box").css({
+						"margin-left" : navW
+					})
+				}
+			});
+			$(".nail-icon").on("click", function() {
+				if ($.cookie().lockNav == "unLocked") {
+					$.cookie("lockNav", "locked", {
+						express : 7
+					});
+					$(this).html("解锁")
+				} else {
+					$.cookie("lockNav", "unLocked", {
+						express : 7
+					});
+					$(this).html("锁定")
+				}
+
+			});
+			 
+			$(".side-nav li").on("click", function() {
+				$(this).addClass("active").siblings().removeClass("active");
+			});
+
+			$(".content-box").load(
+					$(".side-nav ul li.active").find("span").attr("data-href"));
+
+			$(".side-nav ul li").click(function() {
+				var hsrc = $(this).find("span").attr("data-href");
+				$.get(hsrc, function(result) {
+					if (result.indexOf('login_page') > -1) {
+						window.location.reload();
+					} else {
+						$(".content-box").html(result);
+					}
+				});
+			});
+			$(".sub-nav-l li span").click(
+					function(e) {
+						e.stopPropagation();
+						$(this).parents(".sub-nav").parent("li").addClass(
+								'active').siblings().removeClass('active');
+						var hsrc = $(this).attr("data-href");
+						$.get(hsrc, function(result) {
+							if (result.indexOf('login_page') > -1) {
+								window.location.reload();
+							} else {
+								$(".content-box").html(result);
+							}
+						});
+					});
+		});
+		function doLogout() {
+			$.cookie("loadType", "", {
+				expires : -1
+			});
+			$.cookie("activeCateParentId", "", {
+				expires : -1
+			});
+			$.cookie("queryBySellBuyId", "", {
+				expires : -1
+			});
+			window.location = "$!ServiceName/doLogout";
+		}
+		//setDomain('$!webDomainPath');
+
+		var loadType = $.cookie("loadType");
+		if (isNotNull(loadType)) {
+			if (loadType == 'order') {
+				$(".content-box").load(
+						"/AdminTraderOrderController.do?action=init");
+				$(".side-nav li:eq(3)").addClass("active").siblings()
+						.removeClass("active");
+			}
+			if (loadType.indexOf('billMatchTrader') > -1) {//撮合管理
+				$(".side-nav li:eq(2)").addClass("active").siblings()
+						.removeClass("active");
+				$(".content-box").load("/MatchManagement.do?action=init")
+			}
+			if (loadType == 'price') {
+				$(".content-box").load("/PriceManagement.do?action=init");
+				$(".side-nav li:eq(4)").addClass("active").siblings()
+						.removeClass("active");
+			}
+			if (loadType.indexOf('adminTradeSelf') > -1) {//自营
+				$(".side-nav li:eq(5)").addClass("active").siblings()
+						.removeClass("active");
+				$(".content-box").load("/SelfManagement.do?action=init")
+			}
+			if (loadType.indexOf('customerPooList') > -1) {//客户池
+				$(".side-nav li:eq(0)").addClass("active").siblings()
+						.removeClass("active");
+				$(".content-box").load(
+						"/CustomerPoolController.do?action=init2")
+			}
+			if (loadType.indexOf('customerManageList') > -1) {//客户管理
+				$(".side-nav li:eq(1)").addClass("active").siblings()
+						.removeClass("active");
+				$(".content-box").load(
+						"/CustomerManagementController.do?action=init")
+			}
+		}
+		//点击图像弹出详情
+		$(".user_info").click(function() {
+			var url = 'user/password';
+			layer.open({
+				type : 2,
+				title : "修改密码",
+				content : [ url, 'yes' ],
+				area : [ '605px', '405px' ],
+				success : function(data) {
+					//---
+				}
+			});
+		});
+	</script>
+</body>
+</html>

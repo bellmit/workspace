@@ -1,0 +1,47 @@
+﻿
+====聚贸BI，百度统计趋势=====
+/**
+ * 获取百度统计数据概览(pvs,uvs,stayTimes,ips,exists,avgVisitPages)
+ * @param platform
+ * @param startDate
+ * @param endDate
+ * @return
+ */
+ /biservice/v1/baidu/overivew/platform/100300/startDate/20170518/endDate/20170524
+ {"status":{"code":"200","message":"Successful!"},"overview":[{"name":"浏览量PV","value":896,"unit":"次"},{"name":"访客数UV","value":277,"unit":"个"},{"name":"IP数","value":198,"unit":"个"},{"name":"平均停留时长","value":196,"unit":"秒"},{"name":"平均访问页数","value":1.53,"unit":"次"},{"name":"跳出率","value":76.91,"unit":"%"}]} 
+ 
+ 
+ /**
+ * 获取百度指标趋势(pv,uv,stayTime,ips,exists,avgVisitPages)
+ */
+http://192.168.23.37:9090/biservice/v1/baidu/trend/platform/102000/startDate/20170101/endDate/20170301
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20170101","20170102","20170103","20170104","20170105","20170106","20170107","20170108","20170109","20170110","20170111","20170112","20170113","20170114","20170115","20170116","20170117","20170118","20170119","20170120","20170121","20170122","20170123","20170124","20170125","20170126","20170127","20170128","20170129","20170130","20170131","20170201","20170202","20170203","20170204","20170205","20170206","20170207","20170208","20170209","20170210","20170211","20170212","20170213","20170214","20170215","20170216","20170217","20170218","20170219","20170220","20170221","20170222","20170223","20170224","20170225","20170226","20170227","20170228","20170301"],"pvChart":{"title":"浏览量PV趋势情况","seriesName":"浏览量PV","unit":"次","seriesData":[0,0,0,0,0,0,8,0,0,0,0,0,0,0,0,15,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"uvChart":{"title":"访客数UV趋势情况","seriesName":"访客数UV","unit":"个","seriesData":[0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"ipChart":{"title":"IP数趋势情况","seriesName":"IP数","unit":"个","seriesData":[0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"averageTimeChart":{"title":"平均停留时长趋势情况","seriesName":"平均停留时长","unit":"秒","seriesData":[0,0,0,0,0,0,100.00,0,0,0,0,0,0,0,0,75.00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"avgVisitPagesChart":{"title":"平均访问页数趋势情况","seriesName":"平均访问页数","unit":"次","seriesData":[0,0,0,0,0,0,1.00,0,0,0,0,0,0,0,0,1.25,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"exitRateChart":{"title":"跳出率趋势情况","seriesName":"跳出率","unit":"%","seriesData":[0,0,0,0,0,0,100.00,0,0,0,0,0,0,0,0,75.00,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}}
+
+#页面流量排名和页面跳出排名
+http://192.168.23.37:9090/biservice/v1/baidu/vist/platform/102000/startDate/20170101/endDate/20170301
+{"status":{"code":"200","message":"Successful!"},"pvChart":{"seriesName":"页面流量排名","yAxisData":["http://www.jumoretong.com/active/1","http://www.jumoretong.com"],"seriesData":[2,6]},"existCountChart":{"seriesName":"页面跳出排名","yAxisData":["http://www.jumoretong.com/active/1","http://www.jumoretong.com"],"seriesData":[2,6]}}
+
+#访问来源
+http://jmbi-service.jm.com/biservice/v1/baidu/sources/platform/100200/startDate/20161221/endDate/20161222
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":["外部链接","直接访问","搜索引擎"],"xAxisData":["20161221","20161222"],"seriesData":[[493,512],[1322,834],[1443,2551]]},"pieChart":{"legendData":["外部链接","直接访问","搜索引擎"],"seriesData":[{"typeOrId":-1,"name":"外部链接","value":"1005"},{"typeOrId":-1,"name":"直接访问","value":"2156"},{"typeOrId":-1,"name":"搜索引擎","value":"3994"}]},"table":[{"name":"外部链接","pv":1005,"uv":648,"ip":615,"exitRate":87.69},{"name":"直接访问","pv":2156,"uv":388,"ip":300,"exitRate":61.73},{"name":"搜索引擎","pv":3994,"uv":3629,"ip":3609,"exitRate":94.17},{"name":"当前汇总","pv":7155,"uv":4665,"ip":4524,"exitRate":81.20}]}
+
+#新老访客
+http://192.168.23.37:9090/biservice/v1/baidu/vistors/platform/102000/startDate/20170101/endDate/20170301
+{"status":{"code":"200","message":"Successful!"},"newPercent":"50.00%","oldPercent":"50.00%","tableData":[{"name":"浏览量","newNumber":"10","oldNumber":"13"},{"name":"访客数","newNumber":"8","oldNumber":"8"},{"name":"平均访问时长","newNumber":"134.125","oldNumber":"111.25"}]}
+
+#访客地域分布（中国地图）
+http://192.168.23.37:9090/biservice/v1/baidu/areas/platform/102000/startDate/20170101/endDate/20170301
+{"status":{"code":"200","message":"Successful!"},"data":[{"name":"广东","value":"1"},{"name":"河北","value":"2"},{"name":"广西","value":"15"},{"name":"浙江","value":"4"},{"name":"北京","value":"1"}],"max":15}
+
+ 
+#访客地域分布（世界地图）和地域流量榜单
+http://jmbi-service.jm.com/biservice/v1/baidu/world/platform/100200/startDate/201601321/endDate/20171222
+{"status":{"code":"200","message":"Successful!"},"data":[{"typeOrId":-1,"name":"巴西","value":"19"},{"typeOrId":-1,"name":"泰国","value":"36"},{"typeOrId":-1,"name":"委内瑞拉","value":"13"},{"typeOrId":-1,"name":"新西兰","value":"24"},{"typeOrId":-1,"name":"柬埔寨","value":"24"},{"typeOrId":-1,"name":"莫桑比克","value":"1"},{"typeOrId":-1,"name":"伊拉克","value":"4"},{"typeOrId":-1,"name":"加纳","value":"1"},{"typeOrId":-1,"name":"越南","value":"97"},{"typeOrId":-1,"name":"阿根廷","value":"9"},{"typeOrId":-1,"name":"摩尔多瓦","value":"1"},{"typeOrId":-1,"name":"纳米比亚","value":"1"},{"typeOrId":-1,"name":"美国","value":"607"},{"typeOrId":-1,"name":"肯尼亚","value":"2"},{"typeOrId":-1,"name":"卡塔尔","value":"1"},{"typeOrId":-1,"name":"乌兹别克斯坦","value":"1"},{"typeOrId":-1,"name":"韩国","value":"285"},{"typeOrId":-1,"name":"其他","value":"250"},{"typeOrId":-1,"name":"哥伦比亚","value":"3"},{"typeOrId":-1,"name":"巴拿马","value":"5"},{"typeOrId":-1,"name":"德国","value":"14"},{"typeOrId":-1,"name":"立陶宛","value":"1"},{"typeOrId":-1,"name":"吉尔吉斯斯坦","value":"2"},{"typeOrId":-1,"name":"老挝","value":"12"},{"typeOrId":-1,"name":"埃塞俄比亚","value":"1"},{"typeOrId":-1,"name":"印度","value":"40"},{"typeOrId":-1,"name":"英国","value":"46"},{"typeOrId":-1,"name":"瑞士","value":"3"},{"typeOrId":-1,"name":"伊朗","value":"12"},{"typeOrId":-1,"name":"奥地利","value":"2"},{"typeOrId":-1,"name":"意大利","value":"26"},{"typeOrId":-1,"name":"白俄罗斯","value":"7"},{"typeOrId":-1,"name":"土耳其","value":"12"},{"typeOrId":-1,"name":"阿尔及利亚","value":"5"},{"typeOrId":-1,"name":"斯洛伐克","value":"2"},{"typeOrId":-1,"name":"比利时","value":"3"},{"typeOrId":-1,"name":"多米尼加","value":"1"},{"typeOrId":-1,"name":"埃及","value":"5"},{"typeOrId":-1,"name":"拉脱维亚","value":"1"},{"typeOrId":-1,"name":"巴巴多斯","value":"2"},{"typeOrId":-1,"name":"爱尔兰","value":"1"},{"typeOrId":-1,"name":"中国","value":"163584"},{"typeOrId":-1,"name":"阿尔巴尼亚","value":"2"},{"typeOrId":-1,"name":"澳大利亚","value":"82"},{"typeOrId":-1,"name":"印度尼西亚","value":"28"},{"typeOrId":-1,"name":"马其顿","value":"1"},{"typeOrId":-1,"name":"坦桑尼亚","value":"1"},{"typeOrId":-1,"name":"毛里求斯","value":"1"},{"typeOrId":-1,"name":"塞尔维亚","value":"1"},{"typeOrId":-1,"name":"巴勒斯坦","value":"1"},{"typeOrId":-1,"name":"阿曼","value":"2"},{"typeOrId":-1,"name":"巴基斯坦","value":"9"},{"typeOrId":-1,"name":"卢森堡","value":"1"},{"typeOrId":-1,"name":"黎巴嫩","value":"1"},{"typeOrId":-1,"name":"哥斯达黎加","value":"1"},{"typeOrId":-1,"name":"尼泊尔","value":"1"},{"typeOrId":-1,"name":"罗马尼亚","value":"8"},{"typeOrId":-1,"name":"沙特阿拉伯","value":"4"},{"typeOrId":-1,"name":"秘鲁","value":"10"},{"typeOrId":-1,"name":"厄瓜多尔","value":"4"},{"typeOrId":-1,"name":"阿拉伯联合酋长国","value":"4"},{"typeOrId":-1,"name":"安哥拉","value":"2"},{"typeOrId":-1,"name":"以色列","value":"6"},{"typeOrId":-1,"name":"斐济","value":"2"},{"typeOrId":-1,"name":"墨西哥","value":"16"},{"typeOrId":-1,"name":"危地马拉","value":"1"},{"typeOrId":-1,"name":"希腊","value":"2"},{"typeOrId":-1,"name":"亚美尼亚","value":"3"},{"typeOrId":-1,"name":"捷克","value":"3"},{"typeOrId":-1,"name":"保加利亚","value":"3"},{"typeOrId":-1,"name":"匈牙利","value":"3"},{"typeOrId":-1,"name":"波兰","value":"3"},{"typeOrId":-1,"name":"法国","value":"16"},{"typeOrId":-1,"name":"俄罗斯","value":"74"},{"typeOrId":-1,"name":"斯里兰卡","value":"2"},{"typeOrId":-1,"name":"荷兰","value":"7"},{"typeOrId":-1,"name":"哈萨克斯坦","value":"10"},{"typeOrId":-1,"name":"斯洛文尼亚","value":"1"},{"typeOrId":-1,"name":"瑞典","value":"7"},{"typeOrId":-1,"name":"摩洛哥","value":"6"},{"typeOrId":-1,"name":"西班牙","value":"19"},{"typeOrId":-1,"name":"缅甸","value":"5"},{"typeOrId":-1,"name":"乌克兰","value":"26"},{"typeOrId":-1,"name":"乌拉圭","value":"1"},{"typeOrId":-1,"name":"突尼斯","value":"3"},{"typeOrId":-1,"name":"智利","value":"7"},{"typeOrId":-1,"name":"乌干达","value":"2"},{"typeOrId":-1,"name":"加拿大","value":"119"},{"typeOrId":-1,"name":"日本","value":"39"},{"typeOrId":-1,"name":"爱沙尼亚","value":"2"},{"typeOrId":-1,"name":"南非","value":"3"},{"typeOrId":-1,"name":"马来西亚","value":"105"},{"typeOrId":-1,"name":"葡萄牙","value":"7"},{"typeOrId":-1,"name":"新加坡","value":"35"},{"typeOrId":-1,"name":"津巴布韦","value":"1"},{"typeOrId":-1,"name":"塞内加尔","value":"2"},{"typeOrId":-1,"name":"菲律宾","value":"28"},{"typeOrId":-1,"name":"孟加拉国","value":"7"}],"max":null,"table":[{"country":"中国","pv":278872,"uv":163584,"ip":159527},{"country":"美国","pv":830,"uv":607,"ip":601},{"country":"韩国","pv":411,"uv":285,"ip":277},{"country":"其他","pv":348,"uv":250,"ip":241},{"country":"加拿大","pv":165,"uv":119,"ip":119},{"country":"累计汇总","pv":282082,"uv":165906,"ip":161817}]}   
+   
+   
+   
+
+
+
+
+

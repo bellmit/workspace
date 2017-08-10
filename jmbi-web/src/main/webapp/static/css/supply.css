@@ -1,0 +1,28 @@
+.supplyTable{border-radius: 0px; -moz-border-radius:0px; -webkit-border-radius:0px;}
+.supplyTable-header{height: 70px; background-color: #ccc; padding: 0px 20px;}
+.supplyTable-header h3{font-size: 24px; line-height: 70px; color: #1a1a1a; margin: 0px;	}
+.supplyTable-header .closeBtn{width: 26px; height: 26px; overflow: hidden; background: url(/dsw/admin/images/closeBtn.png) no-repeat; opacity: 1; filter:alpha(opacity=100); text-indent: -999em; margin-top: 20px;}
+.supplyTableMain{border:1px solid #ccc; padding: 0px; color: #1a1a1a; font-family: "simsun";}
+.createInfo{height: 68px; line-height: 68px; font-size: 14px; color: #1a1a1a; padding: 0 20px; border-bottom:1px solid #ccc;}
+.userSubTab {width: 100%;}
+.userSubTab td,.userPubTab td{height:26px;line-height: 0px; padding:10px 0px;}
+.userSubTab .subTlt{width: 80px; padding-left:20px;}
+.userSubTab .subCaption,.userPubTab .subCaption{font-size: 16px; padding: 20px 0px 10px 20px;}
+.uSpan{display:inline-block; width: 148px; height: 24px; line-height: 24px; padding-left: 10px; background-color: #ccc; border:1px solid #808080; overflow: hidden;}
+.usSpan{width: 118px;}
+
+.pubSelect{width: 190px; height: 26px; line-height: 26px; border:1px solid #808080 !important; overflow: hidden;}
+.selBox{float: left; width: 90px !important; height: 26px !important; line-height: 26px; overflow: hidden; border:1px solid #808080 !important;}
+.selInput{float: left; width: 78px !important; height: 24px !important; line-height: 24px; border:1px solid #808080 !important; border-radius: 0px !important; padding:0px 0px 0px 10px !important; margin-right: 10px;}
+.InputW190{width: 180px !important; height: 24px !important; line-height: 24px !important; padding:0px 0px 0px 10px !important; border:1px solid #808080 !important; border-radius: 0px !important;}
+.selectW190{width: 190px; height: 26px; line-height: 26px; border:1px solid #808080 !important; border-radius: 0px !important;}
+.Wdate190{width: 180px; height: 26px !important; line-height: 26px !important; border-radius: 0px !important; border: 1px solid #808080 !important; padding: 0px 0px 0px 10px !important;}
+.PubAddressBox{width: 200px; margin-top: 10px;}
+.PubAddressBox select{float:left; width: 90px; height: 26px; line-height: 26px; margin-bottom: 10px; margin-right: 10px; border:1px solid #808080 !important; border-radius: 0px !important;}
+.supplyTable-footer{height: 70px; line-height: 70px; text-align: center; background-color: #ccc;}
+.supplyBtn{width:100px; height:30px; line-height: 30px; background-color: #ff6600; color: #fff; border-radius: 4px; -moz-border-radius:4px; -webkit-border-radius:4px; cursor: pointer; margin-right: 8px;}
+.unit{position: relative; left: 10px; top: -10px;}
+.subTlt .sh{position: relative; left: 0px; top: 10px;}
+.remarkBx{width: 140px !important; height: 30px; padding: 10px; border-radius: 0px !important; border: 1px solid #808080;}
+
+

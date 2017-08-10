@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.jumore.ucenter:ucenter-dubbo-service-api:2.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://D:/.m2/repository/com/jumore/ucenter/ucenter-dubbo-service-api/2.0.0-SNAPSHOT/ucenter-dubbo-service-api-2.0.0-20170310.083452-83.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/.m2/repository/com/jumore/ucenter/ucenter-dubbo-service-api/2.0.0-SNAPSHOT/ucenter-dubbo-service-api-2.0.0-20170310.083452-83-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/.m2/repository/com/jumore/ucenter/ucenter-dubbo-service-api/2.0.0-SNAPSHOT/ucenter-dubbo-service-api-2.0.0-20170310.083452-83-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

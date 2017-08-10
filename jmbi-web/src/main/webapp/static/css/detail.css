@@ -1,0 +1,84 @@
+.detail-cont{
+    margin-bottom:30px;
+}
+.detail-content{
+    min-width: 800px;
+    max-width: 920px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.detail-content em{
+    margin: 0 2px;
+}
+.detail-content label{
+    margin: 2px 0;
+}
+.detail-content .detail-label{
+    width: 125px;
+    color: #666;
+    line-height: 32px;
+    text-align: right;
+    font-weight: bold;
+}
+.detail-content .detail-label em{
+    color: red;
+}
+.detail-content td{
+    padding: 3px;
+    border: solid 1px #F1F1F1;
+    line-height: 1em;
+}
+.detail-content td[colspan='2']{
+    width: 270px;
+}
+.detail-content input[type=text]{
+    width: 93%;
+}
+.detail-content textarea{
+    width: 100%;
+}
+.detail-content select{
+    width: 93%;
+    line-height: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.detail-content select.units{
+    width: auto;
+}
+.detail-content input.ipt-among1{
+    width: 45%;
+    text-align: left;
+}
+.detail-content input.ipt-among2{
+    width: 70%;
+}
+.detail-content  select.select-sm{
+    float: left;
+    width: 50px;
+}
+.detail-content .select-xxl{
+    width: 100%;
+}
+
+.detail-content .disc-c{
+    overflow: hidden;
+    text-align: right;
+}
+.detail-content .disc-c input{
+    float: right;
+    margin-top: 10px;
+}
+.detail-content .disc-c span{
+    float: right;
+}
+.detail-content .contract-img{
+    overflow: hidden;
+}
+.detail-content .contract-img img{
+    float: left;
+    width: 120px;
+    height: 120px;
+    margin: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,17 @@
+﻿----------------------总览----------------------
+运营数据概览
+/biservice/v1/jzx/overview/OperationOverview
+{"status":{"code":"200","message":"Successful!"},"data":[{"name":"入驻企业","value":"279","unit":"家"},{"name":"已服务企业","value":"58","unit":"家"},{"name":"入驻服务机构","value":"147","unit":"家"},{"name":"上架服务","value":"68","unit":"个"},{"name":"项目订单","value":"270","unit":"笔"},{"name":"合同金额","value":"1238892.35","unit":"万元"}]}
+
+项目订单分析
+新增项目订单
+/biservice/v1/jzx/overview/newProjectOrder/20170101/20171201
+{"status":{"code":"200","message":"Successful!"},"total":"207","proportion":[{"name":"企业服务管理","value":"176"},{"name":"市场营销服务","value":"2"},{"name":"综合咨询服务","value":"29"}],"unit":"笔","titel":"新增项目订单"}
+
+市场营销订单  各行业占比
+/biservice/v1/enjzx/overview/industryShare/Business Managent Service/20170101/20171201
+{"status":{"code":"200","message":"Successful!"},"total":"","proportion":[{"name":"Hardware Equipment","value":"4"},{"name":"Translation Industry","value":"1"},{"name":"SoftWare","value":"1"},{"name":"Chemical Industry","value":"3"},{"name":"Product Industry","value":"4"},{"name":"Clothes Industry","value":"1"},{"name":"Machine Industry","value":"2"},{"name":"1212121","value":"1"}],"unit":"","titel":"Marketing Service 中企业行业占比"}
+
+市场营销订单  各细分服务类型占比
+/biservice/v1/enjzx/overview/TypeRatio/Business Managent Service/20170101/20171201
+{"status":{"code":"200","message":"Successful!"},"total":"","proportion":[{"name":"Certificate Consulti","value":"3"}],"unit":"","titel":"Marketing Service 中细分服务类型占比"}

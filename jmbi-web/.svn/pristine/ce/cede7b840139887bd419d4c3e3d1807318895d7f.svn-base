@@ -1,0 +1,274 @@
+﻿   
+ //=============聚贸通（聚达通）BI企业分类统计==========
+ // 企业分类统计：企业新增数||企业活跃数
+	/**
+	 * 企业分类统计：由于2个企业数统计hbase的表结构一致；
+	 * 
+	 * 企业新增数||企业活跃数
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year {2个表，一个是天统计，一个是月统计}
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param chart
+	 *            查询的图表：{企业分类统计的}1、企业新增数；；2、企业活跃数
+	 * @return
+	 */
+http://192.168.23.37:9090/biservice/v1/company/getCompanyNum/timeType/month/startDate/20170301/endDate/20170308/chart/1
+{"seriesName":"","legendData":["拍档","客户"],"xAxisData":["1日","2日","3日","4日","5日","6日","7日","8日","9日","10日","11日","12日","13日","14日","15日","16日","17日","18日","19日","20日","21日","22日","23日","24日","25日","26日","27日","28日","29日","30日","31日"],"series":[{"data":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"name":"拍档"},{"data":[2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"name":"客户"}],"title":"企业新增数","status":{"code":"200","message":"Successful!"}}
+
+
+	/**
+	 * 企业分类统计：由于2个企业数统计hbase的表结构一致；
+	 * 
+	 * 企业新增数||企业活跃数
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year {2个表，一个是天统计，一个是月统计}
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param chart
+	 *            查询的图表：{企业分类统计的}1、企业新增数；；2、企业活跃数
+	 * @return
+	 */
+http://192.168.23.37:9090/biservice/v1/company/getCompanyNum/timeType/week/startDate/20170301/endDate/20170308/chart/2
+{"seriesName":"","legendData":["拍档","客户"],"xAxisData":["周日","周一","周二","周三","周四","周五","周六"],"series":[{"data":[6,5,5,3,0,0,0],"name":"拍档"},{"data":[6,5,6,5,0,0,0],"name":"客户"}],"title":"企业活跃数","status":{"code":"200","message":"Successful!"}}
+
+  // 企业分类统计：企业新增数||企业活跃数
+
+
+ 
+// 企业分类统计：几个top统计和导出
+	/**
+	 * 企业分类统计：由于几个top统计hbase的表结构一致；这里用一个方法。把表名传过来，进行查询
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param chart
+	 *            查询的图表：{企业分类统计的}1、客户企业订单数top；；2、拍档企业订单数top；； 3、客户企业支出top
+	 *            ；；4、拍档企业收入top；；5、客户企业:订单货值top；；6、拍档企业:订单货值top
+	 * @return
+	 */
+http://192.168.23.37:9090/biservice/v1/company/getCompanyAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/chart/1
+{"seriesName":"","seriesData":[42,32,17,17,16],"yAxisData":["客户xukaer0043公司","客户xukaer0051公司","李媛客户企业801","中国用友软件股份有限公司","李媛企业拍档0003"],"title":"客户企业订单数TOP5","status":{"code":"200","message":"Successful!"}}
+
+
+
+
+
+
+
+/**
+	 * 企业分类统计：由于几个top统计hbase的表结构一致；这里用一个方法。把表名传过来，进行查询  :::导出
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param chart
+	 *            查询的图表：{企业分类统计的}1、客户企业订单数top；；2、拍档企业订单数top；； 3、客户企业支出top
+	 *            ；；4、拍档企业收入top；；5、客户企业:订单货值top；；6、拍档企业:订单货值top
+	 * @return
+	 */
+/v1/company/exportCompanyAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/chart/1
+ 
+// 企业分类统计：几个top统计和导出  
+
+  //=============企业分类统计==========
+ 
+ 
+ 
+
+
+ //=============进出口分类统计==========
+ 
+ 	/**
+	 * 进出口分类统计：进口贸易国别top
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+ http://192.168.23.37:9090/biservice/v1/inout/getInOutCountryAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/inout/in
+ {"seriesName":"","seriesData":[145717715.0000,35921323.0000,391537.0000,363826.0000,29119.0000],"yAxisData":["不丹","巴林","孟加拉国","缅甸","朝鲜"],"title":"进口贸易国别TOP5","status":{"code":"200","message":"Successful!"}}
+ 
+ 
+ 	/**
+	 * 进出口分类统计：出口贸易国别top：：导出
+	 * 
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+/v1/inout/exportInOutCountryAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/inout/in
+ 
+ 
+ 
+ 	/**
+	 * 进出口分类统计：进口商品top
+	 *
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+ http://192.168.23.37:9090/biservice/v1/inout/getInOutGoodsAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/0102/inout/in
+{"seriesName":"","seriesData":[500000.0000,462675.7278,0.0001],"yAxisData":["船舶动力用汽轮机","改良种用濒危野马","南方蓝鳍金枪鱼(Thunnus maccoyii)苗"],"title":"进口商品TOP5","status":{"code":"200","message":"Successful!"}}
+ 
+ /**
+	 * 进出口分类统计：进口商品top::导出
+	 *
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+ /v1/inout/exportInOutGoodsAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/inout/out
+ 
+ 
+ 
+ 
+ 	/**
+	 * 进出口分类统计：进口口岸top
+	 *
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+ http://192.168.23.37:9090/biservice/v1/inout/getInOutCustomsAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/01/inout/in
+ {"seriesName":"","seriesData":[143516985.0647,397494.2491,29152.0996,12955.6454,0.0088],"yAxisData":["机场单证","北京关区","京监管处","京关展览","京关关税"],"title":"进口口岸TOP5","status":{"code":"200","message":"Successful!"}}
+ 
+ 
+ 	/**
+	 * 进出口分类统计：进口口岸top：：导出
+	 *
+	 * @param timeType
+	 *            时间类型：week、month、quarter、year
+	 * @param startDate
+	 *            开始时间
+	 * @param endDate
+	 *            结束时间
+	 * @param customsCode
+	 *            海关/关区：编码
+	 * @param inout
+	 *            in进口、out出口
+	 * @return
+	 */
+/v1/inout/exportInOutCustomsAmount/timeType/month/startDate/20160101/endDate/20170307/customsCode/all/inout/in
+
+ //=============进出口分类统计==========
+   
+   
+   
+ 
+ 
+ 
+ 
+ //--------------提供：关区/海关选择控件接口--------------
+
+ /**
+     * 获取关区列表：
+     * @return
+     * @throws Exception
+     */
+/v1/dict/firstLevelCustoms
+{"statusCode":200,"message":"操作成功","data":[{"customsCode":"all","customsName":"海关总署/全部关区"},{"customsCode":"01","customsName":"北京关区"},{"customsCode":"02","customsName":"天津关区"},{"customsCode":"04","customsName":"石家庄区"},{"customsCode":"05","customsName":"太原海关"},{"customsCode":"06","customsName":"满洲里关"},{"customsCode":"07","customsName":"呼特关区"},{"customsCode":"08","customsName":"沈阳关区"},{"customsCode":"09","customsName":"大连海关"},{"customsCode":"15","customsName":"长春关区"},{"customsCode":"19","customsName":"哈尔滨区"},{"customsCode":"22","customsName":"上海海关"},{"customsCode":"23","customsName":"南京海关"},{"customsCode":"29","customsName":"杭州关区"},{"customsCode":"31","customsName":"宁波关区"},{"customsCode":"33","customsName":"合肥海关"},{"customsCode":"35","customsName":"福州关区"},{"customsCode":"37","customsName":"厦门关区"},{"customsCode":"40","customsName":"南昌关区"},{"customsCode":"42","customsName":"青岛海关"},{"customsCode":"43","customsName":"济南海关"},{"customsCode":"46","customsName":"郑州关区"},{"customsCode":"47","customsName":"武汉海关"},{"customsCode":"49","customsName":"长沙关区"},{"customsCode":"50","customsName":"广东分署"},{"customsCode":"51","customsName":"广州海关"},{"customsCode":"52","customsName":"黄埔关区"},{"customsCode":"53","customsName":"深圳海关"},{"customsCode":"57","customsName":"拱北关区"},{"customsCode":"60","customsName":"汕头海关"},{"customsCode":"64","customsName":"海口关区"},{"customsCode":"67","customsName":"湛江关区"},{"customsCode":"68","customsName":"江门关区"},{"customsCode":"72","customsName":"南宁关区"},{"customsCode":"79","customsName":"成都关区"},{"customsCode":"80","customsName":"重庆关区"},{"customsCode":"83","customsName":"贵阳海关"},{"customsCode":"86","customsName":"昆明关区"},{"customsCode":"88","customsName":"拉萨海关"},{"customsCode":"90","customsName":"西安关区"},{"customsCode":"94","customsName":"乌关区"},{"customsCode":"95","customsName":"兰州关区"},{"customsCode":"96","customsName":"银川海关"},{"customsCode":"97","customsName":"西宁关区"},{"customsCode":"99","customsName":"政法司"}]}
+
+
+    /**
+     * 获取某一关区下的：海关列表：
+     * @param code 关区编码
+     * @return
+     * @throws Exception
+     */
+/v1/dict/secondLevelCustoms/code/02
+{"statusCode":200,"message":"操作成功","data":[{"customsCode":"0204","customsName":"东港海关"},{"customsCode":"0205","customsName":"津塘沽办"},{"customsCode":"0202","customsName":"新港海关"},{"customsCode":"0203","customsName":"津开发区"},{"customsCode":"0201","customsName":"天津海关"},{"customsCode":"0208","customsName":"津保税区"},{"customsCode":"0209","customsName":"蓟县海关"},{"customsCode":"0206","customsName":"津驻邮办"},{"customsCode":"0207","customsName":"津机场办"},{"customsCode":"0215","customsName":"天津机场海关快件监管中心"},{"customsCode":"0216","customsName":"天津经济技术开发区保税物流中心"},{"customsCode":"0213","customsName":"天津东疆保税港区"},{"customsCode":"0214","customsName":"天津滨海新区综合保税区"},{"customsCode":"0211","customsName":"津加工区"},{"customsCode":"0212","customsName":"天津保税物流园区"},{"customsCode":"0210","customsName":"武清海关"},{"customsCode":"0217","customsName":"天津东疆保税港区海关（港区）"},{"customsCode":"0218","customsName":"静海海关"},{"customsCode":"0220","customsName":"津关税处"}]}
+
+//--------------提供：关区/海关选择控件接口--------------
+ 
+ 
+ 
+   
+   
+   
+ 
+ biservice/v1/overview/getOverview //总览
+{"amount":13649363248.1,"partnerIncome":233314.1,"count":178,"customerPay":233314.1,"partnerCount":120,"customerCount":171}
+
+
+/biservice/v1/overview/starLevel/{area}/  星级水平
+{"seriesName":"拍档企业等级分布","seriesData":[0,0,0,0,0],"yAxisData":null,"title":"拍档企业等级分布","status":null}
+
+/biservice/v1/overview/partner/{area}/  拍档
+{"legendData":["8601101","8601100"],"seriesName":"拍档企业地域分布","seriesData":[{"value":50,"name":"8601101"},{"value":1,"name":"8601100"}],"title":"拍档企业地域分布"}
+
+/biservice/v1/overview/customer/{area}/  客户
+{"legendData":["8601101","8601100"],"seriesName":"客户企业地域分布","seriesData":[{"value":55,"name":"8601101"},{"value":2,"name":"8601100"}],"title":"客户企业地域分布"}
+
+
+/biservice/v1/areaorder/map/{timeType}/{startDate}/{endDate}/  //地图
+[{"name":"海关总署/全部关区","value":100,"count":30,"amount":54905300.00652870,"partner":1335121.39,"customer":1335121.39},{"name":"北京关区","value":100,"count":33,"amount":2415091.7197936620,"partner":14726.14,"customer":14726.14}]
+
+/biservice/v1/areaorder/list/{startDate}/{endDate}/{customsCode}/  //列表
+{"p":[{"value":422,"name":"客户xukaer0006公司"},{"value":138,"name":"李媛客户企业801"},{"value":85,"name":"浙江维维集团有限公司"},{"value":49,"name":"李媛企业客户0001"},{"value":15,"name":"客户xukaer0051公司"}],"a":[{"value":54905300.00652870,"name":"海关总署/全部关区"}],"c":[{"value":30,"name":"海关总署/全部关区"}],"i":[{"value":291.1,"name":"聚拍档liyuan0001"},{"value":138,"name":"李媛聚拍�?0001"},{"value":132,"name":"拍档xukaer000045公司"},{"value":85,"name":"拍档短信通道公司"},{"value":49,"name":"李媛聚拍档企�?01"}]}
+
+biservice/v1/operate/total  //  运营总览顶部6个统计图
+[{"MemberTotal":"7110.00"},{"OpenStoreTotal":"71.00"},{"ItemTotal":"550.00"},{"OrderTotal":"397.00"},{"PayTotal":"0.00"},{"TranTotal":""}]
+
+
+
+
+
+

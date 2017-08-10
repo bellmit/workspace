@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jmdata-biservice:war">
+    <output-path>$PROJECT_DIR$/jmdata-biservice/target</output-path>
+    <root id="archive" name="biservice.war">
+      <element id="artifact" artifact-name="jmdata-biservice:war exploded" />
+    </root>
+  </artifact>
+</component>

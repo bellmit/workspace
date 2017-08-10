@@ -1,0 +1,11 @@
+﻿
+====用户行为  用户关注   参数与之前保持一致platform平台编码， startDate开始日期， endDate结束日期=====
+
+用户搜索关键字排行接口
+/biservice/v1/userattention/wordrank/platform/100400/startDate/20170610/endDate/20170620
+{"status":{"code":"200","message":"Successful!"},"barChart":{"seriesName":"用户搜索关键词排行","yAxisData":["流星","吉林省长春市吉林省吉林省长春市长春市吉林省长春市吉林省长春市","流星公司","下面我们就一步一步的创建第一条用例，至于细节不多解释，只是对","Demo","柔柔弱弱投投偷偷拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖哈哈哈哈或","罗超","芒果","柔柔弱弱","232344444"],"seriesData":[3,3,3,2,2,2,2,1,1,1]}}
+
+用户搜索词云接口
+/biservice/v1/userattention/wordcloud/platform/100400/startDate/20170610/endDate/20170620
+{"status":{"code":"200","message":"Successful!"},"wordCloud":[{"name":"流星公司","value":3},{"name":"吉林省长春市吉林省吉林省长春市长春市吉林省长春市吉林省长春市","value":3},{"name":"流星","value":3},{"name":"Demo","value":2},{"name":"罗超","value":2},{"name":"下面我们就一步一步的创建第一条用例，至于细节不多解释，只是对","value":2},{"name":"柔柔弱弱投投偷偷拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖拖哈哈哈哈或","value":2},{"name":"因为要做数据。迁移各平台需要在。线上注册好相关的账号到时","value":1},{"name":"因为要做数据迁移，各平台需要在线上注册好相关的账号，到时","value":1},{"name":"芒果","value":1},{"name":"柔柔弱弱","value":1},{"name":"111111111111111111111111111111111111111111","value":1},{"name":"2444","value":1},{"name":"232344444","value":1},{"name":"感觉很干净各回各家更健康更健康更好看结果刚好看见更健康","value":1},{"name":"jklnbkjnkljnkjlnkjlnlkjnkjnkjnkjlnkjlnkj","value":1},{"name":"下面我们就一步一步的创建第一条用例，至于细节不多解释","value":1}]}
+

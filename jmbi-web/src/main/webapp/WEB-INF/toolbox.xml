@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbox> 
+	<tool> 
+		<!-- 时间处理工具类 -->
+		<key>dateUtils</key> 
+		<scope>application</scope> 
+		<class>com.jumore.jmbi.common.util.DateUtils</class> 
+	</tool> 
+	<tool>
+		<!-- 配置项工具类 -->
+		<key>pro</key> 
+		<scope>application</scope> 
+	   	<class>com.jumore.jmbi.common.util.properties.PropertiesUtil</class> 
+	</tool>
+
+	<!--枚举-->
+	<!-- <tool>
+		<key>jmdataCommonEnum</key>
+		<scope>application</scope>
+		<class>org.apache.velocity.tools.generic.FieldTool</class>
+		多个枚举类的场合value用逗号分隔
+		<parameter name="include" value="com.jumore.jmbi.enums.report.ReportStatusEnum"
+		/>
+	</tool> -->
+</toolbox> 

@@ -1,0 +1,33 @@
+-------------- ↓ 融资 -----------------------------------------------
+
+总览的 融资趋势 折线图
+type:RZSQ(0, "融资申请"), RZQYue(1, "融资签约"), RZQYe(2, "入驻企业"), SJCP(3, "上架产品"), ELSE(999, "其他");
+/biservice/v1/enjrt/financing/trend/lineChart/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"平台融资趋势","title":"平台融资趋势","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesData":[0,0]}}
+
+
+业务分析的 融资趋势分析 折线图
+type 类型：同上
+/biservice/v1/enjrt/financing/trend/analysis/lineChart/platform/101501/startDate/20170101/endDate/20170707/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"平台融资趋势","title":"平台融资趋势","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesData":[0,0]}}
+
+
+总览的 区域分布 世界地图
+type 类型：同上
+/biservice/v1/enjrt/financing/areaDist/global/type/0
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["Canada","Russian Federation"],"seriesData":[{"typeOrId":38,"name":"Canada","value":"5"},{"typeOrId":178,"name":"Russian Federation","value":"28"}]},"counts":286,"nowDate":"2017-07-14"}
+
+
+业务分析的 区域分布 世界地图
+type 类型：同上
+/biservice/v1/enjrt/financing/areaDist/global/platform/101501/startDate/20170101/endDate/20170707/type/0
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["Canada","Russian Federation"],"seriesData":[{"typeOrId":38,"name":"Canada","value":"5"},{"typeOrId":178,"name":"Russian Federation","value":"28"}]},"counts":286,"nowDate":"2017-07-14"}
+
+
+业务分析的 融资明细 表格
+type 类型：同上
+area 后面填“世界地图”接口获得的 typeOrId
+/biservice/v1/enjrt/financing/area/1/detail/platform/101501/startDate/20170101/endDate/20170707/limit/10/offset/0/type/0
+{"tableData":[{"create_time":"20161201","id":"568999","company_name":"聚融通测试公司","amount":10100,"apply_counts":3,"reply_amount":200}],"totalSize":2,"status":{"code":"200","message":"Successful!"}}
+
+-------------- ↑ 融资 -----------------------------------------------

@@ -1,0 +1,128 @@
+package org.jumao.bi.utis;
+
+import org.jumao.bi.utis.constants.CN;
+import org.jumao.bi.utis.constants.Key;
+import org.jumao.bi.utis.exceptions.WrapEx;
+
+public class GeneralUtils {
+
+    public static String NEW_LINE = "\n";
+
+    /**
+     * @return " " + method name
+     */
+    public static String getCurrMethod() {
+        StackTraceElement[] stes = Thread.currentThread().getStackTrace();
+        return StringUtils.joinStr(" ", stes[2].getMethodName());
+    }
+
+    public static String getCurrMethod(String prefix) {
+        return StringUtils.joinStr(prefix, getCurrMethod());
+    }
+
+
+    /**
+     * @return " " + method name
+     */
+    public static String getUpperMethod() {
+        StackTraceElement[] stes = Thread.currentThread().getStackTrace();
+        return StringUtils.joinStr(" ", stes[Key.Num3].getMethodName());
+    }
+
+    /**
+     * @param ex
+     * @return
+     */
+    public static String getAllStackTraceFromExp(Throwable ex) {
+        StackTraceElement[] stes = ex.getStackTrace();
+        StringBuilder sb = new StringBuilder();
+        sb.append(ex.getMessage()).append(NEW_LINE);
+        for (StackTraceElement ste : stes) {
+            sb.append("    at ").append(ste.toString()).append(NEW_LINE);
+        }
+        return sb.toString();
+    }
+
+
+    /**
+     * 使 toString 方法能打印完整的错误栈
+     */
+    public static Exception getWrapEx(Exception e) {
+        e.printStackTrace();
+        if (e instanceof WrapEx) {
+            return e;
+        } else {
+            WrapEx wrapEx = new WrapEx(getAllStackTraceSb(e));
+            wrapEx.setStackTrace(e.getStackTrace());
+            return wrapEx;
+        }
+    }
+
+    public static StringBuilder getAllStackTraceSb(Throwable ex) {
+        StackTraceElement[] stes = ex.getStackTrace();
+        StringBuilder sb = new StringBuilder();
+        sb.append(ex.getMessage());
+
+        for (StackTraceElement ste : stes) {
+            sb.append(" ").append(ste.toString());
+//            sb.append("    at ").append(ste.toString()).append(NEW_LINE);
+        }
+        return sb;
+    }
+
+    /**
+     * 根据属性名称获取对应的getter方法名称
+     * @param property
+     * @return
+     */
+    public static String getGetterMethodName(String property) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(property);
+        if (Character.isLowerCase(sb.charAt(0))) {
+            if (sb.length() == 1 || !Character.isUpperCase(sb.charAt(1))) {
+                sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
+            }
+        }
+        sb.insert(0, "get");
+        return sb.toString();
+    }
+    /**
+     * 根据属性名称获取对应的setter方法名称
+     * @param property
+     * @return
+     */
+    public static String getSetterMethodName(String property) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(property);
+        if (Character.isLowerCase(sb.charAt(0))) {
+            if (sb.length() == 1 || !Character.isUpperCase(sb.charAt(1))) {
+                sb.setCharAt(0, Character.toUpperCase(sb.charAt(0)));
+            }
+        }
+        sb.insert(0, "set");
+        return sb.toString();
+    }
+
+
+    /**
+     * 根据单位返回某个数字要除的分母
+     *
+     * @param unit 单位，如“万元”
+     * @return 分母
+     */
+    public static int getDenominatorForUnit(String unit) {
+        switch (unit) {
+            case CN.Wan_Yuan:
+                return Key.Num10000;
+
+            case CN.Wan_Tiao:
+                return Key.Num10000;
+
+            default:
+                return Key.Num0;
+        }
+    }
+
+
+
+}

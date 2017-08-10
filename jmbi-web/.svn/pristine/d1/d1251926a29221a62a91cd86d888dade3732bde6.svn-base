@@ -1,0 +1,356 @@
+#setPasswordWrap{
+	height: 0;
+	overflow: hidden;
+}
+#setPassword,#failure{
+	padding: 20px;
+}
+#setPassword p, #failure p{
+	text-align: right;
+}
+
+#setPassword .input-group,#failure .input-group{
+	padding-bottom: 15px;
+}
+.col-lg-person{
+	float:left;
+	width: 20px;
+	height: 30px;
+	line-height: 30px;
+}
+.sch-wrap .row > div{
+	padding-bottom: 10px;
+}
+.alert.sch-wrap{
+	padding: 15px 20px 5px;
+	margin-bottom: 0;
+	background-color: #fff;
+	border: none;
+}
+.time-picker .icon{
+	background: #eee url(../img/datePicker.gif) center no-repeat;
+}
+/******图片上传开始******/
+#uploadPicPath img{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+}
+
+.fn-hide{
+	display: none;
+}
+
+.img-list{
+	overflow: hidden;
+}
+.img-list .img-box{
+	float: left;
+    position: relative;
+    padding: 0px;
+    margin: 10px 10px 0;
+    width: 100px;
+    height: 100px;
+}
+.img-list .img-box i{
+	position: absolute;
+	right: -6px;
+	top: -6px;
+	z-index: 99;
+	width: 15px;
+	height: 15px;
+	color: #fff;
+	line-height: 16px;
+	text-align: center;
+	background: #ccc;
+	border-radius: 15px;
+	cursor: pointer;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.upload .uploadifyp{
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+.upload .uploadifya{
+	position: absolute;
+	top: 0;
+}
+.upload #uploadify-button{
+	width: 100px;
+	height: 100px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background: url('../img/user3.png') center no-repeat;
+}
+.upload .btn{
+	width: 100px;
+	margin-right: 30px;
+}
+#uploadPicPath input{
+	opacity: 0;
+}
+.upload-area{
+	padding-bottom: 15px;
+}
+.upload-multify{
+	width: auto;
+}
+.upload .uploadifyQueueItem{
+	width: 260px;
+}
+.upload .info{
+	line-height: 30px;
+}
+.upload .info span{
+	color: red;
+	margin-right: 0;
+}
+
+
+/******图片上传结束******/
+/*******弹窗内部样式开始*************/
+.mainsmall > .layer-pop{
+	padding: 20px 55px;
+}
+.info-list{
+	overflow: hidden;
+	margin-left: 30px;
+}
+.info-list span.title{
+	width: 100px;
+	float: left;
+	line-height: 30px;
+	text-align: right;
+}
+.info-list span.radio-wrap{
+	font-weight: normal;
+}
+.info-list .p{
+	float: left;
+	line-height: 30px;
+	margin: 0px;
+	width: auto;
+}
+#upload-page .info-list .p{
+	/*width: 280px;*/
+	max-width: 500px;
+}
+.info-list textarea{
+	min-width: 220px;
+	width: auto;
+	height: 100px;
+	border: 1px solid #ddd;
+}
+.info-list label input{
+	margin: 0px;
+	vertical-align: middle;
+}
+.select2-container .select2-choice{
+	background: #fff;
+}
+.select2-container .select2-choice{
+	line-height: 30px;
+	height: 30px;
+}
+.layer-pop .ipt-select1{
+	width: 258px !important;
+	height: 32px;
+	line-height: 32px;
+}
+.layer-pop .ipt-halfW{
+	width: 126px;
+}
+.layer-pop .ipt-among1{
+	width: 94px;
+	text-align: center;
+}
+.layer-pop .ipt-among2{
+	width: 74px;
+}
+.layer-pop .ipt-xl{
+	width: 425px;
+}
+.layer-pop .ipt-xxl{
+	width: 630px;
+}
+/*******弹窗内部样式结束*************/
+/*******运力管理查看合同开始*********/
+#findContractsByCompany{
+	padding: 20px 30px;
+}
+#findContractsByCompany a{
+	display: inline-block;
+	text-align: center;
+	margin-right: 10px;
+}
+#findContractsByCompany a img{
+	width: 100px;
+	height: 100px;
+	display: block;
+}
+#findContractsByCompany a span{
+	line-height: 30px;
+}
+/*******运力管理查看合同结束*********/
+.nav-tabs .btn{
+	float:right!important;
+	margin-right: 15px;
+}
+.wl-btn:hover, .wl-btn:focus{
+	color: #fff;
+	background-color: #0080cc;
+}
+/*******need supply*********/
+
+/******buttons*********/
+@media (min-width: 120px){
+	.col-lg-3 {
+		float: left;
+	    width: 25%;
+	}
+	.col-lg-1 {
+		float: left;
+	    width: 15%;
+	}
+}
+.main-block .table tbody tr td:last-child{
+	text-align: left;
+}
+.th:last-child{
+
+}
+.wl-serch,.wl-serch:active{
+	padding: 6px 12px 6px 35px;
+	background: #deeefd url(../img/icons-bg.png) 10px -47px;
+	border: 1px solid #81c0fe;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	color: #333;
+}
+input.wl-date{
+	padding-left: 30px;
+	background: url(../img/icons-bg.png) 0 -147px;
+} 
+.wl-serch span{
+	width: 15px;
+	height: 15px;
+	display: inline-block;
+
+}
+.wl-btn{
+	padding: 6px 12px;
+	background: #2788e8;
+	color: #fff;
+}
+.wl-btn-showNeed,.wl-btn-showNeed:active{
+	padding-left: 35px;
+	background: #2788e8 url(../img/icons-bg.png) 0 0;
+}
+#wl-cont .btn-sm{
+	border: 1px solid #81c0fe;
+	background: #deeefd;
+	color: #333;
+}
+/**********nav-tabs***************/
+#wl-cont{
+	background: #ecf2f7;
+	border-top: 1px solid #dedede;
+	padding: 20px;
+}
+#wl-cont .nav-tabs{
+	min-height: 38px;
+	margin-bottom: 7px;
+	border-bottom: 2px solid #2f4050;
+}
+#wl-cont .nav-tabs > li.active > a, #wl-cont .nav-tabs > li.active > a:hover, #wl-cont .nav-tabs > li.active > a:focus{
+	background: #2f4050;
+	color: #fff;
+}
+#wl-cont .fixed-table-toolbar .bars, #wl-cont .fixed-table-toolbar .search, #wl-cont .fixed-table-toolbar .columns{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+#wl-cont .nav-tabs > li{
+	color: #2f4050;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+#wl-cont .nav-tabs > li a{
+	padding: 7px 16px;
+}
+.layer-pop .btn{
+	padding: 0 12px;
+}
+.layui-layer-content .input-group textarea.form-control{
+	width: 172px;
+}
+.ws-nw{
+	white-space: nowrap;
+}
+
+.main-block .bg-primary h4{
+	line-height: 40px;
+	margin: 0;
+}
+.main-block .bg-muted{
+	overflow: hidden;
+	padding: 20px 0 20px 60px;
+	background: #f9f9f9;
+	margin-top: 10px;
+}
+.main-block .bg-muted .set-info{
+	float: left;
+	min-width: 200px;
+	max-width: 265px;
+	color: #333;
+	line-height: 30px;
+	margin-right: 25px;
+	overflow: hidden;
+}
+.main-block .bg-muted .set-info span,.main-block .bg-muted .set-info div{
+	float: left;
+}
+.main-block .bg-muted .set-info .info-val em{
+	color: #3399ee;
+}
+.main-block .bg-muted .set-info .info-set .ipt-txt{
+	width: 90px;
+	height: 28px;
+	line-height: 28px;
+	padding-left: 5px;
+	border: 1px solid #ccc;
+}
+.main-block .bg-muted .set-info .info-set{
+	display: none;
+}
+.main-block .bg-muted .set-info .info-set label{
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+.main-block .bg-muted .set-info .info-set label input[type='radio']{
+	vertical-align: middle;
+	margin: 0 2px 0 0;
+}
+.main-block .bg-muted .btn{
+	float: left;
+	padding: 4px 12px;
+}
+.layui-layer-photos{
+	overflow: auto;
+}
+.layui-layer-photos .layui-layer-content{
+	overflow: auto !important;
+}
+.layui-layer-imgbar{
+	display: none !important;
+}
+.layui-layer-photos .layui-layer-setwin .layui-layer-ico{
+	position: fixed;
+	right: 40px;
+	top: 36px;
+}
+/*.layui-layer-content .layui-layer-phimg{
+	overflow: auto;
+}*/

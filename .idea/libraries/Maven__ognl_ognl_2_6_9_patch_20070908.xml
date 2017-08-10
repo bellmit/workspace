@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: ognl:ognl:2.6.9-patch-20070908">
+    <CLASSES>
+      <root url="jar://D:/.m2/repository/ognl/ognl/2.6.9-patch-20070908/ognl-2.6.9-patch-20070908.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/.m2/repository/ognl/ognl/2.6.9-patch-20070908/ognl-2.6.9-patch-20070908-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://D:/.m2/repository/ognl/ognl/2.6.9-patch-20070908/ognl-2.6.9-patch-20070908-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

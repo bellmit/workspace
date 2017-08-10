@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace=".RoleMapper">
+    <resultMap id="BaseResultMap" type="com.jumore.jmbi.dao.entity.permission.Role">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="dept_id" property="deptId" jdbcType="INTEGER"/>
+        <result column="dept_name" property="deptName" jdbcType="VARCHAR"/>
+        <result column="platform_id" property="platformId" jdbcType="INTEGER"/>
+        <result column="functions" property="functions" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="TINYINT"/>
+    </resultMap>
+    <resultMap type="com.jumore.jmbi.dao.entity.permission.Department"
+               id="roleMap">
+        <id column="platform_id" property="id" jdbcType="INTEGER"/>
+        <result column="platform_name" property="name"/>
+        <collection property="roleList"
+                    ofType="com.jumore.jmbi.dao.entity.permission.Role" column="pid">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+        </collection>
+    </resultMap>
+    <sql id="Base_Column_List">
+		id, name, dept_id, platform_id, functions, status
+	</sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap"
+            parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from jmbi_role
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="select" resultMap="BaseResultMap" parameterType="map">
+        select
+        a.id, a.name, a.dept_id, a.platform_id, a.functions,
+        a.status,b.name
+        dept_name
+        from jmbi_role a
+        left join jmbi_department b on
+        a.dept_id =
+        b.id
+        <where>
+            <if test="platformId != null">
+                and a.platform_id = #{platformId,jdbcType=INTEGER}
+            </if>
+            <if test="deptId != null">
+                and a.dept_id = #{deptId,jdbcType=INTEGER}
+            </if>
+            <if test="name != null and name != '' ">
+                and a.name like CONCAT('%',#{name,jdbcType=VARCHAR},'%')
+            </if>
+        </where>
+
+    </select>
+    <select id="selectRolesByDeptId" resultMap="roleMap"
+            parameterType="java.lang.Integer">
+        select
+        a.id, a.name,a.platform_id,case a.platform_id when 100100 then '交易全站' when 100101 then 'JUMORE Global' when
+        100200 then '聚贸化工' when 100201 then 'JUMORE Chemical' when 100300 then '聚贸有色' when 100301 then 'JUMORE
+        Non-ferrous' when 100400 then '聚运通' when 100401 then 'JUMORE EtransMore'
+        when 100700 then '聚贸煤炭' when 100701 then 'JUMORE Coal' when 100800 then '聚贸钢铁' when 100801 then 'JUMORE Steel'
+        when 100900 then '聚贸矿产'when 100901 then 'JUMORE Mineral' when 101000 then '聚贸农产品' when 101001 then 'JUMORE
+        Agricultural Products' when 101100 then '聚贸工业品' when 101101 then 'JUMORE Industrial Products' when 101200 then
+        '聚贸消费品' when 101201 then 'JUMORE Consumer Goods' when 101300 then '聚贸机械' when 101301 then 'JUMORE Machinery'
+        when 101400 then '聚贸食品' when 101401 then 'JUMORE Food' when 101500 then '聚融通' when 101501 then 'JUMORE Finance'
+        when 101600 then '大数聚' when 101700 then '聚认证' when 101701 then 'JUMORE Certification' when 101800 then '聚智能'
+        when 101801 then 'JUMORE Technology' when 101900 then '聚咨询' when 101901 then 'JUMORE Consultancy' when 102000
+        then '聚贸通' when 102100 then '支付结算中心' when 102200 then '聚贸石油' when 102201 then 'JUMORE Petro' else '其它' End as platform_name
+        from
+        jmbi_role a
+        left join
+        jmbi_department b on a.dept_id =
+        b.id
+        <where>
+            <if test="deptId != null">
+                and a.status=0 and a.dept_id = #{deptId,jdbcType=INTEGER}
+            </if>
+        </where>
+        order by platform_id
+    </select>
+    <select id="selectByIds" resultType="map" parameterType="map">
+        select GROUP_CONCAT(functions) functions,GROUP_CONCAT(name)
+        roleNames,GROUP_CONCAT(DISTINCT platform_id order by platform_id)
+        platform_id
+        from jmbi_role
+        <where>
+            <if test="ids != null">
+                id in
+                <foreach item="item" index="index" collection="ids" open="("
+                         separator="," close=")">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="platformId != null">
+                and platform_id = #{platformId,jdbcType=INTEGER}
+            </if>
+        </where>
+
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+		delete from
+		jmbi_role
+		where id = #{id,jdbcType=INTEGER}
+	</delete>
+    <insert id="insert" parameterType="com.jumore.jmbi.dao.entity.permission.Role">
+		insert into jmbi_role (id,
+		name, dept_id,
+		platform_id, functions, status)
+		values
+		(#{id,jdbcType=INTEGER},
+		#{name,jdbcType=VARCHAR},
+		#{deptId,jdbcType=INTEGER},
+		#{platformId,jdbcType=INTEGER},
+		#{functions,jdbcType=VARCHAR},
+		#{status,jdbcType=TINYINT})
+	</insert>
+    <insert id="insertSelective" parameterType="com.jumore.jmbi.dao.entity.permission.Role">
+        insert into jmbi_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="deptId != null">
+                dept_id,
+            </if>
+            <if test="platformId != null">
+                platform_id,
+            </if>
+            <if test="functions != null">
+                functions,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="deptId != null">
+                #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="platformId != null">
+                #{platformId,jdbcType=INTEGER},
+            </if>
+            <if test="functions != null">
+                #{functions,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.jumore.jmbi.dao.entity.permission.Role">
+        update jmbi_role
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="deptId != null">
+                dept_id = #{deptId,jdbcType=INTEGER},
+            </if>
+            <if test="platformId != null">
+                platform_id = #{platformId,jdbcType=INTEGER},
+            </if>
+            <if test="functions != null">
+                functions = #{functions,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=TINYINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.jumore.jmbi.dao.entity.permission.Role">
+		update jmbi_role
+		set name = #{name,jdbcType=VARCHAR},
+		dept_id =
+		#{deptId,jdbcType=INTEGER},
+		platform_id =
+		#{platformId,jdbcType=INTEGER},
+		functions =
+		#{functions,jdbcType=VARCHAR},
+		status = #{status,jdbcType=TINYINT}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

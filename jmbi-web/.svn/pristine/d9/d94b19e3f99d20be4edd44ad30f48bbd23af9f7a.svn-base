@@ -1,0 +1,387 @@
+-------------- ↓ 总览 -----------------------------------------------
+
+可配置的几个总览数字，itemIds 如下可选
+GYSQYS(1, "供应商企业数", "个"), WTFQYS(2, "委托方企业数", "个"), WTFGRS(3, "委托方个人数", "个"),
+    CKS(4, "仓库数", "个"), XLS(5, "线路数", "条"), HZ(6, "货值", "元"), DDJE(7, "订单金额", "元"),
+    DDS(8, "订单数", "个"), SJS(9, "司机数", "个"), CLS(10, "车辆数", "辆"), ELSE(999, "其他", "");
+
+/biservice/v1/jyt/overview/numbers/itemIds/1-2-3/platform/1025/startDate/20160501/endDate/20170701
+{"code":"200","message":"Successful!","data":[{"id":1,"name":"供应商企业数","value":123, "unit":"个"}], "nowDate":"2017-06-26"}
+
+
+总览折线图，itemId 同上
+/biservice/v1/jyt/overview/lineChart/itemId/1/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"title":"供应商企业数","unit":"个","legendData":"现在似乎不填也可以","xAxisData":["20170701"],"yAxisData":[],"seriesData":[0]}
+
+
+总览物流线路 饼图
+/biservice/v1/jyt/overview/transportLine/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["内河航运","海运"],"seriesData":[{"typeOrId":233,"name":"内河航运","value":"405"},{"typeOrId":234,"name":"海运","value":"772"}]},"counts":12179}
+
+
+需求发布数 top5
+/biservice/v1/jyt/overview/requireTop5/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"需求发布数排行","xAxisData":[],"yAxisData":["妙委托方公司","小小委托方公司"],"seriesData":[307,182]}}
+
+-------------- ↑ 总览 -----------------------------------------------
+
+-------------- ↓ 注册分析 日新增用户 -----------------------------------------------
+
+新增注册数 折线图
+/biservice/v1/jyt/register/newlyIncr/lineChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"","xAxisData":["20170701"],"yAxisData":[],"seriesData":[0]}
+
+
+注册用户地域分布 中国地图，无数据，未提供sql
+
+
+注册用户地域分布 top10 条形图，无数据，未提供sql
+
+
+新增用户来源 top5
+/biservice/v1/jyt/register/newlyIncr/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"新增用户来源排行TOP5","xAxisData":[],"yAxisData":["聚运通1","聚运通2"],"seriesData":[307,182]}}
+
+
+新增用户来源 饼图
+/biservice/v1/jyt/register/newlyIncr/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["咨询1","咨询2"],"seriesData":[{"typeOrId":233,"name":"咨询1","value":"405"},{"typeOrId":234,"name":"咨询2","value":"772"}]},"counts":12179}
+
+-------------- ↑ 注册分析 日新增用户 -----------------------------------------------
+
+-------------- ↓ 注册分析 认证分析 -----------------------------------------------
+
+认证用户 概览折线图，type 如下
+SMRZ(0, "实名认证"), WTFSZRZ(1, "委托方三证认证"), GYSSZRZ(2, "供应商三证认证"),
+    WTSSQ(3, "委托商授权"), GYSSQ(4, "供应商授权");
+
+/biservice/v1/jyt/register/authUser/lineChart/platform/1025/startDate/20160501/endDate/20170701/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"","xAxisData":["20170701"],"yAxisData":[],"seriesData":[0]}
+
+
+委托、供应 历史累积 饼图
+/biservice/v1/jyt/register/authUser/history/pieChart/platform/1025
+{
+    "status":{"code":"200","message":"Successful!"},
+    "pieChart":{"legendData":["委托方个人","司机"],"seriesData":[{"typeOrId":2,"name":"委托方个人","value":"494"},{"typeOrId":3,"name":"司机","value":"158"}]},
+    "entrustHistoryCounts":1228,  ---委托 历史累积
+    "supplyHistoryCounts":383     ---供应 历史累积
+}
+
+供应商地域分布 中国地图
+/biservice/v1/jyt/register/supply/areaDist/chinaMap/platform/1025/startDate/20170501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["山东1","山东2"],"seriesData":[{"typeOrId":233,"name":"山东1","value":"405"},{"typeOrId":234,"name":"山东2","value":"772"}]},"counts":12179}
+
+
+供应商地域分布 top10
+/biservice/v1/jyt/register/supply/areaDist/barChart/platform/1025/startDate/20170501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"","xAxisData":[],"yAxisData":["浙江1","浙江2"],"seriesData":[307,182]}}
+
+
+委托商地域分布 中国地图
+/biservice/v1/jyt/register/entrust/areaDist/chinaMap/platform/1025/startDate/20170501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["山东1","山东2"],"seriesData":[{"typeOrId":233,"name":"山东1","value":"405"},{"typeOrId":234,"name":"山东2","value":"772"}]},"counts":12179}
+
+
+委托商地域分布 top10
+/biservice/v1/jyt/register/entrust/areaDist/barChart/platform/1025/startDate/20170501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"","xAxisData":[],"yAxisData":["浙江1","浙江2"],"seriesData":[307,182]}}
+
+
+司机地域分布 中国地图，没数据，未提供sql
+
+
+司机域分布 top10，没数据，未提供sql
+
+-------------- ↑ 注册分析 认证分析 -----------------------------------------------
+
+-------------- ↓ 成交分析交易相关 -----------------------------------------------
+/**
+ * operate:平台运营情况表.
+ * 
+ * @author Administrator
+ * @date 2017年6月13日 下午1:12:04
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+ @GET
+ /biservice/v1/jyt/deal/operate/{startDate}/{endDate}/{platform}/
+ [{"count":64,"weight":8583.0000000000,"total_price":0.10},{"count":409,"weight":11194047.2300000000,"total_price":13.86}]
+ 
+ /**
+ * settle:结算方式占比.
+ * 
+ * @author Administrator
+ * @date 2017年6月13日 下午3:21:46
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+@GET
+/biservice/v1/jyt/deal/settle/{startDate}/{endDate}/{platform}/
+{"legendData":["线下支付","直接支付","担保支付"],"seriesName":"结算方式占比","seriesData":[{"value":28,"name":"线下支付","code":"0"},{"value":38,"name":"直接支付","code":"100"},{"value":25,"name":"担保支付","code":"200"}],"title":"结算方式占比"}
+
+/**
+ * lineType:运输方式
+ * 
+ * @author Administrator
+ * @date 2017年6月13日 下午4:04:27
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+@GET
+/biservice/v1/jyt/deal/lineType/{startDate}/{endDate}/{platform}/
+{"legendData":["公路","海运","仓储","空运"],"seriesName":"运输方式","seriesData":[{"value":92,"name":"公路","code":"231"},{"value":1,"name":"海运","code":"234"},{"value":7,"name":"仓储","code":"235"},{"value":1,"name":"空运","code":"237"}],"title":"运输方式"}
+
+/**
+ * orderSource:订单来源.
+ * 
+ * @author Administrator
+ * @date 2017年6月14日 上午10:31:31
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jyt/deal/lineType/{startDate}/{endDate}/{platform}/
+ {"legendData":["公路","海运","仓储","空运"],"seriesName":"运输方式","seriesData":[{"value":92,"name":"公路","code":"231"},{"value":1,"name":"海运","code":"234"},{"value":7,"name":"仓储","code":"235"},{"value":1,"name":"空运","code":"237"}],"title":"运输方式"}
+ 
+ /**
+ * orderType:订单类型.
+ * 
+ * @author Administrator
+ * @date 2017年6月14日 下午1:56:38
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jyt/deal/orderType/{startDate}/{endDate}/{platform}/
+ {"legendData":["线上订单"],"seriesName":"订单类型占比","seriesData":[{"value":81,"name":"线上订单","code":"1"}],"title":"订单类型占比"}
+ 
+/**
+ * areaAmount:区域金额.
+ * 
+ * @author Administrator
+ * @date 2017年6月20日 上午9:57:29
+ * @param currencyCode 币种 ：142:人民币（暂时用不到）
+ * @param lineType 线路类型：公路-231,铁路-232,内河航运-233 海运-234 空运-237
+ * @param startDate
+ * @param endDate
+ * @param sortField 排序字段：ordernum 笔数、ordertotal 金额
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/jyt/deal/areaAmount/{currencyCode}/{lineType}/{startDate}/{endDate}/{sortField}/
+ [{"address":86011,"area_name":null,"ordernum":51,"ordertotal":770.3600000000,"paynum":49,"paytotal":767.3600000000},{"address":86033,"area_name":null,"ordernum":29,"ordertotal":5728.7800000000,"paynum":19,"paytotal":5210.6800000000}]
+ 
+ /**
+ * translate:交易转化跟踪.
+ * 
+ * @author Administrator
+ * @date 2017年6月13日 下午2:47:51
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+@GET
+/biservice/v1/jyt/deal/translate/{startDate}/{endDate}/{platform}/
+{"legendData":["需求UV","意向UV","订单UV","支付UV"],"seriesName":"交易转化跟踪","seriesData":[{"value":18,"name":"需求UV","code":null},{"value":191,"name":"意向UV","code":null},{"value":178,"name":"订单UV","code":null},{"value":34,"name":"支付UV","code":null}],"title":"交易转化跟踪"}
+
+/**
+ * payChannel:支付渠道金额占比.
+ * 
+ * @author Administrator
+ * @date 2017年5月8日 上午11:15:36
+ * @param startDate
+ * @param endDate
+ * @param platform
+ * @return
+ * @throws Exception
+ */
+/biservice/v1/jyt/deal/payChannel/{startDate}/{endDate}/{platform}/
+{"legendData":["浦发银行","民生银行","东方付通"],"seriesName":"支付渠道金额占比","seriesData":[{"value":132.00,"name":"浦发银行"},{"value":753.00,"name":"民生银行"},{"value":794.00,"name":"东方付通"}],"title":"支付渠道金额占比"}
+
+ 
+ -------------- ↑ 成交分析交易相关 -----------------------------------------------
+
+ -------------- ↓ 物流商分析 -----------------------------------------------
+ 物流方式top-人民币：
+ --全部
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20170601/endDate/20170625/lineType/all
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"浦发2000615499","等级":"1","运力":"3","订单数":"20","金额(万元)":"0.00"},{"物流商名称":"流星贸易公司","等级":"4","运力":"73","订单数":"6","金额(万元)":"0.00"},{"物流商名称":"江三供应商公司","等级":"1","运力":"4","订单数":"9","金额(万元)":"0.00"},{"物流商名称":"浙江杭州芒果物流公司112","等级":"1","运力":"25","订单数":"41","金额(万元)":"0.00"},{"物流商名称":"杭州供应商物流有限公司","等级":"4","运力":"65","订单数":"2","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"170","订单数":"78","金额(万元)":"0.00"}]}}
+--公路
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20170601/endDate/20170625/lineType/231
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"江三供应商公司","等级":"1","运力":"4","订单数":"8","金额(万元)":"0.00"},{"物流商名称":"浙江杭州芒果物流公司112","等级":"1","运力":"25","订单数":"23","金额(万元)":"0.00"},{"物流商名称":"浦发2000615499","等级":"1","运力":"3","订单数":"17","金额(万元)":"0.00"},{"物流商名称":"流星贸易公司","等级":"4","运力":"73","订单数":"6","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"105","订单数":"54","金额(万元)":"0.00"}]}}
+--铁路
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20170601/endDate/20170625/lineType/232
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"浦发2000615499","等级":"1","运力":"3","订单数":"3","金额(万元)":"0.00"},{"物流商名称":"浙江杭州芒果物流公司112","等级":"1","运力":"25","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"28","订单数":"4","金额(万元)":"0.00"}]}}
+--内河航运
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20170601/endDate/20170625/lineType/233
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"浙江杭州芒果物流公司112","等级":"1","运力":"25","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"25","订单数":"1","金额(万元)":"0.00"}]}}
+--海运
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20170601/endDate/20170625/lineType/234
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"江三供应商公司","等级":"1","运力":"4","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"杭州供应商物流有限公司","等级":"4","运力":"65","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"69","订单数":"2","金额(万元)":"0.00"}]}}
+--空运
+/biservice/v1/jyt/lgProvidersAnalysis/lgTypeByRMBTop/platform/102000/startDate/20160601/endDate/20170625/lineType/237
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"物流商名称":"叶供应商测试有限公司","等级":"1","运力":"42","订单数":"3","金额(万元)":"222.00"},{"物流商名称":"赵一供应商","等级":"2","运力":"3","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"流星贸易公司","等级":"4","运力":"73","订单数":"3","金额(万元)":"0.00"},{"物流商名称":"浙江杭州芒果物流公司112","等级":"1","运力":"25","订单数":"1","金额(万元)":"0.00"},{"物流商名称":"测试华山有限公司","等级":"1","运力":"1","订单数":"5","金额(万元)":"0.00"},{"物流商名称":"杭州供应商物流有限公司","等级":"4","运力":"65","订单数":"2","金额(万元)":"0.00"},{"物流商名称":"赵供应商公司名称","等级":"4","运力":"193","订单数":"6","金额(万元)":"0.00"},{"物流商名称":"合计","等级":"","运力":"402","订单数":"21","金额(万元)":"222.00"}]}}
+
+仓储top分析-人民币：
+--全部
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/all
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"浙江杭州芒果物流公司112","仓储数":"7","订单数":"16","人民币(万元)":"0.00"},{"仓库":"杭州供应商物流有限公司","仓储数":"23","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"30","订单数":"17","人民币(万元)":"0.00"}]}}
+--普通
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/308
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"浙江杭州芒果物流公司112","仓储数":"4","订单数":"16","人民币(万元)":"0.00"},{"仓库":"杭州供应商物流有限公司","仓储数":"5","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"9","订单数":"17","人民币(万元)":"0.00"}]}}
+--恒温
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/309
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"杭州供应商物流有限公司","仓储数":"5","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"5","订单数":"1","人民币(万元)":"0.00"}]}}
+--冷库
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/310
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"杭州供应商物流有限公司","仓储数":"3","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"3","订单数":"1","人民币(万元)":"0.00"}]}}
+--危险
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/311
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[]}}
+--保税
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/365
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"杭州供应商物流有限公司","仓储数":"2","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"2","订单数":"1","人民币(万元)":"0.00"}]}}
+--海关监控
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/366
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"浙江杭州芒果物流公司112","仓储数":"2","订单数":"16","人民币(万元)":"0.00"},{"仓库":"杭州供应商物流有限公司","仓储数":"3","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"5","订单数":"17","人民币(万元)":"0.00"}]}}
+--其它
+/biservice/v1/jyt/lgProvidersAnalysis/warehousingByRMBTop/platform/102000/startDate/20170601/endDate/20170625/wareHouseType/367
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"仓库":"浙江杭州芒果物流公司112","仓储数":"1","订单数":"16","人民币(万元)":"0.00"},{"仓库":"杭州供应商物流有限公司","仓储数":"5","订单数":"1","人民币(万元)":"0.00"},{"仓库":"合计","仓储数":"6","订单数":"17","人民币(万元)":"0.00"}]}}
+
+
+ -------------- ↑ 物流商分析 -----------------------------------------------
+
+ -------------- ↓ 物流方式分析 -----------------------------------------------
+物流货运流向图:
+
+--公路
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/231
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"青海","destination_area":"重庆","total_money":"1000.00"},{"departure_area":"北京","destination_area":"天津","total_money":"622.00"},{"departure_area":"北京","destination_area":"天津","total_money":"500.00"},{"departure_area":"江西","destination_area":"江西","total_money":"2.50"},{"departure_area":"北京","destination_area":"天津","total_money":"1.00"},{"departure_area":"北京","destination_area":"天津","total_money":"0.21"},{"departure_area":"北京","destination_area":"天津","total_money":"0.20"},{"departure_area":"北京","destination_area":"天津","total_money":"0.10"},{"departure_area":"北京","destination_area":"天津","total_money":"0.10"},{"departure_area":"北京","destination_area":"山西","total_money":"0.00"}]}}
+--铁路
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/232
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"北京","destination_area":"河北","total_money":"0.00"},{"departure_area":"浙江","destination_area":"浙江","total_money":"0.00"},{"departure_area":"北京","destination_area":"上海","total_money":"0.00"},{"departure_area":"北京","destination_area":"天津","total_money":"0.00"},{"departure_area":"北京","destination_area":"天津","total_money":"0.00"},{"departure_area":"上海","destination_area":"浙江","total_money":"0.00"},{"departure_area":"江西","destination_area":"江西","total_money":"0.00"},{"departure_area":"北京","destination_area":"天津","total_money":"0.00"},{"departure_area":"天津","destination_area":"天津","total_money":"0.00"},{"departure_area":"浙江","destination_area":"浙江","total_money":"0.00"}]}}
+--内河航运
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/233
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"成都","destination_area":"广东","total_money":"0.00"},{"departure_area":"成都","destination_area":"成都","total_money":"0.00"},{"departure_area":"成都","destination_area":"广东","total_money":"0.00"},{"departure_area":"成都","destination_area":"云南","total_money":"0.00"},{"departure_area":"成都","destination_area":"广东","total_money":"0.00"},{"departure_area":"重庆","destination_area":"云南","total_money":"0.00"},{"departure_area":"成都","destination_area":"云南","total_money":"0.00"},{"departure_area":"成都","destination_area":"云南","total_money":"0.00"},{"departure_area":"成都","destination_area":"成都","total_money":"0.00"},{"departure_area":"成都","destination_area":"广东","total_money":"0.00"}]}}
+--海运
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/234
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"中国","destination_area":"中国","total_money":"477.04"},{"departure_area":"中国","destination_area":"澳门","total_money":"0.50"},{"departure_area":"中国","destination_area":"韩国","total_money":"0.00"},{"departure_area":"中国","destination_area":"中国","total_money":"0.00"},{"departure_area":"中国","destination_area":"香港","total_money":"0.00"},{"departure_area":"香港","destination_area":"中国","total_money":"0.00"},{"departure_area":"中国","destination_area":"香港","total_money":"0.00"},{"departure_area":"中国","destination_area":"韩国","total_money":"0.00"},{"departure_area":"中国","destination_area":"香港","total_money":"0.00"},{"departure_area":"香港","destination_area":"香港","total_money":"0.00"}]}}
+--空运
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/237
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"日本","destination_area":"马来西亚","total_money":"0.00"},{"departure_area":"美国","destination_area":"美国","total_money":"0.00"},{"departure_area":"美国","destination_area":"秘鲁","total_money":"0.00"},{"departure_area":"英国","destination_area":"意大利","total_money":"0.00"},{"departure_area":"美国","destination_area":"英国","total_money":"0.00"},{"departure_area":"美国","destination_area":"马来西亚","total_money":"0.00"},{"departure_area":"美国","destination_area":"英国","total_money":"0.00"},{"departure_area":"澳大利亚","destination_area":"新加坡","total_money":"0.00"},{"departure_area":"美国","destination_area":"英国","total_money":"0.00"},{"departure_area":"美国","destination_area":"美国","total_money":"0.00"}]}}
+--仓库
+/biservice/v1/jyt/lgType/freightFlow/platform/102000/startDate/20160101/endDate/20170625/lineType/235
+{"status":{"code":"200","message":"Successful!"},"flowChart":{"seriesData":[{"departure_area":"天津","destination_area":"天津","total_money":"0.95"},{"departure_area":"天津","destination_area":"天津","total_money":"0.12"},{"departure_area":"浙江","destination_area":"浙江","total_money":"0.10"},{"departure_area":"江西","destination_area":"江西","total_money":"0.10"},{"departure_area":"浙江","destination_area":"浙江","total_money":"0.08"},{"departure_area":"黑龙江","destination_area":"黑龙江","total_money":"0.01"},{"departure_area":"黑龙江","destination_area":"黑龙江","total_money":"0.00"},{"departure_area":"北京","destination_area":"北京","total_money":"0.00"},{"departure_area":"北京","destination_area":"北京","total_money":"0.00"},{"departure_area":"北京","destination_area":"北京","total_money":"0.00"}]}}
+
+物流方式分析:
+--公路
+/biservice/v1/jyt/lgType/lgTypeByRMBTop/platform/102000/startDate/20160101/endDate/20170625/lineType/231
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"发送方向":"青海---重庆","产品类型(个)":"0","重量(T)":"1344.00","体积(m^2)":"1344.00","金额(万元)":"1000.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"11116870.11","体积(m^2)":"12349583.88","金额(万元)":"622.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"5.00","体积(m^2)":"20.00","金额(万元)":"500.00"},{"发送方向":"江西---江西","产品类型(个)":"0","重量(T)":"16.00","体积(m^2)":"16.00","金额(万元)":"2.50"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"55556558.55","体积(m^2)":"61729397.40","金额(万元)":"1.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"1132.00","体积(m^2)":"1132.00","金额(万元)":"0.21"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"966.00","体积(m^2)":"966.00","金额(万元)":"0.20"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"477.00","体积(m^2)":"255.00","金额(万元)":"0.10"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"330.00","体积(m^2)":"330.00","金额(万元)":"0.10"},{"发送方向":"北京---山西","产品类型(个)":"0","重量(T)":"50.00","体积(m^2)":"50.00","金额(万元)":"0.00"},{"发送方向":"合计","产品类型(个)":"0","重量(T)":"66677748.66","体积(m^2)":"74083094.28","金额(万元)":"2126.11"}]}}
+--铁路
+/biservice/v1/jyt/lgType/lgTypeByRMBTop/platform/102000/startDate/20160101/endDate/20170625/lineType/232
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"发送方向":"北京---河北","产品类型(个)":"0","重量(T)":"223.00","体积(m^2)":"323.00","金额(万元)":"0.00"},{"发送方向":"浙江---浙江","产品类型(个)":"0","重量(T)":"4445.00","体积(m^2)":"3955.00","金额(万元)":"0.00"},{"发送方向":"北京---上海","产品类型(个)":"0","重量(T)":"1000.00","体积(m^2)":"1000.00","金额(万元)":"0.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"180.00","体积(m^2)":"180.00","金额(万元)":"0.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"上海---浙江","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"1.00","金额(万元)":"0.00"},{"发送方向":"江西---江西","产品类型(个)":"0","重量(T)":"2426.00","体积(m^2)":"2409.00","金额(万元)":"0.00"},{"发送方向":"北京---天津","产品类型(个)":"0","重量(T)":"12.00","体积(m^2)":"12.00","金额(万元)":"0.00"},{"发送方向":"天津---天津","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"1.00","金额(万元)":"0.00"},{"发送方向":"浙江---浙江","产品类型(个)":"0","重量(T)":"100.00","体积(m^2)":"200.00","金额(万元)":"0.00"},{"发送方向":"合计","产品类型(个)":"0","重量(T)":"8389.00","体积(m^2)":"8083.00","金额(万元)":"0.00"}]}}
+--内河航运
+/biservice/v1/jyt/lgType/lgTypeByRMBTop/platform/102000/startDate/20160101/endDate/20170625/lineType/233
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"发送方向":"成都---广东","产品类型(个)":"0","重量(T)":"233343.00","体积(m^2)":"322554.00","金额(万元)":"0.00"},{"发送方向":"成都---成都","产品类型(个)":"0","重量(T)":"12345678.11","体积(m^2)":"98765432.22","金额(万元)":"0.00"},{"发送方向":"成都---广东","产品类型(个)":"0","重量(T)":"444.00","体积(m^2)":"32434.00","金额(万元)":"0.00"},{"发送方向":"成都---云南","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"成都---广东","产品类型(个)":"0","重量(T)":"1000.00","体积(m^2)":"1000.00","金额(万元)":"0.00"},{"发送方向":"重庆---云南","产品类型(个)":"0","重量(T)":"40.00","体积(m^2)":"60.00","金额(万元)":"0.00"},{"发送方向":"成都---云南","产品类型(个)":"0","重量(T)":"2323.00","体积(m^2)":"2332.00","金额(万元)":"0.00"},{"发送方向":"成都---云南","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"成都---成都","产品类型(个)":"0","重量(T)":"12345678.10","体积(m^2)":"98765432.20","金额(万元)":"0.00"},{"发送方向":"成都---广东","产品类型(个)":"0","重量(T)":"100.00","体积(m^2)":"200.00","金额(万元)":"0.00"},{"发送方向":"合计","产品类型(个)":"0","重量(T)":"24928608.21","体积(m^2)":"197889448.42","金额(万元)":"0.00"}]}}
+--海运
+/biservice/v1/jyt/lgType/lgTypeByRMBTop/platform/102000/startDate/20160101/endDate/20170625/lineType/234
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"发送方向":"中国---中国","产品类型(个)":"0","重量(T)":"11000.00","体积(m^2)":"11000.00","金额(万元)":"477.04"},{"发送方向":"中国---澳门","产品类型(个)":"0","重量(T)":"1001.00","体积(m^2)":"1001.00","金额(万元)":"0.50"},{"发送方向":"中国---韩国","产品类型(个)":"0","重量(T)":"26.00","体积(m^2)":"48.00","金额(万元)":"0.00"},{"发送方向":"中国---中国","产品类型(个)":"0","重量(T)":"3333.00","体积(m^2)":"2222.00","金额(万元)":"0.00"},{"发送方向":"中国---香港","产品类型(个)":"0","重量(T)":"500.00","体积(m^2)":"5000.00","金额(万元)":"0.00"},{"发送方向":"香港---中国","产品类型(个)":"0","重量(T)":"1221.00","体积(m^2)":"1221.00","金额(万元)":"0.00"},{"发送方向":"中国---香港","产品类型(个)":"0","重量(T)":"200.00","体积(m^2)":"200.00","金额(万元)":"0.00"},{"发送方向":"中国---韩国","产品类型(个)":"0","重量(T)":"12345678.99","体积(m^2)":"98765432.11","金额(万元)":"0.00"},{"发送方向":"中国---香港","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"香港---香港","产品类型(个)":"0","重量(T)":"3333.00","体积(m^2)":"23232.00","金额(万元)":"0.00"},{"发送方向":"合计","产品类型(个)":"0","重量(T)":"12366293.99","体积(m^2)":"98809358.11","金额(万元)":"477.54"}]}}
+--空运
+/biservice/v1/jyt/lgType/lgTypeByRMBTop/platform/102000/startDate/20160101/endDate/20170625/lineType/237
+{"status":{"code":"200","message":"Successful!"},"tableChart":{"seriesData":[{"发送方向":"日本---马来西亚","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"美国---美国","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"美国---秘鲁","产品类型(个)":"0","重量(T)":"2.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"英国---意大利","产品类型(个)":"0","重量(T)":"23.00","体积(m^2)":"23.00","金额(万元)":"0.00"},{"发送方向":"美国---英国","产品类型(个)":"0","重量(T)":"444.00","体积(m^2)":"333.00","金额(万元)":"0.00"},{"发送方向":"美国---马来西亚","产品类型(个)":"0","重量(T)":"3369.00","体积(m^2)":"6669.00","金额(万元)":"0.00"},{"发送方向":"美国---英国","产品类型(个)":"0","重量(T)":"112.00","体积(m^2)":"22.00","金额(万元)":"0.00"},{"发送方向":"澳大利亚---新加坡","产品类型(个)":"0","重量(T)":"444.00","体积(m^2)":"433.00","金额(万元)":"0.00"},{"发送方向":"美国---英国","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"1.00","金额(万元)":"0.00"},{"发送方向":"美国---美国","产品类型(个)":"0","重量(T)":"1.00","体积(m^2)":"2.00","金额(万元)":"0.00"},{"发送方向":"合计","产品类型(个)":"0","重量(T)":"4398.00","体积(m^2)":"7489.00","金额(万元)":"0.00"}]}}
+
+ -------------- ↑ 物流方式分析 -----------------------------------------------
+
+
+
+ -----------------------------支付分析-----------------------------
+支付分析支付开通历史累计图1
+/biservice/v1/jyt/pay/payOne/100400/20161201/20170131")
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20161201","20161202","20161203","20161204","20161205","20161206","20161207","20161208","20161209","20161210","20161211","20161212","20161213","20161214","20161215","20161216","20161217","20161218","20161219","20161220","20161221","20161222","20161223","20161224","20161225","20161226","20161227","20161228","20161229","20161230","20161231","20170101","20170102","20170103","20170104","20170105","20170106","20170107","20170108","20170109","20170110","20170111","20170112","20170113","20170114","20170115","20170116","20170117","20170118","20170119","20170120","20170121","20170122","20170123","20170124","20170125","20170126","20170127","20170128","20170129","20170130","20170131"],"pv":{"title":"浏览量PV趋势情况","seriesName":"浏览量PV","unit":"次","seriesData":[310,148,3,3,126,0,0,182,76,2,1,181,133,165,394,104,2,3,163,166,111,163,74,14,13,84,113,165,437,290,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"uv":{"title":"独立访客UV趋势情况","seriesName":"独立访客UV","unit":"个","seriesData":[54,44,2,2,41,0,0,41,36,2,1,38,36,48,71,47,2,3,35,50,41,57,28,6,8,36,48,41,45,46,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]},"payOpen":{"title":"支付开通数趋势情况","seriesName":"支付开通数","unit":"个","seriesData":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0]}}
+
+支付分析支付开通历史累计数
+/biservice/v1/jyt/pay/payTotal
+{"status":{"code":"200","message":"Successful!"},"data":{"total":50}}
+
+支付分析支付渠道占比
+/biservice/v1/jyt/pay/channelProportion
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"value":"民生银行","name":"11"},{"value":"浦发银行","name":"6"},{"value":"工商银行","name":"5"},{"value":"建设银行","name":"7"}],"unit":"个"}
+
+支付分析支付开通地域分布
+/biservice/v1/jyt/pay/payOpenClime/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"value":"1","name":"广西壮族自治区"},{"value":"1","name":"重庆市"},{"value":"1","name":"上海市"},{"value":"1","name":"湖北省"},{"value":"1","name":"湖南省"},{"value":"2","name":"广东省"},{"value":"10","name":"北京市"},{"value":"1","name":"山东省"},{"value":"15","name":"浙江省"},{"value":"1","name":"江苏省"},{"value":"1","name":"内蒙古自治区"},{"value":"1","name":"青海省"},{"value":"1","name":"辽宁省"},{"value":"2","name":"天津市"},{"value":"2","name":"吉林省"},{"value":"3","name":"黑龙江省"},{"value":"1","name":"河北省"}],"unit":"个"}
+
+支付分析支付开通地域分布top
+/biservice/v1/jyt/pay/payOpenClimeTop/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"title":"支付开通Top10","seriesName":"支付开通","unit":"个","xAxisData":[15,10,3,2,2,2,1,1],"seriesData":["浙江省","北京市","黑龙江省","吉林省","广东省","天津市","湖南省","青海省"]}
+
+ -----------------------------运力分析-----------------------------
+ 运力图公路
+/biservice/v1/jyt/pay/trafficHighway/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"河北省"},{"name":"河北省","value":"3065"}],[{"name":"河北省"},{"name":"河南省","value":"1141"}],[{"name":"河北省"},{"name":"广东省","value":"603"}],[{"name":"河北省"},{"name":"福建省","value":"564"}],[{"name":"河北省"},{"name":"安徽省","value":"552"}],[{"name":"河北省"},{"name":"广西壮族自治区","value":"427"}],[{"name":"河北省"},{"name":"四川省","value":"400"}],[{"name":"浙江省"},{"name":"浙江省","value":"331"}],[{"name":"河北省"},{"name":"浙江省","value":"313"}],[{"name":"河北省"},{"name":"山东省","value":"299"}]],"unit":"次"}
+
+运力图铁路
+/biservice/v1/jyt/pay/trafficRailway/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"浙江省"},{"name":"浙江省","value":"302"}],[{"name":"北京市"},{"name":"天津市","value":"25"}],[{"name":"浙江省"},{"name":"北京市","value":"20"}],[{"name":"河北省"},{"name":"河北省","value":"11"}],[{"name":"上海市"},{"name":"浙江省","value":"11"}],[{"name":"山西省"},{"name":"内蒙古自治区","value":"8"}],[{"name":"北京市"},{"name":"河北省","value":"5"}],[{"name":"吉林省"},{"name":"黑龙江省","value":"4"}],[{"name":"上海市"},{"name":"江西省","value":"4"}],[{"name":"浙江省"},{"name":"上海市","value":"4"}]],"unit":"次"}
+
+运力图内河航运
+/biservice/v1/jyt/pay/trafficInlandNavigation/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"成都"},{"name":"广东","value":"289"}],[{"name":"成都"},{"name":"成都","value":"29"}],[{"name":"成都"},{"name":"云南","value":"20"}],[{"name":"浙江"},{"name":"广东","value":"10"}],[{"name":"成都"},{"name":"重庆","value":"7"}],[{"name":"云南"},{"name":"吉林","value":"6"}],[{"name":"重庆"},{"name":"云南","value":"6"}],[{"name":"重庆"},{"name":"广东","value":"4"}],[{"name":"重庆"},{"name":"重庆","value":"3"}],[{"name":"成都"},{"name":"安徽","value":"3"}]],"unit":"次"}
+
+运力图海运
+/biservice/v1/jyt/pay/trafficOceanShipping/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"中国"},{"name":"中国","value":"572"}],[{"name":"中国"},{"name":"中国港澳台","value":"66"}],[{"name":"中国"},{"name":"韩国","value":"27"}],[{"name":"中国港澳台"},{"name":"中国港澳台","value":"19"}],[{"name":"韩国"},{"name":"东南亚","value":"18"}],[{"name":"中国"},{"name":"地西","value":"12"}],[{"name":"美西"},{"name":"西非","value":"11"}],[{"name":"日本"},{"name":"美东","value":"7"}],[{"name":"中国港澳台"},{"name":"中国","value":"5"}],[{"name":"中国"},{"name":"中亚","value":"5"}]],"unit":"次"}
+
+运力图空运
+/biservice/v1/jyt/pay/trafficAirTransport/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"美国"},{"name":"英国","value":"21"}],[{"name":"美国"},{"name":"美国","value":"7"}],[{"name":"中国"},{"name":"中国","value":"3"}],[{"name":"美国"},{"name":"中国","value":"3"}],[{"name":"英国"},{"name":"意大利","value":"3"}],[{"name":"土耳其"},{"name":"澳大利亚","value":"3"}],[{"name":"日本"},{"name":"马来西亚","value":"2"}],[{"name":"澳大利亚"},{"name":"新加坡","value":"2"}],[{"name":"美国"},{"name":"秘鲁","value":"1"}]],"unit":"次"}
+
+运力图仓储
+/biservice/v1/jyt/pay/trafficStorage/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"北京"},{"name":"北京","value":"23"}],[{"name":"浙江"},{"name":"浙江","value":"13"}],[{"name":"黑龙江"},{"name":"黑龙江","value":"11"}],[{"name":"天津"},{"name":"天津","value":"10"}],[{"name":"江苏"},{"name":"江苏","value":"3"}],[{"name":"湖北"},{"name":"湖北","value":"2"}],[{"name":"福建"},{"name":"福建","value":"2"}],[{"name":"山东"},{"name":"山东","value":"1"}],[{"name":"吉林"},{"name":"吉林","value":"1"}],[{"name":"贵州"},{"name":"贵州","value":"1"}]],"unit":"次"}
+
+运力排行
+/biservice/v1/jyt/pay/TransportTop/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"title":"运力排行Top5","seriesName":"公司名称","unit":"个","xAxisData":[4790,4576,1415,305,265],"seriesData":["顺丰***","卡行***物流","消息***公司","赵小***公司","赵供***名称"]}
+
+车辆分析
+/biservice/v1/jyt/pay/CarAnalysis/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"value":"45","name":"平板车"},{"value":"14","name":"高低板车"},{"value":"41","name":"挂车"},{"value":"6","name":"其他"},{"value":"10","name":"高栏车"},{"value":"6","name":"冷藏车"},{"value":"11","name":"厢车"},{"value":"4","name":"特种车"}],"unit":"辆"}
+
+-----------------------------仓储分析-----------------------------
+
+仓储分析热力图
+/biservice/v1/jyt/pay/StorageHeat/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"area":"1640.00","value":"2","name":"湖北"},{"area":"1246392.00","value":"30","name":"北京"},{"area":"3400.00","value":"1","name":"上海"},{"area":"1252.00","value":"2","name":"吉林"},{"area":"6442.00","value":"2","name":"江西"},{"area":"318842.00","value":"13","name":"浙江"},{"area":"500.00","value":"1","name":"贵州"},{"area":"100.00","value":"2","name":"福建"},{"area":"6300.00","value":"1","name":"山东"},{"area":"33787.00","value":"11","name":"黑龙江"},{"area":"103600.00","value":"3","name":"江苏"},{"area":"437054.00","value":"10","name":"天津"}],"unit":"个"}
+
+仓储分析仓库总数、可用面积、总面积
+/biservice/v1/jyt/pay/StorageArea/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"可用面积":"2157722.00","总面积":"283923.00","仓库总数":"74"}],"unit":"平方米"}
+
+仓库总面积top5
+/biservice/v1/jyt/pay/StorageAreaTop/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"title":"仓库面积top5","seriesName":"仓库面积","unit":"平方米","xAxisData":[1246035.00,437054.00,318842.00,103600.00,33787.00],"seriesData":["北京市","天津市","浙江省","江苏省","黑龙江省"]}
+
+仓库类型（面积）饼图
+/biservice/v1/jyt/pay/StorageTypeTop/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"value":"1263527.00","name":"普通"},{"value":"203623.00","name":"危险"},{"value":"280846.00","name":"冷库"},{"value":"75624.00","name":"其他"},{"value":"309084.00","name":"恒温"},{"value":"1401.00","name":"保税"},{"value":"23617.00","name":"海关监管"}],"unit":"平方米"}
+
+仓库面积企业排名top5
+/biservice/v1/jyt/pay/StorageCompanyTop/20150101/20170521
+{"status":{"code":"200","message":"Successful!"},"title":"仓库面积top5","seriesName":"仓库面积","unit":"平方米","xAxisData":[1549365.00,411637.00,150000.00,14400.00,12884.00],"seriesData":["杭州***公司","流星***公司","浙江***公司","现代***公司","上海***物流"]}

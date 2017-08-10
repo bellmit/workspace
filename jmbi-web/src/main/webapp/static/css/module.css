@@ -1,0 +1,678 @@
+h3{
+	margin: 0 0 10px;
+}
+/*我的账户*/
+input[type="file"]{
+	display: inline-block;
+}
+input[type="file"].file-btn {
+	opacity: 0;
+	filter: alpha(opacity=0);
+	font-size: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.index-box .per-info .btns-box .btn-w{
+	width: 70px;
+	margin: 2px 5px;
+}
+.position-re{
+	position: relative;
+}
+input[type="text"].input-txt {
+	/*min-width: 136px;*/
+	/*height: 30px;*/
+	line-height: 30px;
+	padding: 0px 8px;
+	height: 30px;
+	background: #fff;
+	border: 1px solid #ddd;
+}
+.btn-b, .btn-bb, input[type="button"].btn-b, input[type="button"].btn-bb {
+	display: inline-block;
+	width: 140px;
+	height: 38px;
+	line-height: 36px;
+	border: 1px solid #1177dc;
+	background: #1177dc;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.btns-box{
+	margin-top: 20px;
+	text-align: center;
+}
+.mb24{
+	margin-bottom: 24px;
+}
+.tab-text{
+	display: inline-block;
+	padding: 0 10px;
+	line-height: 20px;
+	height: 20px;
+	background: #ff8a00;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 10px;
+	cursor: default;
+	margin-right: 4px;
+	margin-bottom: 4px;
+}
+/*订单支付*/
+.order-info .info{
+	height: 42px;
+	line-height: 42px;
+	background: #e2f1ff;
+	color: #1177dc;
+	font-size: 14px;
+}
+.order-info .info .name{
+	display: inline-block;
+	vertical-align: top;
+	height: 42px;
+	width: auto;
+	padding: 0 20px;
+	line-height: 42px;
+	background: #1177dc;
+	color: #fff;
+	text-align: center;
+	margin-right: 44px;
+}
+.order-info .info .fn-right{
+	margin-right: 12px;
+	cursor: pointer;
+}
+.order-info .info .fn-right i{
+	float: right;
+	position: relative;
+	height: 6px;
+	width: 12px;
+	margin: 18px 0px 0 8px;
+	transform: rotate(180deg);
+}
+.order-info .info .fn-right.active i{
+	transform: rotate(0deg);
+}
+.order-info .info .fn-right i:before,.order-info .info .fn-right i:after{
+	display: inline-block;
+	position: absolute;
+	left: 2px;
+	content: " ";
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-style: solid dashed dashed dashed;
+}
+.order-info .info .fn-right i:before{
+	top: 1px;
+	border-top-color: #1177dc;
+}
+.order-info .info .fn-right i:after{
+	top: 0px;
+	border-top-color: #e2f1ff;
+}
+.order-info .detail{
+	display: none;
+	border: 1px solid #ddd;
+	border-top: none;
+	background: #fff;
+	color: #6d6d6d;
+	font-size: 14px;
+}
+.order-info .detail p{
+	padding-left: 28px;
+	line-height: 56px;
+	height: 56px;
+	border-bottom: 1px solid #ddd;
+}
+.order-info .detail p .orange{
+	font-size: 18px;
+}
+.order-info .detail ul{
+	padding: 14px 0 28px 28px;
+	overflow: hidden;
+}
+.order-info .detail ul li{
+	float: left;
+	width: 230px;
+	line-height: 40px;
+}
+.order-info .payway{
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #1177dc;
+	margin-top: 30px;
+}
+.order-info .payway span{
+	display: inline-block;
+	line-height: 38px;
+}
+.order-info .payway span.choose{
+	width: 104px;
+	background: #fff;
+	margin-bottom: -1px;
+	color: #6d6d6d;
+	font-size: 14px;
+}
+.order-info .payway span.choose-tab{
+	padding: 0 34px;
+	background: #fff;
+	color: #1177dc;
+	font-size: 16px;
+	border-radius: 6px 6px 0 0;
+	border: 2px solid #1177dc;
+	border-bottom: none;
+	margin-right: 6px;
+	cursor: pointer;
+}
+.order-info .payway span.choose-tab.active{
+	color: #fff;
+	background: #1177dc;
+}
+.order-info .choose-div{
+	border: 1px solid #ddd;
+}
+.order-info .wy-link .title{
+	border-bottom: 1px solid #ddd;
+	line-height: 50px;
+	padding-left: 30px;
+	color: #6d6d6d;
+	font-size: 14px;
+}
+.order-info .wy-link .links{
+	padding: 20px 11px;
+}
+.order-info .wy-link .links a{
+	display: inline-block;
+	margin: 5px 14px;
+	width: 158px;
+	height: 77px;
+	border: 1px solid #ddd;
+}
+.order-info .wy-link .links a.gh{
+	background: url(../img/bank.png) no-repeat 0px 0px;
+}
+.order-info .wy-link .links a.ny{
+	background: url(../img/bank.png) no-repeat -168px 0px;
+}
+.order-info .wy-link .links a.zg{
+	background: url(../img/bank.png) no-repeat -336px 0px;
+}
+.order-info .wy-link .links a.js{
+	background: url(../img/bank.png) no-repeat -504px 0px;
+}
+.order-info .wy-link .links a.jt{
+	background: url(../img/bank.png) no-repeat -672px 0px;
+}
+.order-info .wy-link .links a.zs{
+	background: url(../img/bank.png) no-repeat 0px -87px;
+}
+.order-info .wy-link .links a.pf{
+	background: url(../img/bank.png) no-repeat -168px -87px;
+}
+.order-info .wy-link .links a.ms{
+	background: url(../img/bank.png) no-repeat -336px -87px;
+}
+.order-info .wy-link .links a.xy{
+	background: url(../img/bank.png) no-repeat -504px -87px;
+}
+.order-info .wy-link .links a.gd{
+	background: url(../img/bank.png) no-repeat -672px -87px;
+}
+.order-info .wy-link .links a.pa{
+	background: url(../img/bank.png) no-repeat 0px -174px;
+}
+.order-info .wy-link .links a.hx{
+	background: url(../img/bank.png) no-repeat -168px -174px;
+}
+.order-info .wy-link .links a.yz{
+	background: url(../img/bank.png) no-repeat -336px -174px;
+}
+.order-info .wy-link .links a.nb{
+	background: url(../img/bank.png) no-repeat -504px -174px;
+}
+.order-info .wy-link .links a.gf{
+	background: url(../img/bank.png) no-repeat -672px -174px;
+}
+.order-info .pf-bank,.order-info .dfft-bank,.order-info .yzm-pay{
+	padding: 40px 30px 20px 30px;
+}
+.order-info .content-box span.title-tip{
+	display: inline-block;
+	width: 130px;
+	height: 36px;
+	line-height: 36px;
+	color: #2789e9;
+	font-size: 12px;
+	text-align: center;
+	font-weight: 700;
+	background: #d2e8fc;
+	margin-bottom: 18px;
+	margin-right: 10px;
+}
+.order-info .content-box .flow-step em{
+	display: inline-block;
+	margin: 0 -19px 0 70px;
+	color: #6e6e6e;
+	font-size: 12px;
+}
+.order-info .content-box .flow-step em.ml122{
+	margin-left: 122px;
+}
+.order-info .content-box .flow-step em.active{
+	color: #2789e9;
+}
+.order-info .content-box .flow-step span{
+	display: block;
+	width: 672px;
+	height: 24px;
+	margin: 12px auto 32px auto;
+	background: url(../img/flow-card.png) no-repeat center;
+}
+.order-info .content-box .flow-step span i{
+	display: block;
+	width: 10%;
+	height: 24px;
+	background: url(../img/flow-card-b.png) no-repeat left center;
+}
+.order-info .content-box .btns-box{
+	text-align: center;
+	padding-bottom: 20px;
+	border-bottom: dotted 1px #777;
+	margin-bottom: 20px;
+}
+.order-info .content-box .payway-p{
+	color: #3b3b3b;
+	font-size: 12px;
+	line-height: 26px;
+}
+.order-info .content-box .surety{
+	text-align: center;
+	padding-bottom: 10px;
+}
+.order-info .content-box .surety dl{
+	display: inline-block;
+	width: 144px;
+	padding-top: 16px;
+	margin: 0 60px;
+}
+.order-info .content-box .surety dt{
+	display: inline-block;
+	width: 32px;
+	height: 36px;
+	background: url(../img/icon-pay.png) no-repeat;
+}
+.order-info .content-box .surety dt.icon01{
+	background-position: 0px -107px;
+}
+.order-info .content-box .surety dt.icon02{
+	background-position: -35px -107px;
+}
+.order-info .content-box .surety dt.icon03{
+	background-position: -68px -73px;
+}
+.order-info .content-box .surety dd{
+	color: #3b3b3b;
+	font-size: 12px;
+	text-align: center;
+	line-height: 16px;
+	padding-top: 12px;
+}
+.order-info .content-box .yzm li span{
+	display: inline-block;
+	vertical-align: middle;
+	color: #003670;
+	font-size: 14px;
+}
+.order-info .content-box .yzm li .input-text{
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	width: 74px;
+	padding: 0 10px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0 15px;
+}
+.order-info .content-box .yzm li .input-btn{
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	background: #f5f5f5;
+	padding: 0 25px;
+	color: #474747;
+	font-size: 14px;
+	border-radius: 3px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+}
+.order-info .content-box .yzm li .input-btn:hover{
+	border: 1px solid #0057ae;
+	background: #0057ae;
+	color: #fff;
+}
+.order-info .content-box .yzm li.tip{
+	background: #fff8f2;
+	padding-left: 15px;
+	color: #ff9947;
+	font-size: 12px;
+	border-radius: 3px;
+	height: 26px;
+	line-height: 26px;
+	margin: 22px 0 38px 0;
+}
+.order-info .content-box .yzm li.tip i{
+	display: inline-block;
+	vertical-align: middle;
+	margin: -2px 8px 0 0;
+	width: 18px;
+	height: 18px;
+	background: url(../img/icon-pay.png) no-repeat 0px -149px;
+}
+.order-info .content-box .yzm li.btn-li{
+	margin-top: 38px;
+}
+.order-info .content-box .yzm li.btn-li .input-btn{
+	border: 1px solid #2789e9;
+	background: #2789e9;
+	color: #fff;
+	padding: 0 34px;
+	height: 34px;
+	line-height: 34px;
+}
+.order-info .content-box .yzm li .sent-btn{
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 25px;
+	font-size: 14px;
+	border-radius: 3px;
+	height: 30px;
+	line-height: 30px;
+	cursor: default;
+	border: 1px solid #288be9;
+	background: #FFF;
+	color: #288be9;
+}
+
+
+/*发布需求*/
+select.input-txt {
+	width: 162px;
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #ddd;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+.require-form{
+	background: #f6f6f6;
+	padding: 20px 0 0;
+	margin-bottom: 20px;
+}
+.require-form ul{
+	overflow: hidden;
+}
+.require-form ul hr{
+	height: 1px;
+	width: 96%;
+	background: #ddd;
+	margin: 20px auto;
+}
+.require-form ul li{
+	display: inline-block;
+	line-height: 26px;
+	margin-bottom: 10px;
+}
+.require-form ul li label{
+	cursor: pointer;
+}
+.require-form ul li span{
+	display: inline-block;
+	vertical-align: top;
+	width: 100px;
+	text-align: right;
+}
+.require-form ul li .input-txt{
+	/*vertical-align: top;*/
+}
+.require-form ul li .input-txt.w-long{
+	width: 225px;
+}
+.require-form ul li .input-txt.w-short{
+	width: 120px;
+}
+.require-form ul li textarea.input-txt.w-short{
+	width: 245px;
+	height: 70px;
+}
+.require-form ul li .input-txt.w-ms{
+	width: 66px;
+}
+.require-form ul li .input-txt.w-ml{
+	width: 600px;
+}.require-form ul li select.input-txt.w-ml{
+	width: 600px;
+}
+.require-form ul li textarea.input-txt{
+	width: 600px;
+	height: 40px;
+	resize: none;
+	padding: 4px 10px;
+	line-height: 18px;
+	border: 1px solid #ddd;
+}
+.require-form ul li .btn-b{
+	line-height: 26px;
+	height: 28px;
+	font-size: 14px;
+	overflow: hidden;
+	text-align: center;
+}
+.require-form .kinds{
+	padding: 0 0 10px 0;
+	margin: 0 20px 20px 20px;
+	border-bottom: 1px solid #ddd;
+}
+.require-form label input[type=radio],.require-form label input[type=checkbox]{
+	display: inline-block;
+	vertical-align: middle;
+	margin: -2px 8px 0 0;
+}
+.require-form label{
+	margin-right: 20px;
+}
+.require-else{
+	display: none;
+}
+.require-form ul li .wl-btn{
+	width: 60px;
+	vertical-align: top;
+	margin-top: 1px;
+	line-height: 24px;
+	height: 26px;
+}
+.require-form ul li .wl-choose{
+	display: inline-block;
+	margin:10px 0px 0px 20px;
+	border: 1px solid #ddd;
+	padding: 10px;
+	background: #fff;
+	width: 190px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.require-form ul li .wl-choose.active{
+	background: #ff8a00;
+	color: #fff;
+}
+.require-form ul li .wl-choose.active dt,.require-form ul li .wl-choose.active dd{
+	color: #fff;
+}
+.require-form ul li .wl-choose img{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	width: 60px;
+	height: 60px;
+}
+.require-form ul li .wl-choose dl{
+	display: inline-block;
+	vertical-align: middle;
+}
+.require-form ul li .wl-choose dt{
+	text-align: center;
+	color: #1177dc;
+	font-size: 16px;
+	line-height: 26px;
+}
+.require-form ul li .wl-choose dd{
+	text-align: left;
+	color: #6d6d6d;
+	font-size: 14px;
+	line-height: 20px;
+}
+/*发布运力*/
+dl.pre{
+	position: absolute;
+	width: 300px;
+	right: -106px;
+	top: 30px;
+}
+dl.pre dd{
+	margin-bottom: 10px;
+}
+dl.pre .date{
+	width: 70px;
+}
+.J_pre i{
+	display: inline-block;
+	vertical-align: middle;
+	margin: -2px 6px 0 0;
+	width: 8px;
+	height: 8px;
+	border: 1px solid #6d6d6d;
+	background: #fff;
+	border-radius: 2px;
+}
+.J_pre i.active{
+	background: #1177dc;
+}
+/*弹窗*/
+.add-pop ul{
+	width: 420px;
+	padding: 20px 0px 20px 30px;
+}
+.add-pop ul li span{
+	display: inline-block;
+	vertical-align: top;
+	width: 70px;
+	text-align: right;
+}
+.add-pop ul .select-box{
+	display: inline-block;
+	width: 340px;
+}
+.add-pop ul .input-txt.w70{
+	width: 70px;
+}
+.lookback-pop ul{
+	overflow: hidden;
+	width: 600px;
+	padding: 20px 0px 10px 30px;
+}
+.lookback-pop ul li{
+	float: left;
+	line-height: 20px;
+	font-size: 14px;
+	width: 200px;
+	margin-bottom: 10px;
+}
+.lookback-pop ul li.w300{
+	width: 300px;
+}
+.lookback-pop .title-div{
+	line-height: 40px;
+	margin: 0px 20px;
+	border-bottom: 2px solid #1177dc;
+}
+.lookback-pop .title-div .title{
+	font-size: 14px;
+	font-weight: 700;
+	color: #1177dc;
+}
+.lookback-pop .title-div .mr20{
+	margin-right: 20px;
+}
+.lookback-pop p{
+	margin: 10px 40px 40px 60px;
+	font-size: 14px;
+	line-height: 18px;
+}
+.lookback-pop .pdf{
+	margin: 20px 30px 40px 30px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.lookback-pop .pdf p{
+	margin: 0px 0px 10px 20px;
+	font-size: 14px;
+	overflow: hidden;
+}
+.lookback-pop .pdf a.blue{
+	float: right;
+	text-decoration: underline;
+}
+.sop-pop a.position-re{
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 22px;
+	height: 22px;
+	display: inline-block;
+	vertical-align: top;
+	width: 70px;
+	margin: 0;
+}
+.sop-pop ul li a.btn-b{
+	margin-top: 0px;
+}
+.sop-pop ul li textarea.input-txt{
+	height: 80px;
+}
+.sop-pop ul{
+	padding: 10px 30px 30px 30px;
+	width: 340px;
+}
+.lookbj-pop .btn-bb{
+	margin: 20px auto;
+}
+.lookbj-pop .product-list{
+	min-width: 1000px;
+}
+.J_lookbj{
+	position: relative;
+}
+.J_lookbj .num{
+	display: block;
+	position: absolute;
+	font-size: 12px;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 100%;
+	background: #ff8a00;
+	right: -10px;
+	top: -10px;
+}
+.bj-pop input[type=button]{
+	display: inline-block;
+	width: 90px;
+	margin-top: 20px;
+}

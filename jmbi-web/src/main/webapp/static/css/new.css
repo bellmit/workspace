@@ -1,0 +1,272 @@
+.bootstrap-table .page-search-num, .bootstrap-table .page-search,
+.bootstrap-table .page-first, .bootstrap-table .page-last {
+    display: none !important;
+}
+
+.bootstrap-table .page-pre > a, .bootstrap-table .page-next > a {
+    /* display: block; */
+    /* color: transparent; */
+}
+
+.bootstrap-table ul.pagination > li {
+    height: 24px;
+    width: 24px;
+    margin: 5px;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    line-height: 24px;
+    cursor: pointer;
+    border-radius: 13px;
+}
+
+.bootstrap-table ul.pagination > li.page-pre {
+    background: url(../img/sl-icon.png) 5px -441px no-repeat;
+}
+
+.bootstrap-table ul.pagination > li.page-next {
+    background: url(../img/sl-icon.png) 7px -491px no-repeat;
+}
+
+.bootstrap-table ul.pagination > li.page-number.active, .bootstrap-table ul.pagination > li.page-number:hover {
+    background-color: #4497ed;
+}
+
+.bootstrap-table ul.pagination > li.page-number.active > a, .bootstrap-table ul.pagination > li.page-number:hover > a {
+    /* color: #fff */
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus{
+    background: #dedede;
+    border: 1px solid #999;
+    color: #333;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus,.pagination > li > a, .pagination > li > span{
+    border: 1px solid #81c0fe;
+    background: #deeefd;
+    color: #333;
+}
+
+.layer-pop .pop-content .con-top .pbox {
+    height: 32px;
+    line-height: 32px;
+    color: #2f323b
+}
+
+.layer-pop .pop-content .con-top .pbox span {
+    display: inline-block;
+    float: left;
+    height: 32px;
+    line-height: 32px
+}
+
+.layer-pop .pop-content .con-top .pbox span.icbox {
+    width: 88px
+}
+
+.layer-pop .pop-content .con-top .pbox span.icbox .ic {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 6px 0 6px 42px
+}
+
+.layer-pop .pop-content .con-top .pbox span.icbox .ic-yes {
+    background-position: 0 -180px
+}
+
+.layer-pop .pop-content .con-top .pbox span.icbox .ic-no {
+    background-position: 0 -213px
+}
+
+.layer-pop .pop-content .con-top .pbox span.text {
+    color: #717272;
+    font-size: 14px;
+    position: relative
+}
+
+.layer-pop .pop-content .con-top .pbox span.text .input-text {
+    width: 170px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+    top: -2px
+}
+
+.layer-pop .pop-content .con-top .pbox span.text select.input-text {
+    height: 32px;
+    line-height: 32px;
+    width: 183px
+}
+
+.layer-pop .pop-content .con-top .pbox span.text .ic {
+    height: 20px;
+    width: 16px;
+    background-color: #fff;
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    cursor: pointer
+}
+
+.layer-pop .pop-content .con-top .pbox span.text .ic-clean {
+    background-position: 0 -246px
+}
+
+.layer-pop .pop-content .con-top .pbox span.btns .sl-btn {
+    margin-left: 15px
+}
+
+.zclip {
+    display: block;
+    width: 100px;
+    height: 32px;
+    position: absolute;
+    left: 15px;
+    top: 0px;
+}
+
+.zclip embed {
+    width: 100px;
+    height: 32px;
+}
+
+.kuanpop-shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 19880803;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+}
+
+.kuanpop {
+    display: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 19880804;
+    background-color: #fff;
+}
+
+.block-searchbox {
+    margin-top: 30px;
+}
+
+.bs-checkbox {
+    padding-left: 25px;
+}
+
+.bs-checkbox input {
+    position: relative;
+    top: 2px;
+}
+
+.accessory {
+    display: block;
+    height: 52px;
+}
+
+.accessory a {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    margin: 12px 0;
+}
+
+.accessory a .ic {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+}
+
+.ic-accessoryBlue {
+    background-position: -365px -44px;
+}
+
+.main-block .block-table table tr:hover td .accessory a .ic-accessoryBlue {
+    background-position: -365px -143px;
+}
+
+.ic-accessoryRed {
+    background-position: -365px -182px;
+}
+
+.ic-del {
+    background-position: -361px 4px;
+}
+
+tr:hover .ic-del, tr.active .ic-del {
+    background-position: -361px -97px;
+}
+
+.ic-qy {
+    background-position: -260px -41px;
+}
+
+tr:hover .ic-qy, tr.active .ic-qy {
+    background-position: -260px -142px;
+}
+
+.ic-ty {
+    background-position: -114px 4px;
+}
+
+tr:hover .ic-ty, tr.active .ic-ty {
+    background-position: -114px -96px;
+}
+
+.block-tablebox table tr td.a, .block-tablebox table tr th.a {
+    width: 70px;
+}
+
+.block-tablebox table tr td.b, .block-tablebox table tr th.b {
+    width: 200px;
+}
+
+.block-tablebox table tr td.c, .block-tablebox table tr th.c {
+    width: 180px;
+}
+
+.block-tablebox table tr td.d, .block-tablebox table tr th.d {
+    width: 80px;
+}
+
+.block-tablebox table tr td.e, .block-tablebox table tr th.e {
+    width: 130px;
+}
+
+.block-tablebox table tr td.f, .block-tablebox table tr th.f {
+    width: 190px;
+}
+
+.block-tablebox table tr td.g, .block-tablebox table tr th.g {
+    width: 240px;
+}
+
+.block-tablebox table tr td.h, .block-tablebox table tr th.h {
+    width: 120px;
+}
+
+.block-tablebox table tr td.i, .block-tablebox table tr th.i {
+    width: 70px;
+}
+
+.block-tablebox table tr td.j, .block-tablebox table tr th.j {
+    width: 135px;
+}
+.uploadDoneImg.slt{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    height: 34px;
+}
+.main-block .block-content .fn-right .sl-btn{
+    margin-left: 0px;
+}

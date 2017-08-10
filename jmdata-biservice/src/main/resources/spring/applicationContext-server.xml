@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd"
+	default-lazy-init="true">
+
+
+	<import resource="classpath:cxf/cxf.xml" />
+	<import resource="classpath:cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:cxf/cxf-servlet.xml" />
+
+	<!--<bean id="testSvc" class="org.jumao.bi.service.impl.test.TestSvcImpl" />-->
+	<bean id="pingSvc" class="org.jumao.bi.service.impl.test.PingSvcImpl" />
+	<bean id="baiduSvc" class="org.jumao.bi.service.impl.baidu.BaiduSvcImpl" />
+	<bean id="overviewSvc" class="org.jumao.bi.service.impl.jdt.overview.OverviewSvcImpl" />
+	<bean id="inoutSvc" class="org.jumao.bi.service.impl.jdt.inout.InOutSvcImpl" />
+	<bean id="companySvc" class="org.jumao.bi.service.impl.jdt.company.CompanySvcImpl" />
+	<bean id="areaOrderSvc" class="org.jumao.bi.service.impl.jdt.areaorder.AreaOrderSvcImpl" />
+	<bean id="userTraceSvc" class="org.jumao.bi.service.impl.user.UserTraceSvcImpl" />
+	<bean id="userAttentionSvc" class="org.jumao.bi.service.impl.user.UserAttentionSvcImpl" />
+	<bean id="operationOverview" class="org.jumao.bi.service.impl.trade.operate.OperationSvcImpl" />
+	<bean id="operationOrderSvc" class="org.jumao.bi.service.impl.trade.operate.OperationOrderNSvcImpl" />
+	<bean id="operationGoodsSvc" class="org.jumao.bi.service.impl.trade.operate.OperationGoodsNSvcImpl" />
+	<bean id="operationConvFunnelSvc" class="org.jumao.bi.service.impl.trade.operate.OperationConvFunnelNSvcImpl" />
+	<bean id="registerAnalysis" class="org.jumao.bi.service.impl.trade.register.RegisterAnalysisImpl" />
+	<bean id="shopSvc" class="org.jumao.bi.service.impl.trade.shop.ShopSvcImpl" />
+	<bean id="dealSvc" class="org.jumao.bi.service.impl.trade.deal.DealSvcImpl" />
+	<bean id="goodsAnalysis" class="org.jumao.bi.service.impl.trade.goods.GoodsAnalysisImpl" />
+	<bean id="masOperationOverview" class="org.jumao.bi.service.impl.trade.operate.MasOperationSvcImpl" />
+	<bean id="shopAnalysisSvc" class="org.jumao.bi.service.impl.trade.shop.ShopAnalysisSvcImpl" />
+	<bean id="jytOverviewAnalysis" class="org.jumao.bi.service.impl.jyt.overview.JytOverviewAnalysisImpl"/>
+	<bean id="jytDealSvc" class="org.jumao.bi.service.impl.jyt.deal.DealSvcImpl" />
+	<bean id="jytPaymentSvc" class="org.jumao.bi.service.impl.jyt.payment.JytPaymentSvcImpl" />
+	<bean id="jytRegIncrAndAuthSvc" class="org.jumao.bi.service.impl.jyt.register.JytRegIncrAndAuthSvcImpl"/>
+	<bean id="lgProvidersAnalysisSvc" class="org.jumao.bi.service.impl.jyt.deal.LogisticsProvidersAnalysisImpl" />
+	<bean id="logisticsTypeSvc" class="org.jumao.bi.service.impl.jyt.deal.LogisticsTypeImpl" />
+	<bean id="jrtOverviewImpl" class="org.jumao.bi.service.impl.jrt.overview.JrtOverviewImpl" />
+	<bean id="jrtFinancingSvc" class="org.jumao.bi.service.impl.jrt.JrtFinancingSvcImpl" />
+	<bean id="jrtCompanySvc" class="org.jumao.bi.service.impl.jrt.CompanySvcImpl" />
+	<bean id="JzxOverviewImpl" class="org.jumao.bi.service.impl.jzx.JzxOverviewImpl" />
+	<!--<bean id="kylinImpl" class="org.jumao.bi.service.jrt.KylinImpl" />-->
+	<bean id="enJrtFinancingSvc" class="org.jumao.bi.service.impl.enjrt.EnJrtFinancingSvcImpl" />
+	<bean id="enJrtOverviewSvc" class="org.jumao.bi.service.impl.enjrt.EnJrtOverviewImpl" />
+	<bean id="jzxBusinessTrendSvc" class="org.jumao.bi.service.impl.jzx.JzxBusinessTrendImpl" />
+	<bean id="enJzxBusinessTrendSvc" class="org.jumao.bi.service.impl.enjzx.EnJzxBusinessTrendImpl" />
+	<bean id="gaSvc" class="org.jumao.bi.service.impl.ga.GaSvcImpl" />
+	<bean id="enNetFlowSvc" class="org.jumao.bi.service.impl.en.EnNetFlowSvcImpl" />
+	<bean id="enJzxOverviewImpl" class="org.jumao.bi.service.impl.enjzx.EnJzxOverviewImpl" />
+	<bean id="enJytPaymentSvcImpl" class="org.jumao.bi.service.impl.enjyt.EnJytCapaSvcImpl" />
+	<bean id="enJytOverviewSvc" class="org.jumao.bi.service.impl.enjyt.EnJytOverviewSvcImpl" />
+	<bean id="enJytRegisterSvc" class="org.jumao.bi.service.impl.enjyt.EnJytRegisterSvcImpl" />
+	<bean id="enLgProvidersAnalysisSvc" class="org.jumao.bi.service.impl.enjyt.deal.EnLogisticsProvidersAnalysisImpl" />
+	<bean id="enLogisticsTypeSvc" class="org.jumao.bi.service.impl.enjyt.deal.EnLogisticsTypeImpl" />
+	<jaxrs:server id="restServiceContainer" address="/">
+		<jaxrs:serviceBeans>
+			<!--<ref bean="testSvc" />-->
+			<ref bean="pingSvc" />
+			<ref bean="baiduSvc" />
+			<ref bean="overviewSvc" />
+			<ref bean="inoutSvc" />
+			<ref bean="companySvc" />
+			<ref bean="areaOrderSvc" />
+			<ref bean="userTraceSvc" />
+			<ref bean="userAttentionSvc" />
+			<ref bean="operationOverview" />
+			<ref bean="operationOrderSvc" />
+			<ref bean="operationGoodsSvc" />
+			<ref bean="operationConvFunnelSvc" />
+			<ref bean="registerAnalysis" />
+			<ref bean="shopSvc" />
+			<ref bean="dealSvc" />
+			<ref bean="goodsAnalysis" />
+			<ref bean="masOperationOverview" />
+			<ref bean="shopAnalysisSvc" />
+			<ref bean="jytOverviewAnalysis" />
+			<ref bean="jytDealSvc" />
+			<ref bean="jytPaymentSvc" />
+			<ref bean="jytRegIncrAndAuthSvc" />
+			<ref bean="lgProvidersAnalysisSvc" />
+			<ref bean="logisticsTypeSvc" />
+			<ref bean="jrtOverviewImpl" />
+			<ref bean="jrtFinancingSvc" />
+			<ref bean="jrtCompanySvc" />
+			<ref bean="JzxOverviewImpl" />
+			<!--<ref bean="kylinImpl" />-->
+			<ref bean="enJrtFinancingSvc" />
+			<ref bean="enJrtOverviewSvc" />
+			<ref bean="jzxBusinessTrendSvc" />
+			<ref bean="enJzxBusinessTrendSvc" />
+			<ref bean="gaSvc" />
+			<ref bean="enNetFlowSvc" />
+			<ref bean="enJzxOverviewImpl" />
+			<ref bean="enJytPaymentSvcImpl" />
+			<ref bean="enJytOverviewSvc" />
+			<ref bean="enJytRegisterSvc" />
+			<ref bean="enLgProvidersAnalysisSvc" />
+			<ref bean="enLogisticsTypeSvc" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+		<jaxrs:languageMappings>
+			<entry key="en" value="en-gb" />
+		</jaxrs:languageMappings>
+		<jaxrs:providers>
+			<bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
+			<bean class="org.jumao.bi.provider.InvokeFaultExceptionMapper"></bean>
+		</jaxrs:providers>
+
+	</jaxrs:server>
+		<!-- 日志拦截器 -->
+	<bean id="logInterceptor" class="org.jumao.bi.component.LogInterceptor"/>
+	<!-- 异常拦截器 -->
+	<bean id="exceptionHandler" class="org.jumao.bi.component.ExceptionAdvisor"/>  
+	<bean name="beanNameAutoProxyCreator" class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator" >  
+		<property name="beanNames">
+			<!-- 配置需要进行日志记录的Service-->
+			<value>
+				<!--testSvc,-->operationOrderSvc,operationGoodsSvc,operationConvFunnelSvc,
+				shopAnalysisSvc,lgProvidersAnalysisSvc,logisticsTypeSvc,jzxBusinessTrendSvc,
+				enJzxBusinessTrendSvc,enLgProvidersAnalysisSvc,enLogisticsTypeSvc
+			</value>
+   		</property>
+   		<property name="interceptorNames">
+    		<list>
+         		<value>exceptionHandler</value>
+         		<value>logInterceptor</value>
+    		</list>
+   		</property>
+	</bean>
+</beans>

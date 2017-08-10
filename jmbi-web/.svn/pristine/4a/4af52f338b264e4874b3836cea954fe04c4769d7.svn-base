@@ -1,0 +1,87 @@
+-------------- ↓ 流量分析 -----------------------------------------------
+
+platform 传 0 表示全站，其他的正常使用，如 101501 表示聚融通英文版
+
+概览  几个数字
+/biservice/v1/en/netflow/overview/platform/101501/startDate/20170101/endDate/20170707
+
+id   name
+1    pv 浏览量
+2    uv 独立访客
+3    bounce_rate 跳出率
+4    avg_session_dur 平均停留时间
+5    new_users 新访客
+6    old_users 老访客
+
+{"code":"200","message":"Successful!","data":[{"id":1,"name":"pv","value":"8"},{"id":2,"name":"uv","value":"7"},{"id":3,"name":"bounce_rate","value":"91.67%"},{"id":4,"name":"avg_session_dur","value":"1.25%"}],"nowDate":"2017-07-28"}
+
+
+
+趋势分析 折线图
+type 类型：
+PV(0, "浏览量"), UV(1, "独立访客"), AVG_SESSION_DUR(2, "平均停留时间"),
+AVG_UV(3, "访问深度"),NEW_USERS(4, "新访客"), BOUNCE_RATE(5, "跳出率"), SESSIONS(6, "访问次数")
+
+/biservice/v1/en/netflow/trend/lineChart/platform/101501/startDate/20170101/endDate/20170807/type/0
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"[趋势分析]","title":"趋势分析","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesData":[0,0]}}
+
+
+
+各平台流量指标情况  表格
+
+orderTarget 可传：pv 浏览量、 sessions 访问次数、 uv 独立访客
+orderType 可传：asc 正序， desc 倒序
+
+/biservice/v1/en/netflow/overview/table/platform/101501/startDate/20170101/endDate/20170707/orderTarget/pv/orderType/asc
+{"code":"200","message":"Successful!","data":[{"name":"JUMOREGlobal","pv":2711,"sessions":1437,"uv":1834,"avg_session_dur":31.36,"bounce_rate":"50.40%"},{"name":"JUMOREIndustrial","pv":1000,"sessions":459,"uv":775,"avg_session_dur":37.03,"bounce_rate":"50.47%"}],"nowDate":"2017-08-01"}
+
+
+
+页面流量(uv) top5
+/biservice/v1/en/netflow/pv/barChart/platform/101501/startDate/20170101/endDate/20170807
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"页面流量排名","title":"页面流量排名","yAxisData":["/login"],"seriesData":[67]}}
+
+
+
+跳出(uv) top5
+/biservice/v1/en/netflow/bounce/barChart/platform/101501/startDate/20170101/endDate/20170807
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"页面跳出排名","title":"页面跳出排名","yAxisData":["/login"],"seriesData":[67]}}
+
+
+
+区域分布 世界地图
+/biservice/v1/en/netflow/areaDist/global/pv/platform/101501/startDate/20170101/endDate/20170707
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["China"],"seriesData":[{"typeOrId":"China","name":"China","value":"8"}]},"nowDate":"2017-07-28"}
+
+
+
+访问来源 饼图
+/biservice/v1/en/netflow/sourceMedium/uv/pieChart/platform/101501/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["外部链接"],"seriesData":[{"typeOrId":"referral","name":"外部链接","value":"8"}]},"nowDate":"2017-07-28"}
+
+
+
+访问来源 折线图
+/biservice/v1/en/netflow/sourceMedium/lineChart/platform/101501/startDate/20170101/endDate/20170807/type/0   type 已经不再使用，先保留参数
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"[访问来源]","title":"访问来源","xAxisData":["20170701","20170702"],"yAxisData":[],"seriesDataMulti":[[...], [...]]}}
+
+
+
+入口页 pv top10
+/biservice/v1/en/netflow/entrancesPage/pvTop10/table/platform/101501/startDate/20170101/endDate/20170807
+{"code":"200","message":"Successful!","data":[{"name":"/","value":3919,"percent":"98.64%"},{"name":"/login","value":24,"percent":"0.60%"}],"nowDate":"2017-08-01"}
+
+
+
+受访页 pv top10
+/biservice/v1/en/netflow/visitedPage/pvTop10/table/platform/101501/startDate/20170101/endDate/20170807
+{"code":"200","message":"Successful!","data":[{"name":"/","value":3919,"percent":"98.64%"},{"name":"/login","value":24,"percent":"0.60%"}],"nowDate":"2017-08-01"}
+
+
+
+来源站 pv top10
+/biservice/v1/en/netflow/medium/pvTop10/table/platform/101501/startDate/20170101/endDate/20170807
+{"code":"200","message":"Successful!","data":[{"name":"/","value":3919,"percent":"98.64%"},{"name":"/login","value":24,"percent":"0.60%"}],"nowDate":"2017-08-01"}
+
+
+-------------- ↑ 流量分析 -----------------------------------------------

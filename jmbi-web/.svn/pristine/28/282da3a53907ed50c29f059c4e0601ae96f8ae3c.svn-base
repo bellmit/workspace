@@ -1,0 +1,20 @@
+.linkComSearchBox .input-prepend{margin-right: 60px;}
+.user-status .selectBar{width: 235px;}
+.sffpTrade{width: 153px;}
+.ownTradeUserNo{width: 233px;}
+.tabTlt{width:100px; padding-right:20px; text-align: right;}
+
+input.companyName{width: 386px; border: 1px solid #e8e8e8;}
+
+
+
+
+
+
+
+
+
+
+
+
+

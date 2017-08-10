@@ -1,0 +1,135 @@
+{
+  "platform": "聚运通BI",
+  "menuData": [{
+      "name": "用户行为",
+      "path": "1",
+      "iconClass": {
+        "icon-yhxw": true
+      },
+      "meta": ["81201", "81202", "81203", "81204"],
+      "items": [{
+          "name": "流量分析",
+          "path": "flow-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81202"]
+        },
+        {
+          "name": "登录分析",
+          "path": "login-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81203"]
+        },
+        {
+          "name": "用户关注",
+          "path": "user-attension",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81204"]
+        }
+      ]
+    },
+    {
+      "name": "运营情况",
+      "path": "2",
+      "iconClass": {
+        "icon-yyqk": true
+      },
+      "meta": ["81205", "81206", "81207", "81208", "81209", "81210", "81211", "81212", "81213", "81214", "81215", "81216", "81217"],
+      "items": [{
+          "name": "总览",
+          "path": "overview",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81206"]
+        },
+        {
+          "name": "注册分析",
+          "path": "2-1",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81207", "81208", "81209", "81210", "81211", "81212"],
+          "items": [{
+            "name": "日新增用户",
+            "path": "increased-user",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81208"]
+          }, {
+            "name": "企业用户",
+            "path": "enterprise-user",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81209"]
+          }, {
+            "name": "支付分析",
+            "path": "pay-analysis",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81210"]
+          }, {
+            "name": "运力分析",
+            "path": "capacity",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81211"]
+          }, {
+            "name": "仓储分析",
+            "path": "warehouse",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81212"]
+          }]
+        },
+        {
+          "name": "成交分析",
+          "path": "2-3",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["81213", "81214", "81215", "81216", "81217"],
+          "items": [{
+            "name": "成交概览",
+            "path": "dealing",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["81214"]
+          }, {
+            "name": "物流商分析",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "path": "logistics",
+            "meta": ["81215"]
+          }, {
+            "name": "交易地域分析",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "path": "dealing-analysis",
+            "meta": ["81216"]
+          }, {
+            "name": "物流方式分析",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "path": "shipping",
+            "meta": ["81217"]
+          }]
+        }
+      ]
+    }
+  ]
+}

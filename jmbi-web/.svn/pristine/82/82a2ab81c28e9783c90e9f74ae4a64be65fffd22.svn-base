@@ -1,0 +1,53 @@
+/*layout css*/
+.side-nav li{ margin-bottom: 20px;}
+.control-box h3{ line-height: 40px;}
+.control-box p.btns{ margin-bottom: 15px;}
+.main-block{ margin: 0 20px;}
+/*layout css end*/
+
+/*khgl css*/
+.main-block .block-table{ padding-bottom: 30px;}
+.khgl-block .block-table,.zygl-block .block-table{ padding-bottom: 0;}
+.main-block .block-table table td{ line-height: normal; min-width: 80px;}
+.main-block .block-table table td .sl-icyuanbtn{ margin: 5px 0;}
+.khgl-block .block-list{ margin-top: 30px; margin-bottom: 20px;}
+.main-block .block-list .list{ padding: 28px 15px;}
+.main-block .block-list .list-1 .top { font-size: 12px;}
+.main-block .block-list .list-1 .bottom{ font-size: 12px;}
+.main-block .block-list .list-1 .bottom p span{ margin-left: 20px; margin-right: 25px;}
+.main-block .block-list .list-2 .list-table table th,.main-block .block-list .list-2 .list-table table td{ line-height: normal; padding: 0 5px; min-width: 80px;}
+.main-block .block-list .list-2 .list-table table td span{ margin: 0 5px;}
+.main-block .block-list .list-2 .list-leftbox{ left: 15px;}
+.main-block .block-list .list-3 .content-list,.main-block .block-list .list-4 .ul-list{ width: 750px;}
+.main-block .block-list .list .box-btns{ width: 180px;}
+.main-block .block-list .list-4 .ul-list span .input-text{ width: 148px;}
+.main-block .block-list .list-4 .ul-list span .big-input-text{ width: 402px;}
+.main-block .block-list .list-5{ padding-right: 200px;}
+.main-block .block-table-box{ padding-right: 220px; margin-bottom: 20px;}
+.main-block .block-table-box .box-btns{ width: 220px;}
+.main-block .block-table-box .box-table table tr td{ min-width: 70px;}
+.main-block .block-tablebox table .top td,.main-block .block-tablebox table .middle td{ line-height: normal;}
+.main-block .block-tablebox table .top td span{ padding-left: 0px; display: block; padding-top: 3px;}
+.main-block .block-tablebox table .middle td .sl-btn{ width: 70px;}
+.main-block .block-tablebox table .bottom td .sl-btn{ margin: 5px 0;}
+.main-block .block-leftright .leftright-box{ width: 480px;}
+.main-block .block-leftright .leftright-box .content .content-list .list-head .head-left{ width: 200px;}
+.main-block .block-leftright .leftright-box .content .content-list .list-head .head-left em{ padding-right: 10px;}
+.main-block .block-leftright .leftright-box .content .content-list .list-text .text-left, .main-block .block-leftright .leftright-box .content .content-list .list-text .text-right{ width: 170px;}
+.main-block .block-leftright .leftright-box .content .content-list .list-text .text-right{ padding-right: 110px;}
+.main-block .block-leftright .leftright-box .content .content-list .list-text .text-right .text-btns{ width: 106px;}
+.main-block .block-table-box .box-content span select.input-text{ width: 166px;}
+.main-block .block-table-box .box-content span .input-text{ width: 158px;}
+.main-block .block-table-box .line-bdleft{ right: 220px;}
+.main-block .block-table-box .box-boom{ width: 722px;}
+.main-block .block-table-box .box-boom .top-list .toplist-box{ width: 352px;}
+.main-block .block-table-box .box-boom .top-list .toplist-box .content .con-title .title-left{ width: 160px;}
+.main-block .block-table-box .box-boom .down-list{ padding: 10px 0; margin-top: 10px;}
+.main-block .block-table-box .box-boom .down-list p span .input-text{ width: 68px;}
+.main-block .block-ch .leftright-box{ width: 412px;}
+.main-block .block-ch .leftright-box .content .contents-box{ width: 408px;}
+.main-block .block-leftright .leftright-box .down{ width: 480px;}
+.main-block .block-ch .leftright-box .content .contents-box .text-left, .main-block .block-ch .leftright-box .content .contents-box .text-right{ width: 130px;}
+.main-block .block-ch .leftright-box .content .contents-box .text-right{ width: 246px;}
+.main-block .block-ch .leftright-box .content .contents-box .text-right .text-btns,.main-block .block-ch .leftright-box .content .contents-box .text-right .text-btns span{ width: 96px;}
+

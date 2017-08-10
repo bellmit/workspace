@@ -1,0 +1,124 @@
+------------------------
+--  交易总平台、聚贸总站 --
+------------------------
+
+//-------------- 总平台 运营分析  总览 --------------
+
+/biservice/v1/masoperate/total/100500  //  运营总览顶部6个统计图
+{"status":{"code":"200","message":"Successful!"},"data":{"nowDate":"2017-06-26","MemberTotal":"1725","ItemTotal":"4956","PayTotal":"318","TranTotal":"40.91","OpenStoreTotal":"127","OrderTotal":"456"}}
+
+/biservice/v1/masoperate/getBasic/20170401/20170520  //  交易全平台整体趋势
+{"status":{"code":"200","message":"Successful!"},"xAxisData":["20170401","20170402","20170403","20170404","20170405","20170406","20170407","20170408","20170409","20170410","20170411","20170412","20170413","20170414","20170415","20170416","20170417","20170418","20170419","20170420","20170421","20170422","20170423","20170424","20170425","20170426","20170427","20170428","20170429","20170430","20170501","20170502","20170503","20170504","20170505","20170506","20170507","20170508","20170509","20170510","20170511","20170512","20170513","20170514","20170515","20170516","20170517","20170518","20170519","20170520"],"openStoreTotal":{"title":"开通店铺数趋势情况","seriesName":"开通店铺数","unit":"个","seriesData":[2,0,0,0,2,1,0,0,0,0,0,0,2,2,0,0,3,0,2,3,8,1,0,2,3,3,3,3,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,2,0,0,1,1,0]},"itemTotal":{"title":"发布商品数趋势情况","seriesName":"发布商品数","unit":"件","seriesData":[13,0,0,0,12,2,0,0,0,1,0,0,4,4,2,0,3,1,9,4,32,16,1,13,14,10,23,9,0,0,0,0,0,0,5,0,1,2,0,0,0,0,0,0,0,2,3,7,22,0]},"orderTotal":{"title":"订单数趋势情况","seriesName":"订单数","unit":"笔","seriesData":[22,0,0,0,13,2,0,0,0,0,0,0,0,0,0,5,1,4,10,15,32,27,0,26,13,39,28,15,0,0,0,0,0,3,3,0,3,0,6,1,0,0,0,0,12,6,10,22,19,0]},"payTotal":{"title":"付款笔数趋势情况","seriesName":"付款笔数","unit":"笔","seriesData":[0,0,0,0,8,0,0,0,0,49,52,38,0,0,0,0,0,0,0,5,0,0,0,12,10,5,3,1,0,0,0,19,11,2,5,0,0,12,16,29,8,4,0,0,5,13,11,13,5,0]},"tranTotal":{"title":"金额趋势情况","seriesName":"金额","unit":"元","seriesData":[0,0,0,0,88.00,0,0,0,0,523.00,411.00,362.00,0,0,0,0,0,0,0,55.00,0,0,0,182.80,562.00,273.00,83.00,699993.00,0,0,0,494.20,421.00,106.00,264.42,0,0,491.00,2009.61,353.20,121.00,934.00,0,0,104.10,184.20,139.65,135.68,43.00,0]}}
+
+/biservice/v1/masoperate/getItemProportion/20170401/20170520  //  发布商品数 行业 占比
+{"status":{"code":"200","message":"Successful!"},"total":"215","proportion":[{"煤炭":"32"},{"有色":"36"},{"矿产":"27"},{"农产品":"30"},{"钢铁":"20"},{"消费品":"15"},{"食品":"13"},{"工业品":"19"},{"机械":"23"}],"unit":"个"}
+
+/biservice/v1/masoperate/getOrderProportion/20170401/20170520  //  订单笔数 行业 占比
+{"status":{"code":"200","message":"Successful!"},"total":"337","proportion":[{"煤炭":"49"},{"有色":"65"},{"矿产":"21"},{"农产品":"57"},{"钢铁":"34"},{"消费品":"56"},{"食品":"12"},{"工业品":"24"},{"机械":"19"}],"unit":"笔"}
+
+/biservice/v1/masoperate/getOrderMoneyProportion/20170401/20170520  //  订单金额 行业 占比
+{"status":{"code":"200","message":"Successful!"},"total":"0","proportion":[],"unit":"元"}
+
+
+
+
+---- 注册分析  -------------------
+
+交易全平台 或 聚贸总站 的新增注册数折线图，用 platform 区分：
+0 表示交易全平台,
+总站 platform 是 1001。
+biservice/v1/register/ms/newlyIncr/lineChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"新增注册数","xAxisData":["20160503","20160504","20160505"],"seriesData":[27,27,29]}}
+
+
+交易全平台 或 聚贸总站 新增注册数 饼图，用 platform 区分：
+biservice/v1/register/ms/newlyIncr/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["化工","聚贸总站"],"seriesData":[{"name":"化工","value":"2066"},{"name":"聚贸总站","value":"2"}]},"tableData":[],"counts":9956,"percent":""}
+
+
+---- 商品分析  -------------------
+
+发布商品数 折线图，注意 v1 后面是 goods：
+biservice/v1/goods/newlyIncr/lineChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"发布商品数","xAxisData":["20160503","20160504","20160505"],"seriesData":[27,27,29]}}
+
+
+行业 占比 饼图
+biservice/v1/goods/industry/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["矿产","农产品"],"seriesData":[{"name":"矿产","value":"69"},{"name":"农产品","value":"69"}]}}
+
+
+某行业的类目 占比 饼图
+biservice/v1/goods/industry/4/category/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["饲料产品","农机"],"seriesData":[{"name":"饲料产品","value":"1"},{"name":"农机","value":"1"}]}}
+
+
+行业差异 综合分析
+biservice/v1/goods/industry/diff/bubbleGradient/platform/1025/startDate/20160501/endDate/20170701
+{"code":"200","message":"Successful!","data":[[0,3,2024.1,"食品"],[0,6,25819.73,"有色"]]}
+
+
+
+-------------- 店铺运营分析 --------------
+店铺商品发布数排行：
+/biservice/v1/shopAnalysis/goodsCategoriesTop/platform/102000/startDate/20170501/endDate/20170525
+{"status":{"code":"200","message":"Successful!"},"BarChart":{"seriesName":"店铺公司名","yAxisData":["泊位风格","weilin测试jyxcs10001","生活大爆炸","杭州测试有限公司","xian先生的店铺"],"seriesData":[14,8,8,5,4],"itemId":[1000000224,1000000210,1000000293,1000000446,1000000400]}}
+
+商品发布数行业占比：
+/biservice/v1/shopAnalysis/goodsIndustryRatio/platform/102000/startDate/20170501/endDate/20170525/itemId/1000000224
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["矿产","消费品"],"seriesData":[{"name":"矿产","value":11},{"name":"消费品","value":3}]}}
+
+店铺成交金额排行：
+/biservice/v1/shopAnalysis/moneyTransactionMoneyTop/platform/102000/startDate/20170501/endDate/20170525
+{"status":{"code":"200","message":"Successful!"},"BarChart":{"seriesName":"店铺公司名","yAxisData":["weilin测试jyxcs10001","weilin测试jyxcs10002","江西铜矿集团有限公司","浙江铝材加工厂","杭州测试有限公司"],"seriesData":[1201608.50,112401.00,40000.00,20000.00,18600.00],"itemId":[100086,100087,1000000002,1000000001,100142]}}
+
+成交金额行业占比：
+/biservice/v1/shopAnalysis/moneyIndustryRatio/platform/102000/startDate/20170501/endDate/20170525/itemId/100086
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["煤炭","消费品","有色","农产品"],"seriesData":[{"name":"煤炭","value":0.05},{"name":"消费品","value":0.10},{"name":"有色","value":120.00},{"name":"农产品","value":0.00}]}}
+
+-------------- 成交分析 --------------
+/**
+* 
+* industryAmount:行业订单分析.
+* 
+* @author Administrator
+* @date 2017年5月31日 下午2:15:39
+* @param startDate
+* @param endDate
+* @param sortField  排序字段：ordernum 笔数、paytotal 金额
+* @return
+* @throws Exception
+*/
+/biservice/v1/deal/industryAmount/20170501/20170531/paytotal/
+{"ids":[2,9,3,4,1,6,5,8,7],"pieCharts":{"legendData":["有色","机械","矿产","农产品","煤炭","消费品","钢铁","工业品","食品"],"seriesName":"订单分析（行业）","seriesData":[{"value":184.06,"name":"有色"},{"value":151.50,"name":"机械"},{"value":30.62,"name":"矿产"},{"value":24.61,"name":"农产品"},{"value":10.61,"name":"煤炭"},{"value":3.01,"name":"消费品"},{"value":1.28,"name":"钢铁"},{"value":0.03,"name":"工业品"},{"value":0.00,"name":"食品"}],"title":"订单分析（行业）"}}
+
+/**
+ * industryPieCharts:合同方式、结算方式和支付方式按行业分组的饼图.
+ * 
+ * @author Administrator
+ * @date 2017年6月7日 下午3:48:23
+ * @param startDate
+ * @param endDate
+ * @param code
+ * @param key 合同方式:contract_type;结算方式:clearing_type;支付方式:payment_type;
+ * @return
+ * @throws Exception
+ */
+ /biservice/v1/deal/industryPieCharts/20170401/20170428/10/clearing_type/
+ {"legendData":["工业品","食品","煤炭","机械","消费品","钢铁","矿产","有色","农产品"],"seriesName":"","seriesData":[{"value":1,"name":"工业品","code":"8"},{"value":3,"name":"食品","code":"7"},{"value":4,"name":"煤炭","code":"1"},{"value":4,"name":"机械","code":"9"},{"value":4,"name":"消费品","code":"6"},{"value":5,"name":"钢铁","code":"5"},{"value":7,"name":"矿产","code":"3"},{"value":9,"name":"有色","code":"2"},{"value":10,"name":"农产品","code":"4"}],"title":""}
+
+/**
+ * categoryAmount:指定行业订单笔数各类目占比.
+ * 
+ * @author Administrator
+ * @date 2017年6月8日 下午2:47:36
+ * @param startDate
+ * @param endDate
+ * @param industryId
+ * @param sortField
+ * @return
+ * @throws Exception
+ */
+@GET
+/biservice/v1/deal/categoryAmount/20170501/20170531/4/paytotal/
+{"legendData":["油脂油料","小麦","棉花","苗木","花卉","农药","玉米"],"seriesName":"各类目占比","seriesData":[{"value":22.97,"name":"油脂油料","code":"100015"},{"value":1.21,"name":"小麦","code":"101264"},{"value":0.31,"name":"棉花","code":"100019"},{"value":0.06,"name":"苗木","code":"100022"},{"value":0.06,"name":"花卉","code":"100021"},{"value":0.00,"name":"农药","code":"100026"},{"value":0.00,"name":"玉米","code":"100016"}],"title":"各类目占比"}

@@ -1,0 +1,57 @@
+<select class="input-txt w-short area" name="destinationProvince" title="请选择目的地！" required>
+    #configureOptions($!destinationProvinces)
+</select>
+<select class="input-txt w-short area" name="destinationCity" title="请选择目的地！" required>
+	#configureOptions($!destinationCities)
+</select>
+<select class="input-txt w-short area" name="destinationAreaId" title="请选择目的地！" required>
+	#configureOptions($!destinationAreas)
+</select>
+#macro(configureOptions $selectResult) 
+	<option value="">请选择</option>
+	#foreach($!result in $!selectResult.results)
+        <option #if($!result.id == $!selectResult.active)selected#end value="$!result.id">$!result.text</option>
+	#end
+#end
+<script type="text/javascript">
+var destinationProvince = $("[name=destinationProvince]"),
+	destinationCity = $("[name=destinationCity]"),
+	destinationAreaId = $("[name=destinationAreaId]");
+$(function() {
+	// 地区更改
+	destinationProvince.on('change', function() {
+		var areaCode = $(this).val(),
+			lineType = $("[name=lineType]:checked").val();
+		changeArea(areaCode, lineType, destinationCity, destinationAreaId);
+	});
+	
+	// 地区更改
+	destinationCity.on('change', function() {
+		var areaCode = $(this).val(),
+			lineType = $("[name=lineType]:checked").val();
+		changeArea(areaCode, lineType, destinationAreaId);
+	});
+	
+	destinationProvince.select2({width : "162px"});
+	destinationCity.select2({width : "162px"});
+	destinationAreaId.select2({width : "162px"});
+});
+
+function resetDestination(lineType, level) {
+	changeLineType(lineType, [destinationProvince]);
+	setDestinationLevel(level);
+}
+
+function setDestinationLevel(level) {
+	if(level == 1) {
+		destinationCity.prev().hide();
+		destinationAreaId.prev().hide();
+	} else if (level == 2){
+		destinationCity.prev().show();
+		destinationAreaId.prev().hide();
+	} else {
+		destinationCity.prev().show();
+		destinationAreaId.prev().show();
+	}
+}
+</script>

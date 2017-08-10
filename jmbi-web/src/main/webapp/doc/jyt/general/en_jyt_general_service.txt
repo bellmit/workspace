@@ -1,0 +1,125 @@
+-------------- ↓ 总览 -----------------------------------------------
+
+/biservice/v1/enjyt/overview/numbers/platform/1025/startDate/20160501/endDate/20170701
+{"code":"200","message":"Successful!","data":[{"id":1,"name":"供应商企业数","value":123, "unit":"个"}], "nowDate":"2017-06-26"}
+
+
+总览折线图，itemId 如下可选
+      GYSQYS(1, "供应商企业数", "个"), WTFQYS(2, "委托方企业数", "个"), WTFGRS(3, "委托方个人数", "个"),
+          CKS(4, "仓库数", "个"), XLS(5, "线路数", "条"), HZ(6, "货值", "元"), DDJE(7, "订单金额", "元"),
+          DDS(8, "订单数", "个"), SJS(9, "司机数", "个"), CLS(10, "车辆数", "辆"), ELSE(999, "其他", "");
+
+目前只需填 1 2 4 5
+
+/biservice/v1/enjyt/overview/lineChart/itemId/1/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"title":"供应商企业数","unit":"个","legendData":"现在似乎不填也可以","xAxisData":["20170701"],"yAxisData":[],"seriesData":[0]}
+
+
+总览物流线路 饼图
+/biservice/v1/enjyt/overview/transportLine/pieChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["内河航运","海运"],"seriesData":[{"typeOrId":233,"name":"内河航运","value":"405"},{"typeOrId":234,"name":"海运","value":"772"}]},"counts":12179}
+
+
+需求发布数 top5
+/biservice/v1/enjyt/overview/requireTop5/barChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":"需求发布数排行","xAxisData":[],"yAxisData":["妙委托方公司","小小委托方公司"],"seriesData":[307,182]}}
+
+-------------- ↑ 总览 -----------------------------------------------
+
+-------------- ↓ 日新增用户 -----------------------------------------------
+
+
+新增注册数 折线图
+/biservice/v1/enjyt/register/newlyIncr/lineChart/platform/1025/startDate/20160501/endDate/20170701
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"title":"新增注册数","unit":"个","legendData":"现在似乎不填也可以","xAxisData":["20170701"],"yAxisData":[],"seriesData":[0]}
+
+
+注册用户地域分布 世界地图
+/biservice/v1/enjyt/register/areaDist/chinaMap/platform/1025/startDate/20160501/endDate/20170701
+{
+    "status": {
+        "code": "200",
+        "message": "Successful!"
+    },
+    "pieChart": {
+        "legendData": [
+            "其他",
+            "country_10000"
+        ],
+        "seriesData": [
+            {
+                "totalNum": "这是注册总数，如 2",
+                "typeOrId": "国家area_code，如 86021",
+                "name": "国家名",
+                "supplyNum": "供应商数，如 1",
+                "entrustNum": "委托商数，如 1",
+                "value": "这也是注册总数，如 2，可忽略"
+            },
+            {
+                "totalNum": "5",
+                "entrustNum": "1",
+                "typeOrId": "10000",
+                "name": "country_10000",
+                "supplyNum": "4",
+                "value": "5"
+            }
+        ]
+    },
+    "counts": 18,
+    "nowDate": "2017-08-07"
+}
+
+-------------- ↑ 日新增用户 -----------------------------------------------
+
+
+
+------------------------------  运力分析  --------------------------------
+运力分析运力图  all
+/biservice/v1/enjyt/pay/trafficAll/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"Canada"},{"name":"Jamaica","value":"3"}],[{"name":"Czech"},{"name":"Macau, China","value":"2"}],[{"name":"Algeria"},{"name":"Algeria","value":"2"}],[{"name":"Algeria"},{"name":"Congo, Republic of","value":"1"}],[{"name":"Azerbaijan"},{"name":"Jamaica","value":"1"}],[{"name":"China"},{"name":"Ivory Coast","value":"1"}],[{"name":"Gibraltar"},{"name":"China","value":"1"}],[{"name":"Saudi Arabia"},{"name":"Algeria","value":"1"}],[{"name":"Azerbaijan"},{"name":"Congo, Republic of","value":"1"}],[{"name":"Congo, Republic of"},{"name":"Canada","value":"1"}],[{"name":"China"},{"name":"Canada","value":"2"}],[{"name":"Belize"},{"name":"Belarus","value":"2"}],[{"name":"United States"},{"name":"Indonesia","value":"2"}],[{"name":"Brazil"},{"name":"Indonesia","value":"2"}],[{"name":"Germany"},{"name":"Panama","value":"1"}],[{"name":"Bahamas"},{"name":"Indonesia","value":"1"}],[{"name":"Algeria"},{"name":"Indonesia","value":"1"}],[{"name":"Belgium"},{"name":"Bahamas","value":"1"}],[{"name":"Argentina"},{"name":"Australia","value":"1"}],[{"name":"Belgium"},{"name":"Belgium","value":"1"}],[{"name":"Germany"},{"name":"Algeria","value":"2"}],[{"name":"Albania"},{"name":"Indonesia","value":"2"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"Germany"},{"name":"Bulgaria","value":"1"}],[{"name":"Albania"},{"name":"Bahamas","value":"1"}],[{"name":"Panama"},{"name":"Algeria","value":"1"}],[{"name":"Australia"},{"name":"China","value":"1"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"China"},{"name":"Indonesia","value":"1"}],[{"name":"ADDIS ABABA"},{"name":"ADDIS ABABA","value":"8"}],[{"name":"HASSI MESSAOUD"},{"name":"HASSI MESSAOUD","value":"5"}],[{"name":"UJUNGPANDANG(Makassar-HasanuddinAirport)"},{"name":"UJUNGPANDANG(Makassar-HasanuddinAirport)","value":"5"}],[{"name":"Shanghai"},{"name":"Shanghai","value":"5"}],[{"name":"Huangshan"},{"name":"Huangshan","value":"4"}],[{"name":"Beijing"},{"name":"Beijing","value":"3"}],[{"name":"BRUSSELS"},{"name":"BRUSSELS","value":"3"}],[{"name":"Guangzhou"},{"name":"Guangzhou","value":"3"}],[{"name":"El Oued"},{"name":"El Oued","value":"3"}],[{"name":"BOCASDELTORO"},{"name":"BOCASDELTORO","value":"2"}]],"unit":null}
+
+运力分析运力图  AIR FREIGHT
+/biservice/v1/enjyt/pay/airFreight/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"Canada"},{"name":"Jamaica","value":"3"}],[{"name":"Czech"},{"name":"Macau, China","value":"2"}],[{"name":"Algeria"},{"name":"Algeria","value":"2"}],[{"name":"Algeria"},{"name":"Congo, Republic of","value":"1"}],[{"name":"Gibraltar"},{"name":"China","value":"1"}],[{"name":"China"},{"name":"Ivory Coast","value":"1"}],[{"name":"Algeria"},{"name":"Brazil","value":"1"}],[{"name":"Saudi Arabia"},{"name":"Algeria","value":"1"}],[{"name":"Azerbaijan"},{"name":"Congo, Republic of","value":"1"}],[{"name":"Congo, Republic of"},{"name":"Canada","value":"1"}]],"unit":"次"}
+
+运力分析运力图  RAIL TRANSPORT
+/biservice/v1/enjyt/pay/railTransport/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"China"},{"name":"Canada","value":"2"}],[{"name":"Belize"},{"name":"Belarus","value":"2"}],[{"name":"United States"},{"name":"Indonesia","value":"2"}],[{"name":"Brazil"},{"name":"Indonesia","value":"2"}],[{"name":"Bahamas"},{"name":"Indonesia","value":"1"}],[{"name":"Algeria"},{"name":"Indonesia","value":"1"}],[{"name":"Belgium"},{"name":"Bahamas","value":"1"}],[{"name":"Germany"},{"name":"Panama","value":"1"}],[{"name":"Belgium"},{"name":"Belgium","value":"1"}]],"unit":"次"}
+
+运力分析运力图  LAND TRANSPORT
+/biservice/v1/enjyt/pay/landTransport/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"Germany"},{"name":"Algeria","value":"2"}],[{"name":"Albania"},{"name":"Indonesia","value":"2"}],[{"name":"China"},{"name":"Indonesia","value":"1"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"Bulgaria"},{"name":"Indonesia","value":"1"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"Albania"},{"name":"Bahamas","value":"1"}],[{"name":"China"},{"name":"China","value":"1"}],[{"name":"Panama"},{"name":"Algeria","value":"1"}],[{"name":"Australia"},{"name":"China","value":"1"}]],"unit":"次"}
+
+运力分析运力图  WAREHOUSE TRANSPORT
+/biservice/v1/enjyt/pay/warehouseTransport/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[[{"name":"ADDIS ABABA"},{"name":"ADDIS ABABA","value":"8"}],[{"name":"Shanghai"},{"name":"Shanghai","value":"5"}],[{"name":"HASSI MESSAOUD"},{"name":"HASSI MESSAOUD","value":"5"}],[{"name":"UJUNGPANDANG(Makassar-HasanuddinAirport)"},{"name":"UJUNGPANDANG(Makassar-HasanuddinAirport)","value":"5"}],[{"name":"Huangshan"},{"name":"Huangshan","value":"4"}],[{"name":"Guangzhou"},{"name":"Guangzhou","value":"3"}],[{"name":"Beijing"},{"name":"Beijing","value":"3"}],[{"name":"El Oued"},{"name":"El Oued","value":"3"}],[{"name":"BRUSSELS"},{"name":"BRUSSELS","value":"3"}]],"unit":"次"}
+
+运力排行
+/biservice/v1/enjyt/pay/TransportTop/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"title":"运力排行Top5","seriesName":"公司名称","unit":"个","xAxisData":[55,26,13,13,11],"seriesData":["go***m2","go***om","Th***es","ju***re","聚贸***11"]}
+
+运力线路（累计）
+/biservice/v1/enjyt/pay/TransportTop/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"title":"运力排行Top5","seriesName":"公司名称","unit":"个","xAxisData":[55,26,13,13,11],"seriesData":["go***m2","go***om","Th***es","ju***re","聚贸***11"]}
+
+------------------------------  仓储分析  --------------------------------
+仓储发布图
+/biservice/v1/enjyt/pay/StorageHeat/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"area":"49382712.48","value":"4","name":"Huangshan"},{"area":"24716988.72","value":"5","name":"Shanghai"},{"area":"2712.00","value":"2","name":"Zhangzhou"},{"area":"12924.00","value":"5","name":"UJUNGPANDANG(Makassar-HasanuddinAirport)"},{"area":"553.00","value":"2","name":"BRANDON"},{"area":"3223.00","value":"5","name":"HASSI MESSAOUD"},{"area":"2222.00","value":"1","name":"Sanming"},{"area":"366.00","value":"3","name":"Beijing"},{"area":"366.00","value":"3","name":"Guangzhou"},{"area":"22223.00","value":"1","name":"NASSAU(NassauIntlAirport)"},{"area":"123.00","value":"1","name":"Sanya"},{"area":"1354.00","value":"2","name":"DRESDEN"},{"area":"4323.00","value":"2","name":"BOCASDELTORO"},{"area":"33.00","value":"1","name":"CUIABA(CUIABA,MATOGROSSO,BRAZIL)"},{"area":"9466.00","value":"16","name":null},{"area":"1800.00","value":"1","name":"GRANDCAYMAN(Georgetown-OwenRobertsIntlAirport)"},{"area":"3579.00","value":"3","name":"BRUSSELS"},{"area":"1212.00","value":"1","name":"Xingning"},{"area":"636363.00","value":"3","name":"El Oued"},{"area":"52288.00","value":"8","name":"ADDIS ABABA"}],"unit":"个"}
+
+仓库总数  可用面积（m²）  总面积（m²）
+/biservice/v1/enjyt/pay/StorageArea/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"总面积":"74854831.20","可用面积":"288920960.72","仓库总数":"69"}],"unit":"平方米"}
+
+仓库总面积top5
+/biservice/v1/enjyt/pay/StorageAreaTop/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"title":"仓库面积top5","seriesName":"仓库面积","unit":"平方米","xAxisData":[49382712.48,24716988.72,636363.00,52288.00,22223.00],"seriesData":["Huangshan","Shanghai","El Oued","ADDIS ABABA","NASSAU(NassauIntlAirport)"]}
+
+仓库类型（面积）饼图
+/biservice/v1/enjyt/pay/StorageTypeTop/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"proportion":[{"value":"4000.00","name":"Reefer cargo warehouse"},{"value":"50041552.48","name":"General cargo warehouse"},{"value":"24765022.72","name":"Dangerous cargo warehouse"}],"unit":"平方米"}
+
+仓库面积企业排名top5
+/biservice/v1/enjyt/pay/StorageCompanyTop/20160501/20171230
+{"status":{"code":"200","message":"Successful!"},"title":"仓库面积top5","seriesName":"仓库面积","unit":"平方米","xAxisData":[37037034.36,24735179.72,12345900.12,636363.00,79044.00],"seriesData":["聚贸***公司","ca***ng","ha***om","Th***es","go***m2"]}
+

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>账户信息</title>
+<link href="$!rc.contextPath/static/css/userCenter.css" rel="stylesheet" />
+<link href="$!rc.contextPath/static/css/eleme.theme.css" type="text/css"
+	rel="stylesheet" />
+#parse("./common/header.html")
+</head>
+<body>
+	<header class="top-header clearfix">
+		<a href="$!ServiceName/index" class="jm-logo left"> <img
+			src="$!rc.contextPath/static/img/top-header/header-logo.png" alt="">
+			<span>聚贸大数据BI平台</span>
+		</a> <span class="welcome left">热烈欢迎，$!session.getAttribute("user_session_key").name！</span>
+		<div class="user-profile right">
+			<div class="platform">
+				<span>平台切换： <span class="dropdown">$!session.getAttribute("platformName")<i
+						class="icon-link"></i></span></span>
+				<div class="second-nav clearfix">
+					<div class="tab-title" id="nav">
+						<span class="tab selected" id="tab1" onclick="myclick(1)">中文站</span>
+						<span class="tab" id="tab2" onclick="myclick(2)">国际站</span>
+					</div>
+					<div class="item-list-wrapper" id="menu_con">
+						<div class="item-list clearfix list-ul" style="display: block" id="tab1_content">
+							<ul>
+								<h6>交易平台BI</h6>
+								<li><p>
+									<a href="/index2?platformId=100100">交易全站</a>
+								</p></li>
+								<!--<li><p>
+										<a href="/index2?platformId=100200">聚贸化工</a>
+									</p></li> -->
+								<li><p>
+									<a href="/index2?platformId=100300">聚贸有色</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=100700">聚贸煤炭</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=100800">聚贸钢铁</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=100900">聚贸矿产</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=101000">聚贸农产品</a>
+								</p></li>
+								<!--
+								<li><p>
+										<a href="/index2?platformId=102200">聚贸石油</a>
+									</p></li>-->
+								<li><p>
+									<a href="/index2?platformId=101100">聚贸工业品</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=101300">聚贸机械</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=101200">聚贸消费品</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=101400">聚贸食品</a>
+								</p></li>
+							</ul>
+							<ul>
+								<h6>服务平台BI</h6>
+								<li><p>
+									<a href="/index2?platformId=102000">聚贸通</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=100400">聚运通</a>
+								</p></li>
+								<li><p>
+									<a href="/index2?platformId=101500">聚融通</a>
+								</p></li>
+								<!--<li><p>
+										<a href="/index2?platformId=101800">聚智能</a>
+									</p></li>
+								<li><p>
+										<a href="/index2?platformId=101700">聚认证</a>
+									</p></li>-->
+								<li><p>
+									<a href="/index2?platformId=101900">聚咨询</a>
+								</p></li>
+								<!--<li><p>
+										<a href="/index2?platformId=101600">大数聚</a>
+									</p></li> -->
+							</ul>
+						</div>
+						<div class="en-item-list item-list clearfix" id="tab2_content">
+							<ul >
+								<h6>Commodities</h6>
+
+								<li>
+									<p>
+										<a href="/index2?platformId=100101">JUMORE Global</a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=100301">JUMORE Non-ferrous</a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=100701">JUMORE Coal</a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=100801">JUMORE Steel</a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=100901">JUMORE Mineral</a>
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101001">JUMORE Agricultural Products</a>
+									</p>
+								</li>
+							</ul>
+							<ul >
+								<h6>Intermediate & Final Goods</h6>
+								<li>
+									<p>
+										<a href="/index2?platformId=101101">JUMORE Industrial Products</a><!--聚贸工业品-->
+									</p>
+								</li>
+								<li >
+									<p>
+										<a href="/index2?platformId=101301">JUMORE Machinery</a><!--聚贸机械-->
+									</p>
+								</li>
+								<li >
+									<p>
+										<a href="/index2?platformId=101201">JUMORE Consumer Goods</a><!--聚贸消费品-->
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101401">JUMORE Food</a><!--聚贸食品-->
+									</p>
+								</li>
+							</ul>
+							<ul>
+								<h6>Value-added Services</h6>
+
+								<li>
+									<p>
+										<a href="/index2?platformId=100401">JUMORE EtransMore</a><!--运通-->
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101501">JUMORE Finance</a><!--融通-->
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101501">JUMORE Technology</a><!--智能-->
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101501">JUMORE Certification</a><!--认证-->
+									</p>
+								</li>
+								<li>
+									<p>
+										<a href="/index2?platformId=101901">JUMORE Consultancy</a><!--咨询-->
+									</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a href="$!ServiceName/user/user" class="icon-user"></a>
+			#if($!session.getAttribute("user_session_key").role ==0) <a
+				class="icon-setting" href="$!ServiceName/user/list"></a> #end <a
+				class="icon-logout" href="$!ServiceName/doLogout"></a>
+		</div>
+
+	</header>
+
+	<main class="jm-body" v-if="!isLoginPage">
+	<aside class="jm-sidebar">
+		<ul class="el-menu el-menu--dark">
+			<li class="el-submenu is-active is-opened">
+				<div class="el-submenu__title" style="padding-left: 20px;">
+					个人中心<i class="el-submenu__icon-arrow el-icon-arrow-down"></i>
+				</div>
+				<ul class="el-menu" data-old-padding-top=""
+					data-old-padding-bottom="" data-old-overflow="">
+					<li class="el-menu-item is-active" style="padding-left: 40px;">
+						<span class="icon-item icon-grxlgl">个人信息管理</span>
+					</li>
+				</ul>
+			</li>
+
+		</ul>
+	</aside>
+
+	<div class="jm-main">
+		<div class="jm-content">
+			<div class="el-breadcrumb">
+				<span class="el-breadcrumb__item"><span>我的位置：</span> </span> <span
+					class="el-breadcrumb__item"> <span
+					class="el-breadcrumb__item__inner"><a href="/index">聚贸通平台</a></span>
+					<span class="el-breadcrumb__separator">&gt;</span>
+				</span> <span class="el-breadcrumb__item"> <span
+					class="el-breadcrumb__item__inner">个人信息</span> <span
+					class="el-breadcrumb__separator">&gt;</span>
+				</span>
+			</div>
+			<!--end of el-breadcrumb-->
+
+			<div
+				class="el-row jm-grid-box-bg-white jm-grid-border-1px jm-margin-top20">
+				<header class="panel-header jm-grid-border-bottom-1px">
+					<span>基本信息</span>
+				</header>
+				<div class="clearfix userMsg-box">
+					<div class="left">
+						<img alt="">
+						<!-- src="$!rc.contextPath/static/img/userMsg.png" -->
+						<p>
+							<!-- 认证会员 -->
+						</p>
+					</div>
+					<dl class="userMsg-list">
+						<dt>用户名：</dt>
+						<dd>$!session.getAttribute("user_session_key").account</dd>
+						<dt>姓名：</dt>
+						<dd>$!session.getAttribute("user_session_key").name</dd>
+						<dt>密码：</dt>
+						<dd>
+							<span class="userMsg-password">************</span>
+							<button type="button" class="changePassword-btn">修改密码</button>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<!--end of 基本信息-->
+
+
+		</div>
+		<!--end of jm-content-->
+
+
+
+	</div>
+	</main>
+	<script type="text/javascript">
+		$.ajaxSetup({
+			cache : false
+		//关闭AJAX相应的缓存
+		});
+
+		//点击图像弹出详情
+		$(".changePassword-btn").click(function() {
+			var url = '/user/password';
+			layer.open({
+				type : 2,
+				title : "修改密码",
+				content : [ url, 'yes' ],
+				area : [ '605px', '405px' ],
+				success : function(data) {
+					//---
+				}
+			});
+		});
+
+		//切换
+		var myclick = function(v) {
+			var llis = document.getElementsByTagName("span");
+			for(var i = 0; i < llis.length; i++) {
+				var lli = llis[i];
+				if(lli == document.getElementById("tab" + v)) {
+					lli.className="tab selected";
+				} else {
+					lli.className="tab";
+				}
+			}
+
+			var divs = document.getElementsByClassName("item-list");
+			for(var i = 0; i < divs.length; i++) {
+
+				var divv = divs[i];
+
+				if(divv == document.getElementById("tab" + v + "_content")) {
+					divv.style.display = " block";
+				} else {
+					divv.style.display = "none";
+				}
+
+			}
+
+		}
+	</script>
+</body>
+</html>

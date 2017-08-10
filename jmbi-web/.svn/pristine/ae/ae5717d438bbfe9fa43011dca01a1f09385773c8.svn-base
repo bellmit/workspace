@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+/*左侧菜单*/
+.sidebar-menu{
+	border-right: 1px solid #c4c8cb;
+	background:#f4f4f4;
+}
+
+/*二级菜单 start */
+.menu-second li {
+	height: 45px; 
+	line-height: 45px;
+	padding-left: 48px;
+}
+.menu-second li a{
+	display: block;
+	color:#fff;
+	font-size: 16px;
+	font-family: "Microsoft Yahei";	
+}
+/*二级菜单鼠标划过样式*/
+.menu-second-selected li,.menu-second li:hover,.menu-second li:hover a,.menu-second li a:focus{
+    text-decoration: none;
+	background-color: #2f3541 !important;
+	color:#fff !important;
+}
+.menu-first li a:hover{
+	background-color:#3d3d3d;
+	color: #dd3e03;
+}
+/* 二级菜单 end */
+
+/* 一级菜单 */
+.menu-first li{height:53px; line-height:53px; border-bottom:5px solid #1a1b25 !important; padding-left: 20px;}
+.menu-first li a{ display:block; font-size:16px; font-weight:bold; color: #dd3e03; }
+.menu-first li a:focus{
+	text-decoration: none;
+	background-color: #3d3d3d !important;
+	color:#dd3e03 !important;
+}
+/*二级菜单选中状态*/
+/*覆盖bootstrap的样式*/
+.nav-list,.nav-list li a{
+	padding: 0px;
+	margin: 0px;
+}
+
+/* 会员中心nav */
+.navbar-inverse .member-navbar{background-color:#252525;margin:auto; padding:0; height:60px;}
+ul.mb_navtop { margin:auto; padding:0; list-style:none; color:white; font-size:16px;}
+ul.mb_navtop li{ float:left; padding:0 10px; margin:0}
+ul.mb_navtop li.member-title{ font-size:18px; font-weight:bold; background:url(/images/member_center_fen.png) no-repeat right center; padding:0 10px 0 20px}
+
+.member-navbar ul li{float:left; margin-top:18px}
+ul.mb_navtop li.work_time{ font-size:12px; font-weight:normal; color:#000; padding:0 0 0 10px}
+.navbar-inverse .member-navbar a{text-shadow:none !important;color:white;}
+.navbar-inverse .member-navbar a:hover,.navbar-inverse .member-navbar .selected_ a{color:#F60; border-bottom:2px solid #F60}
+ul.member_out{width:220px; list-style:none}
+ul.member_out a.a_nav{ text-align:right}
+ul.member_out li{ float:left}
+ul.member_out ul.member_out-box{color:#666;;width:220px!important; font-size:12px; padding-bottom:15px;overflow:hidden}
+ul.member_out ul.member_out-box li{ margin:0 0 0 10px; line-height:30px; height:30px;border-bottom:1px dotted #ccc; width:90%}
+ul.member_out ul.member_out-box li a.lgt_btn{ background:#F60; color:#000; text-align:center; font-size:14px; display:block; width:50px}
+
+
+/* 搜索条件 */
+.member-inputPrepend .input-prepend{float:left; margin-right:10px;}
+.member-inputPrepend .input-prepend select{}
+/* 筛选按钮 */
+.member-searchBtn .btn,.member-searchBtn .btn-primary{
+	color: #fff;
+	text-shadow: none;
+	background-color: #ff7300; *
+	background-color: #ff7300;
+	background-image: -moz-linear-gradient(top, #ff7300, #fe500b);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ff7300),
+		to(#04c) );
+	background-image: -webkit-linear-gradient(top, #ff7300, #fe500b);
+	background-image: -o-linear-gradient(top, #ff7300, #fe500b);
+	background-image: linear-gradient(to bottom, #ff7300, #fe500b);
+	background-repeat: repeat-x;
+	border-color: #04c #04c #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid :   DXImageTransform.Microsoft.gradient (   startColorstr
+		= 
+		 '#ff0088cc', endColorstr =   '#ff0044cc', GradientType =   0 );
+	filter: progid :   DXImageTransform.Microsoft.gradient (   enabled =  
+		false )
+}
+
+.member-searchTable .btn-primary{margin-right:10px;}
+
+
+
+
+
+
+
+
+
+
+

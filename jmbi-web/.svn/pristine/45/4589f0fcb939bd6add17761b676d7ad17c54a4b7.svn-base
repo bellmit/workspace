@@ -1,0 +1,33 @@
+<link href="$!rc.contextPath/static/dep/zTree_v3/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/dep/ValidForm/Validform.css" rel="stylesheet" type="text/css">
+
+<link href="$!rc.contextPath/static/css/comment2.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/css/bootstrap/bootstrap-table.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="$!rc.contextPath/static/css/admin-menu.css" rel="stylesheet" type="text/css">
+
+<link href="$!rc.contextPath/static/dep/fancybox/jquery-fancybox-2.1.5.css" rel="stylesheet" type="text/css"/>
+
+<link href="$!rc.contextPath/static/css/base.css" rel="stylesheet" type="text/css"/>
+<link href="$!rc.contextPath/static/css/common.css" rel="stylesheet" type="text/css"/>
+
+<script src="$!rc.contextPath/static/dep/jquery-1.12.0.min.js"></script>
+
+<script type="text/javascript" src="$!rc.contextPath/static/dep/bootstrap.min.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/bootstrap-table/bootstrap-table.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/bootstrap-table/local/bootstrap-table-zh-CN.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/jquery.bootstrap.teninedialog.min.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/messenger.min.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/ValidForm/Validform_v5.3.2.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/pubFunction.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/pubFunctionAdmin.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/vendor/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/jquery.autoresize.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/browser-detect.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/jquery.backToTop.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/My97DatePicker/WdatePicker.js"></script>
+<!-- <script type="text/javascript" src="$!rc.contextPath/dsw/front/js/fancybox/jquery-fancybox-2.1.5.js"></script> -->
+<script type="text/javascript" src="$!rc.contextPath/static/dep/area/area.js"></script>
+<script type="text/javascript" src="$!rc.contextPath/static/dep/area/house-area.js"></script>

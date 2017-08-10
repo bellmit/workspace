@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>聚贸大数据BI平台</title>
+		#parse("./common/header.html")
+		
+		
+		<script type="text/javascript" src="$!rc.contextPath/static/dep/md5.js"></script>
+		<link href="$!rc.contextPath/static/css/login.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body class="login-body">
+	<div class="login-form-wrapper">
+    <form class="form-signin">
+      <div class="text-center">
+        <h2 class="form-signin-heading">请登录</h2>
+      </div>
+      <div class="login-box">
+        <input type="text" class="form-control account" placeholder="账号"  id="userId" name="userId">
+
+        <input type="password" class="form-control password" placeholder="密码" id="password" name="password" >
+          
+       <button type="button" class="btn-login" onclick="javascript:login();">登&nbsp;录</button>
+      </div>
+    </form>
+  </div>
+	<!-- <div class="fix-bg"></div>
+	<div class="fix-box">
+		<p class="logo">管理员登录(大数聚英文版)</p>
+		<div class="input-box">
+			<p class="ipt-l"><span>用户名：</span><input class="name" tip="请输入用户名" id="userId" name="userId" type="text"/></p>
+			<p class="ipt-l"><span>密码：</span><input class="pass" tip="请输入密码" id="password" name="password" type="password"/></p>
+			<label><input type="checkbox" id="traderLogin" name="traderLogin" value="1"/>记住用户</label>
+			<input class="btn" type="button" onclick="javascript:login();" value="登录"/>
+		</div>
+	</div> -->
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#userId").focus();
+// 		 var userId = $.cookie("userName");
+// 		 if(userId != undefined && userId != null ){
+// 			 $('#userId').val(userId);
+// 			 $("#traderLogin").attr("checked","true");
+// 		 }
+		  $('#userId').keydown(function(e){
+			  if(e.keyCode==13){
+				  login();
+			  }
+		  });
+		  $('#password').keydown(function(e){
+			  if(e.keyCode==13){
+				  login();
+			  }
+		  });
+	});
+	
+	function login(){
+		  var uValue=$('#userId').val();
+		  var pValue=$('#password').val(); 
+		  if(uValue ==""|| uValue== null){
+			  layer.msg("请输入用户名");
+			  return;
+		  }
+		  if(pValue == "" || pValue == null){
+			  layer.msg("请输入密码");
+			  return;
+		  }
+		 // var data = "&username="+$('#userId').val()
+	   // +"&password="+$('#password').val()+"&rdm="+Math.random();
+		  var data={"username":$('#userId').val(),"password":hex_md5($('#password').val())};
+		  
+		 submitAjax(data);
+	} 
+
+	// 提交
+	function submitAjax(data) {
+		  $.ajax({  
+		      type : "post",  
+		      url : "$!rc.contextPath/doLogin",  
+		      data : data,  
+		      success : function(data){
+		    	  if(data.data==4){
+		    		  window.location = "$!rc.contextPath/index";
+		    	  }else{
+					  layer.msg(data.message);
+				  }
+		      }  
+		   }); 
+	}
+    </script>
+    <!-- login_page -->
+	</body>
+</html>

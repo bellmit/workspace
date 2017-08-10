@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="jmbi-web:war">
+    <output-path>$PROJECT_DIR$/jmbi-web/target</output-path>
+    <root id="archive" name="jmbi-web-0.0.1-SNAPSHOT-${svn.revision}.war">
+      <element id="artifact" artifact-name="jmbi-web:war exploded" />
+    </root>
+  </artifact>
+</component>

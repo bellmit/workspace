@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="jmdata-biservice">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="hbase-client-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-client/hbase-client">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-annotations-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-annotations/hbase-annotations">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-common-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-common/hbase-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-protocol-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-protocol/hbase-protocol">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-it-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-it/hbase-it">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-shell-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-shell/hbase-shell">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop-compat-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-hadoop-compat/hbase-hadoop-compat">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-hadoop2-compat-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-hadoop2-compat/hbase-hadoop2-compat">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-server-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-server/hbase-server">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-procedure-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-procedure/hbase-procedure">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hbase-prefix-tree-1.2.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/hbase-prefix-tree/hbase-prefix-tree">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="biservice"/>
+        <property name="java-output-path" value="/jmdata-biservice/target/classes"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,58 @@
+<select class="input-txt w-short area" name="departureProvince" title="请选择始发地！" required>
+    #configureOptions($!departureProvinces)
+</select>
+<select class="input-txt w-short area" name="departureCity" title="请选择始发地！" required>
+	#configureOptions($!departureCities)
+</select>
+<select class="input-txt w-short area" name="departureAreaId" title="请选择始发地！" required>
+	#configureOptions($!departureAreas)
+</select>
+#macro(configureOptions $selectResult) 
+	<option value="">请选择</option>
+	#foreach($!result in $!selectResult.results)
+        <option #if($!result.id == $!selectResult.active)selected#end value="$!result.id">$!result.text</option>
+	#end
+#end
+<script type="text/javascript">
+var departureProvince = $("[name=departureProvince]"),
+	departureCity = $("[name=departureCity]"),
+	departureAreaId = $("[name=departureAreaId]");
+$(function() {
+	// 地区更改
+	departureProvince.on('change', function() {
+		var areaCode = $(this).val(),
+			lineType = $("[name=lineType]:checked").val();
+		changeArea(areaCode, lineType, departureCity, departureAreaId);
+	});
+	
+	// 地区更改
+	departureCity.on('change', function() {
+		var areaCode = $(this).val(),
+			lineType = $("[name=lineType]:checked").val();
+		changeArea(areaCode, lineType, departureAreaId);
+	});
+	
+	departureProvince.select2({width : "162px"});
+	departureCity.select2({width : "162px"});
+	departureAreaId.select2({width : "162px"});
+});
+
+function resetDeparture(lineType, level) {
+	changeLineType(lineType, [departureProvince]);
+	setDepartureLevel(level);
+}
+
+function setDepartureLevel(level) {
+	if(level == 1) {
+		departureCity.prev().hide();
+		departureAreaId.prev().hide();
+	} else if (level == 2){
+		departureCity.prev().show();
+		departureAreaId.prev().hide();
+	} else {
+		departureCity.prev().show();
+		departureAreaId.prev().show();
+	}
+}
+
+</script>

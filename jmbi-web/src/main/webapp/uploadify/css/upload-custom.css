@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+ p>object{
+        position: relative;
+/*         top: 13px; */
+        opacity:0;
+ }
+ p.uploadifyp{
+ 	position: relative;
+ }
+ .uploadifya{
+ 	background: url('/assets/js/uploadify/images/choose.png');
+ 	width: 50px;
+ 	height: 30px;
+ 	position: absolute; 
+ 	bottom: 0px; 
+ 	display: inline-block;
+ }
+ 

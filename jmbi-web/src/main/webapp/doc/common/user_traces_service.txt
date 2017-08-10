@@ -1,0 +1,12 @@
+﻿
+====用户行为  登录分析=====
+
+用户登录情况接口
+http://192.168.23.37:9090/biservice/v1/usertrace/login/platform/102000/startDate/20170420/endDate/20170425
+{"status":{"code":"200","message":"Successful!"},"lineChart":{"legendData":null,"xAxisData":["20170420","20170421","20170422","20170423","20170424","20170425"],"seriesData":[[36,23,0,0,31,0]]}}
+
+用户使用浏览器情况
+http://192.168.23.37:9090/biservice/v1/usertrace/browser/platform/102000/startDate/20170420/endDate/20170425
+{"status":{"code":"200","message":"Successful!"},"pieChart":{"legendData":["Chrome","Firefox","Sogou Explorer","IE"],"seriesData":[{"name":"Chrome","value":"75"},{"name":"Firefox","value":"8"},{"name":"Sogou Explorer","value":"5"},{"name":"IE","value":"2"}]}}
+
+

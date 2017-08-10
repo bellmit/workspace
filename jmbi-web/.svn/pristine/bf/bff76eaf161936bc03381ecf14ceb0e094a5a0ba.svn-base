@@ -1,0 +1,122 @@
+{
+  "platform": "聚贸交易BI",
+  "menuData": [{
+      "name": "用户行为",
+      "path": "1",
+      "iconClass": {
+        "icon-yhxw": true
+      },
+      "meta": ["8101", "8102", "8103"],
+      "items": [{
+          "name": "流量分析",
+          "path": "flow-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8102"]
+        },
+        {
+          "name": "登录分析",
+          "path": "login-analysis",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8103"]
+        }
+      ]
+    },
+    {
+      "name": "运营情况",
+      "path": "2",
+      "iconClass": {
+        "icon-yyqk": true
+      },
+      "meta": ["8105", "8106", "8108", "8109", "8116", "8111", "8112", "8114", "8115"],
+      "items": [{
+          "name": "总览",
+          "path": "overview",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8106"]
+        },
+        {
+          "name": "注册分析",
+          "path": "2-1",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8107", "8108", "8109", "8116"],
+          "items": [{
+            "name": "日新增用户",
+            "path": "increased-user",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8108"]
+          }, {
+            "name": "认证用户",
+            "path": "authenticated-user",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8109"]
+          }, {
+            "name": "签章支付",
+            "path": "signature-pay",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8116"]
+          }]
+        },
+        {
+          "name": "店铺分析",
+          "path": "2-2",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8110", "8111", "8112"],
+          "items": [{
+            "name": "店铺激活",
+            "path": "shop-activate",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8111"]
+          }, {
+            "name": "店铺运营",
+            "path": "shop-operation",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8112"]
+          }]
+        },
+        {
+          "name": "成交分析",
+          "path": "2-3",
+          "iconClass": {
+            "icon-item": true
+          },
+          "meta": ["8113", "8114", "8115"],
+          "items": [{
+            "name": "成交概览",
+            "path": "dealing",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "meta": ["8114"]
+          }, {
+            "name": "地域金额",
+            "iconClass": {
+              "sub-node-item": true
+            },
+            "path": "geographical-amount",
+            "meta": ["8115"]
+          }]
+        }
+      ]
+    }
+  ]
+}
