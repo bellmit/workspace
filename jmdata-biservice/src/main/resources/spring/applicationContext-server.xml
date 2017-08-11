@@ -47,7 +47,7 @@
 	<bean id="gaSvc" class="org.jumao.bi.service.impl.ga.GaSvcImpl" />
 	<bean id="enNetFlowSvc" class="org.jumao.bi.service.impl.en.EnNetFlowSvcImpl" />
 	<bean id="enJzxOverviewImpl" class="org.jumao.bi.service.impl.enjzx.EnJzxOverviewImpl" />
-	<bean id="enJytPaymentSvcImpl" class="org.jumao.bi.service.impl.enjyt.EnJytCapaSvcImpl" />
+	<bean id="enJytCapaSvcImpl" class="org.jumao.bi.service.impl.enjyt.EnJytCapaSvcImpl" />
 	<bean id="enJytOverviewSvc" class="org.jumao.bi.service.impl.enjyt.EnJytOverviewSvcImpl" />
 	<bean id="enJytRegisterSvc" class="org.jumao.bi.service.impl.enjyt.EnJytRegisterSvcImpl" />
 	<bean id="enLgProvidersAnalysisSvc" class="org.jumao.bi.service.impl.enjyt.deal.EnLogisticsProvidersAnalysisImpl" />
@@ -91,7 +91,7 @@
 			<ref bean="gaSvc" />
 			<ref bean="enNetFlowSvc" />
 			<ref bean="enJzxOverviewImpl" />
-			<ref bean="enJytPaymentSvcImpl" />
+			<ref bean="enJytCapaSvcImpl" />
 			<ref bean="enJytOverviewSvc" />
 			<ref bean="enJytRegisterSvc" />
 			<ref bean="enLgProvidersAnalysisSvc" />
